@@ -9,10 +9,11 @@
   Information System (ESDIS)."
 - MODIS Collection 6.1 active fire detections, standard processing (MCD14ML), Terra and Aqua,
   2000–2025. Downloaded as FIRMS yearly "all countries" archives:
-  https://firms.modaps.eosdis.nasa.gov/data/country/. doi:10.5067/FIRMS/MODIS/MCD14ML
+  https://firms.modaps.eosdis.nasa.gov/download/. Product DOIs: Terra MOD14 doi:10.5067/MODIS/MOD14.061, Aqua MYD14 doi:10.5067/MODIS/MYD14.061
 - VIIRS 375 m active fire detections, standard processing:
   - Suomi NPP (VNP14IMG), 2012–2025
   - NOAA-20 / JPSS-1 (VJ114IMG), 2018–2025
+  - DOIs: doi:10.5067/VIIRS/VNP14IMG.002, doi:10.5067/VIIRS/VJ114IMG.002
 
   Downloaded as FIRMS yearly "all countries" archives.
 - Near-real-time feeds, read live for the "right now" panel:
