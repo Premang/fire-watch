@@ -5,7 +5,7 @@ import "./atlas.css";
 
 export const metadata: Metadata = {
   title: "Fire Watch · Harmonized MODIS + VIIRS Burning Calendar",
-  description: "25 years of NASA MODIS and VIIRS fire hotspots, harmonized onto one consistent scale. Pick any area on Earth to see its burning calendar, anomalies against the historical median, and download the evidence.",
+  description: "26 years of NASA MODIS and VIIRS fire hotspots, harmonized onto one consistent scale. Pick any area on Earth to see its burning calendar, anomalies against the historical median, and download the evidence.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

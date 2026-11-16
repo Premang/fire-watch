@@ -7,6 +7,7 @@ so Fire Watch converts the older counts to the newer scale; you can then see whe
 months, and compare the latest satellite passes with the usual pace. Tested on years it had never seen, the error in
 monthly fire counts drops from 75% to 16%.
 
+- **Live site:** https://fire-watch.fire-watch-app.workers.dev
 - **Demo video (30 s):** https://drive.google.com/file/d/1xq4wRLl68Z-2-atgaKWbH-gVzhDYSjOo/view (also `submission/fire-watch-demo.mp4`)
 - **Project write-up:** [`submission/PROJECT.md`](submission/PROJECT.md) · data sources: [`submission/DATA-CITATIONS.md`](submission/DATA-CITATIONS.md) · use of AI: [`submission/AI-USE.md`](submission/AI-USE.md)
 - **Screenshots of the 3D fire view:** [`submission/3d-view-night.jpg`](submission/3d-view-night.jpg), [`submission/3d-view-day.jpg`](submission/3d-view-day.jpg)
