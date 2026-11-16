@@ -1,0 +1,1453 @@
+{
+  "sourceUrl": "https://modaps.modaps.eosdis.nasa.gov/services/production/outages_suomi_npp.html",
+  "fetchedAt": "2026-10-25T05:02:17.791Z",
+  "sourceHtmlSha256": "779a0a18ee542f61fbb42b56994f58c22b443910eb923e6aa2d889c9d80f13a8",
+  "sourceUpdatedDate": "2026-10-24",
+  "outages": [
+    {
+      "start": "2026-10-22T00:12:00.000Z",
+      "end": "2026-10-22T02:06:00.000Z",
+      "description": "SNPP data gap: 10/22/26 00:12 - 02:00 (inclusive)"
+    },
+    {
+      "start": "2026-10-20T04:30:00.000Z",
+      "end": "2026-10-20T07:42:00.000Z",
+      "description": "SNPP data gap: 10/20/26 04:30 - 07:36 (inclusive)"
+    },
+    {
+      "start": "2026-10-17T07:06:00.000Z",
+      "end": "2026-10-17T07:30:00.000Z",
+      "description": "SNPP data gap: 10/17/26 07:06 - 07:24 (inclusive)"
+    },
+    {
+      "start": "2026-10-16T02:24:00.000Z",
+      "end": "2026-10-16T03:54:00.000Z",
+      "description": "SNPP data gap: 10/16/26 02:24 - 03:48 (inclusive)"
+    },
+    {
+      "start": "2026-10-12T22:00:00.000Z",
+      "end": "2026-10-13T11:48:00.000Z",
+      "description": "SNPP data gap 10/12/26 22:00 10/13/26 11:45:36"
+    },
+    {
+      "start": "2026-10-09T23:00:00.000Z",
+      "end": "2026-10-10T00:36:00.000Z",
+      "description": "SNPP data gap: 10/9/26 23:00 - 10/10/26 00:30 (inclusive)."
+    },
+    {
+      "start": "2026-10-07T23:42:00.000Z",
+      "end": "2026-10-08T01:18:00.000Z",
+      "description": "Missing NPP contact: No science data 10/7/26 23:38z - 01:20z"
+    },
+    {
+      "start": "2026-10-03T03:06:00.000Z",
+      "end": "2026-10-03T04:42:00.000Z",
+      "description": "SNPP data gap: 10/3/26 03:06 - 04:42."
+    },
+    {
+      "start": "2026-10-02T23:36:00.000Z",
+      "end": "2026-10-03T01:12:00.000Z",
+      "description": "SNPP data gap: 10/2/26 23:36 - 10/3/26 01:12"
+    },
+    {
+      "start": "2026-09-28T10:00:00.000Z",
+      "end": "2026-09-28T12:00:00.000Z",
+      "description": "SNPP dat gap: 9/28/26 10:00 - 12:00."
+    },
+    {
+      "start": "2026-09-25T19:06:00.000Z",
+      "end": "2026-09-25T19:12:00.000Z",
+      "description": "SNPP data gap: 9/25/26 19:05:34 - 19:15:57, only hiding the 19:06 granule."
+    },
+    {
+      "start": "2026-09-17T16:00:00.000Z",
+      "end": "2026-09-17T16:30:00.000Z",
+      "description": "SNPP data gap: 9/17/26 16:00 - 16:24 (inclusive)"
+    },
+    {
+      "start": "2026-09-09T22:24:00.000Z",
+      "end": "2026-09-10T00:06:00.000Z",
+      "description": "SNPP data gap: 9/9/26 22:24 - 9/10/26 00:06"
+    },
+    {
+      "start": "2026-08-31T01:24:00.000Z",
+      "end": "2026-08-31T01:36:00.000Z",
+      "description": "SNPP Data gap: 8/31/26 01:19:27 - 01:39:37, hiding granules impacted."
+    },
+    {
+      "start": "2026-08-20T08:30:00.000Z",
+      "end": "2026-08-20T10:18:00.000Z",
+      "description": "SNPP Data outage: 2026/08/20 08:30 - 10:12 (inclusive)"
+    },
+    {
+      "start": "2026-08-03T02:00:00.000Z",
+      "end": "2026-08-06T16:30:00.000Z",
+      "description": "VIIRS Anomaly Impact: 2026/215 02:00 - 2026/218 16:24 (inclusive)."
+    },
+    {
+      "start": "2026-07-21T21:54:00.000Z",
+      "end": "2026-07-21T22:00:00.000Z",
+      "description": "L0 Data issue. Note: process this day without KalmanFilter to avoid larger issues."
+    },
+    {
+      "start": "2026-07-10T11:48:00.000Z",
+      "end": "2026-07-17T04:00:00.000Z",
+      "description": "VIIRS Anomaly Impact: 2026/191 11:48 - 2026/198 03:54 (inclusive)"
+    },
+    {
+      "start": "2026-06-12T00:48:00.000Z",
+      "end": "2026-06-12T01:36:00.000Z",
+      "description": "L0 Data Gap"
+    },
+    {
+      "start": "2026-06-10T03:24:00.000Z",
+      "end": "2026-06-10T03:30:00.000Z",
+      "description": "L0 Data Gap"
+    },
+    {
+      "start": "2026-06-01T00:00:00.000Z",
+      "end": "2026-06-03T02:00:00.000Z",
+      "description": "VIIRS Anomaly Impact: 2026/152 00:00 - 2026/154 01:54 (inclusive)"
+    },
+    {
+      "start": "2026-04-28T00:00:00.000Z",
+      "end": "2026-05-01T04:54:00.000Z",
+      "description": "VIIRS Anomaly Impact: 2026/118 00:00 - 2026/121 04:54 (inclusive)"
+    },
+    {
+      "start": "2026-03-18T17:24:00.000Z",
+      "end": "2026-03-18T17:48:00.000Z",
+      "description": "DMU 46 outage: 17:24 - 17:42 (inclusive)"
+    },
+    {
+      "start": "2026-03-13T08:12:00.000Z",
+      "end": "2026-03-13T11:42:00.000Z",
+      "description": "VIIRS Anomaly Impact period2: 08:12 - 11:36 (inclusive)"
+    },
+    {
+      "start": "2026-03-09T18:00:00.000Z",
+      "end": "2026-03-13T00:00:00.000Z",
+      "description": "VIIRS Anomaly Impact period: 2026/068 18:00 - 2026/071 23:54 (inclusive)"
+    },
+    {
+      "start": "2026-03-06T16:00:00.000Z",
+      "end": "2026-03-06T16:12:00.000Z",
+      "description": "Bad granules 16:00 & 16:06"
+    },
+    {
+      "start": "2025-12-30T17:24:00.000Z",
+      "end": "2025-12-30T17:36:00.000Z",
+      "description": "LRM outage: 17:24 & 17:30 granules"
+    },
+    {
+      "start": "2025-12-09T22:54:00.000Z",
+      "end": "2025-12-09T23:00:00.000Z",
+      "description": "Bad granule 22:54"
+    },
+    {
+      "start": "2025-12-09T21:18:00.000Z",
+      "end": "2025-12-09T22:54:00.000Z",
+      "description": "EDOS Outage"
+    },
+    {
+      "start": "2025-12-01T06:30:00.000Z",
+      "end": "2025-12-01T06:36:00.000Z",
+      "description": "LRM outage: 06:30 granule"
+    },
+    {
+      "start": "2025-11-19T17:54:00.000Z",
+      "end": "2025-11-19T18:12:00.000Z",
+      "description": "DMU 45 outage: 17:54 - 18:06 (inclusive)."
+    },
+    {
+      "start": "2025-11-12T18:00:00.000Z",
+      "end": "2025-11-12T19:00:00.000Z",
+      "description": "VIIRS bad DNB Flag post anomaly issues"
+    },
+    {
+      "start": "2025-11-12T16:24:00.000Z",
+      "end": "2025-11-12T17:18:00.000Z",
+      "description": "VIIRS bad DNB Flag post anomaly issues"
+    },
+    {
+      "start": "2025-11-11T11:36:00.000Z",
+      "end": "2025-11-12T16:24:00.000Z",
+      "description": "VIIRS Anomaly L0 outage"
+    },
+    {
+      "start": "2025-11-01T19:36:00.000Z",
+      "end": "2025-11-01T19:42:00.000Z",
+      "description": "L0 Data issue."
+    },
+    {
+      "start": "2025-10-06T14:36:00.000Z",
+      "end": "2025-10-06T16:12:00.000Z",
+      "description": "Data missing due to antenna issue."
+    },
+    {
+      "start": "2025-08-26T12:18:00.000Z",
+      "end": "2025-08-26T13:54:00.000Z",
+      "description": "Data missing due to C3S transition."
+    },
+    {
+      "start": "2025-08-25T18:00:00.000Z",
+      "end": "2025-08-25T19:18:00.000Z",
+      "description": "Outage due to splitter failing"
+    },
+    {
+      "start": "2025-08-20T16:24:00.000Z",
+      "end": "2025-08-20T16:42:00.000Z",
+      "description": "DMU 44 outage: 16:24 to 16:36 (inclusive)."
+    },
+    {
+      "start": "2025-08-11T16:30:00.000Z",
+      "end": "2025-08-11T16:36:00.000Z",
+      "description": "L0 flaw"
+    },
+    {
+      "start": "2025-08-04T19:54:00.000Z",
+      "end": "2025-08-04T20:30:00.000Z",
+      "description": "L0 Data Gap"
+    },
+    {
+      "start": "2025-08-04T18:36:00.000Z",
+      "end": "2025-08-04T19:12:00.000Z",
+      "description": "L0 Data issues 18:36 19:06 (inclusive)."
+    },
+    {
+      "start": "2025-08-04T17:48:00.000Z",
+      "end": "2025-08-04T18:00:00.000Z",
+      "description": "L0 Data issues 17:48 - 17:54 (inclusive)."
+    },
+    {
+      "start": "2025-07-09T22:24:00.000Z",
+      "end": "2025-07-09T22:30:00.000Z",
+      "description": "Bad granule"
+    },
+    {
+      "start": "2025-07-07T06:00:00.000Z",
+      "end": "2025-07-08T00:00:00.000Z",
+      "description": "L0 Data gap"
+    },
+    {
+      "start": "2025-07-06T08:00:00.000Z",
+      "end": "2025-07-07T00:00:00.000Z",
+      "description": "L0 Data gap"
+    },
+    {
+      "start": "2025-07-06T00:00:00.000Z",
+      "end": "2025-07-06T02:00:00.000Z",
+      "description": "L0 Data gap"
+    },
+    {
+      "start": "2025-07-05T08:00:00.000Z",
+      "end": "2025-07-06T00:00:00.000Z",
+      "description": "L0 Data gap"
+    },
+    {
+      "start": "2025-07-04T16:00:00.000Z",
+      "end": "2025-07-04T22:00:00.000Z",
+      "description": "L0 Data gap"
+    },
+    {
+      "start": "2025-07-04T15:18:00.000Z",
+      "end": "2025-07-04T15:30:00.000Z",
+      "description": "L0 Data gap"
+    },
+    {
+      "start": "2025-07-04T12:12:00.000Z",
+      "end": "2025-07-04T13:54:00.000Z",
+      "description": "L0 Data gap"
+    },
+    {
+      "start": "2025-07-03T15:48:00.000Z",
+      "end": "2025-07-03T17:54:00.000Z",
+      "description": "L0 Data gap"
+    },
+    {
+      "start": "2025-06-12T16:42:00.000Z",
+      "end": "2025-06-12T17:30:00.000Z",
+      "description": "L0 Data gap"
+    },
+    {
+      "start": "2025-05-07T23:30:00.000Z",
+      "end": "2025-05-07T23:36:00.000Z",
+      "description": "LRM outage: 23:30 granule."
+    },
+    {
+      "start": "2025-03-26T17:18:00.000Z",
+      "end": "2025-03-26T17:36:00.000Z",
+      "description": "DMU 43 outage: 17:18 to 17:30 (inclusive)."
+    },
+    {
+      "start": "2025-03-09T08:00:00.000Z",
+      "end": "2025-03-09T08:12:00.000Z",
+      "description": "Bad LRC: 08:00 & 08:06 hidden"
+    },
+    {
+      "start": "2025-01-20T17:12:00.000Z",
+      "end": "2025-01-20T20:18:00.000Z",
+      "description": "L0 Data gap"
+    },
+    {
+      "start": "2025-01-09T21:42:00.000Z",
+      "end": "2025-01-09T21:48:00.000Z",
+      "description": "LRM outage: 21:42 granule"
+    },
+    {
+      "start": "2024-12-11T12:24:00.000Z",
+      "end": "2024-12-11T12:42:00.000Z",
+      "description": "LRM outage: 12:24 - 12:36 (inclusive)."
+    },
+    {
+      "start": "2024-11-20T18:12:00.000Z",
+      "end": "2024-11-20T18:30:00.000Z",
+      "description": "DMU 42 outage: 18:12 through 18:24 grans."
+    },
+    {
+      "start": "2024-11-12T03:12:00.000Z",
+      "end": "2024-11-12T03:24:00.000Z",
+      "description": "LRM outage 03:12 & 03:18 granules"
+    },
+    {
+      "start": "2024-11-02T22:12:00.000Z",
+      "end": "2024-11-06T17:36:00.000Z",
+      "description": "GPS Anomaly outage (11/2/24 22:12 - 11/6/24 17:30, inclusive)"
+    },
+    {
+      "start": "2024-10-09T16:24:00.000Z",
+      "end": "2024-10-09T16:40:00.000Z",
+      "description": "DMU 041 outage 16:24 through 16:36 grans."
+    },
+    {
+      "start": "2024-09-26T00:00:00.000Z",
+      "end": "2024-09-27T17:36:00.000Z",
+      "description": "GPS Anomaly Outage"
+    },
+    {
+      "start": "2024-07-24T05:24:00.000Z",
+      "end": "2024-07-29T15:24:00.000Z",
+      "description": "CDP Reset Anomaly"
+    },
+    {
+      "start": "2024-07-09T21:42:00.000Z",
+      "end": "2024-07-16T17:42:00.000Z",
+      "description": "GPS Anomaly Outage"
+    },
+    {
+      "start": "2024-06-20T17:54:00.000Z",
+      "end": "2024-06-20T18:18:00.000Z",
+      "description": "DMU outage No. 40 18:12 through 18:12 grans."
+    },
+    {
+      "start": "2024-05-30T00:00:00.000Z",
+      "end": "2024-06-04T00:00:00.000Z",
+      "description": "GPS Anomaly Outage (C2) 5/30/24 through 6/3/24"
+    },
+    {
+      "start": "2024-04-24T18:06:00.000Z",
+      "end": "2024-04-24T20:24:00.000Z",
+      "description": "Anomaly outage (data missing from 18:04:42 to 20:28:05)"
+    },
+    {
+      "start": "2024-04-19T06:12:00.000Z",
+      "end": "2024-04-19T06:18:00.000Z",
+      "description": "LRM outage: 06:12 granule"
+    },
+    {
+      "start": "2024-03-06T17:24:00.000Z",
+      "end": "2024-03-06T17:54:00.000Z",
+      "description": "IAM impact 17:24 through 17:48 granules"
+    },
+    {
+      "start": "2024-01-30T23:24:00.000Z",
+      "end": "2024-01-31T16:00:00.000Z",
+      "description": "SMD outage 23:21 - 16:00"
+    },
+    {
+      "start": "2023-12-20T18:12:00.000Z",
+      "end": "2023-12-20T18:30:00.000Z",
+      "description": "DMU outage No. 39 outage 18:12 through 18:24 grans"
+    },
+    {
+      "start": "2023-11-23T09:12:00.000Z",
+      "end": "2023-11-23T09:24:00.000Z",
+      "description": "Maneuver outage: 09:12 & 09:18 granules."
+    },
+    {
+      "start": "2023-11-01T14:00:00.000Z",
+      "end": "2023-11-02T14:54:00.000Z",
+      "description": "CDP Reset L0 outage"
+    },
+    {
+      "start": "2023-10-11T16:48:00.000Z",
+      "end": "2023-10-11T17:06:00.000Z",
+      "description": "DMU outage No. 38"
+    },
+    {
+      "start": "2023-07-26T02:00:00.000Z",
+      "end": "2023-07-27T19:54:00.000Z",
+      "description": "SNPP Lock-up outage"
+    },
+    {
+      "start": "2023-06-21T17:00:00.000Z",
+      "end": "2023-06-21T17:18:00.000Z",
+      "description": "LRM outage: 17:00, 17:06 and 17:12 granules."
+    },
+    {
+      "start": "2023-05-31T00:48:00.000Z",
+      "end": "2023-05-31T01:00:00.000Z",
+      "description": "Maneuver outage, LDOPE & GEO confirmed"
+    },
+    {
+      "start": "2023-05-08T09:00:00.000Z",
+      "end": "2023-05-08T09:18:00.000Z",
+      "description": "RMM outage: 09:00, 09:06 and 09:12 granules - LDOPE and GEO confirmed."
+    },
+    {
+      "start": "2023-05-01T08:30:00.000Z",
+      "end": "2023-05-01T08:36:00.000Z",
+      "description": "LRM outage: 08:30 granule"
+    },
+    {
+      "start": "2023-04-13T16:30:00.000Z",
+      "end": "2023-04-13T17:12:00.000Z",
+      "description": "IAM outage: 1630 through 1706 granules."
+    },
+    {
+      "start": "2023-03-01T16:54:00.000Z",
+      "end": "2023-03-01T17:12:00.000Z",
+      "description": "DMU outage: 1654, 1700 & 17:06 granules"
+    },
+    {
+      "start": "2023-01-02T05:30:00.000Z",
+      "end": "2023-01-02T05:36:00.000Z",
+      "description": "LRM outage: 05:30 granule"
+    },
+    {
+      "start": "2022-12-03T16:54:00.000Z",
+      "end": "2022-12-03T17:00:00.000Z",
+      "description": "Calibration outage 16:54 granule (C1 had 17:00 hidden as well)"
+    },
+    {
+      "start": "2022-12-02T16:12:00.000Z",
+      "end": "2022-12-02T16:36:00.000Z",
+      "description": "RMM outage(16:12 through 16:30 g ranules) LDOPE and GEO confirmed"
+    },
+    {
+      "start": "2022-07-27T15:48:00.000Z",
+      "end": "2022-08-11T00:00:00.000Z",
+      "description": "SNPP Lock-up"
+    },
+    {
+      "start": "2022-07-26T16:00:00.000Z",
+      "end": "2022-07-27T15:48:00.000Z",
+      "description": "L0 Outage - SNPP Lock-Up"
+    },
+    {
+      "start": "2022-06-28T03:30:00.000Z",
+      "end": "2022-06-28T18:24:00.000Z",
+      "description": "VIIRS Lock-up"
+    },
+    {
+      "start": "2022-06-01T17:18:00.000Z",
+      "end": "2022-06-01T17:36:00.000Z",
+      "description": "DMU Outage (17:18 through 17:30 granules) LDOPE & GEO confirmed"
+    },
+    {
+      "start": "2022-05-12T05:48:00.000Z",
+      "end": "2022-05-12T05:54:00.000Z",
+      "description": "LRM outage: 05:48 granule"
+    },
+    {
+      "start": "2022-02-02T17:36:00.000Z",
+      "end": "2022-02-02T18:00:00.000Z",
+      "description": "DMU Outage (17:36 through 17:54 granules) LDOPE & GEO confirmed"
+    },
+    {
+      "start": "2022-01-13T04:24:00.000Z",
+      "end": "2022-01-13T04:30:00.000Z",
+      "description": "LRM (granule failes due to all fill in geo)"
+    },
+    {
+      "start": "2021-12-14T09:00:00.000Z",
+      "end": "2021-12-14T09:06:00.000Z",
+      "description": "LRM (granule fails due to all fill in geo)"
+    },
+    {
+      "start": "2021-11-28T00:00:00.000Z",
+      "end": "2021-11-28T00:12:00.000Z",
+      "description": "Hiding 00:00 and 00:06 granules due to corrupted times caused by GPS system"
+    },
+    {
+      "start": "2021-11-18T17:48:00.000Z",
+      "end": "2021-11-18T19:24:00.000Z",
+      "description": "Maneuver outage, LDOPE & GEO confirmed"
+    },
+    {
+      "start": "2021-10-14T02:36:00.000Z",
+      "end": "2021-10-14T02:42:00.000Z",
+      "description": "Maneuver outage, LDOPE & GEO confirmed"
+    },
+    {
+      "start": "2021-08-03T12:48:00.000Z",
+      "end": "2021-08-04T15:48:00.000Z",
+      "description": "Safe-Mode outage"
+    },
+    {
+      "start": "2021-06-12T01:00:00.000Z",
+      "end": "2021-06-12T01:18:00.000Z",
+      "description": "RMM Outage for 01:00 through 01:12 granules"
+    },
+    {
+      "start": "2021-04-29T16:36:00.000Z",
+      "end": "2021-04-29T16:54:00.000Z",
+      "description": "DMU Outage"
+    },
+    {
+      "start": "2021-01-24T08:24:00.000Z",
+      "end": "2021-01-24T08:30:00.000Z",
+      "description": "Maneuver, LDOPE confirmed"
+    },
+    {
+      "start": "2020-12-25T11:18:00.000Z",
+      "end": "2020-12-25T11:24:00.000Z",
+      "description": "LRM (granule fails due to all fill in geo)"
+    },
+    {
+      "start": "2020-12-10T16:54:00.000Z",
+      "end": "2020-12-10T17:12:00.000Z",
+      "description": "DMU"
+    },
+    {
+      "start": "2020-11-25T15:54:00.000Z",
+      "end": "2020-11-25T16:00:00.000Z",
+      "description": "Outage"
+    },
+    {
+      "start": "2020-09-24T17:30:00.000Z",
+      "end": "2020-09-24T19:00:00.000Z",
+      "description": "IAM"
+    },
+    {
+      "start": "2020-06-24T16:36:00.000Z",
+      "end": "2020-06-24T16:54:00.000Z",
+      "description": "DMU"
+    },
+    {
+      "start": "2020-01-22T16:06:00.000Z",
+      "end": "2020-01-22T16:24:00.000Z",
+      "description": "DMU"
+    },
+    {
+      "start": "2020-01-08T16:48:00.000Z",
+      "end": "2020-01-08T17:00:00.000Z",
+      "description": "Flight Software Update impact - per LDOPE 16:48 - 16:54 granules"
+    },
+    {
+      "start": "2020-01-08T15:18:00.000Z",
+      "end": "2020-01-08T15:48:00.000Z",
+      "description": "Flight Software Update impact - per LDOPE 15:18 - 15:42 granules"
+    },
+    {
+      "start": "2020-01-06T15:12:00.000Z",
+      "end": "2020-01-06T15:24:00.000Z",
+      "description": "LRM"
+    },
+    {
+      "start": "2019-12-07T19:54:00.000Z",
+      "end": "2019-12-07T20:00:00.000Z",
+      "description": "LRM"
+    },
+    {
+      "start": "2019-10-31T14:54:00.000Z",
+      "end": "2019-10-31T15:00:00.000Z",
+      "description": "Petulant Mode Impact - corrupt geolocation"
+    },
+    {
+      "start": "2019-10-31T13:18:00.000Z",
+      "end": "2019-10-31T14:12:00.000Z",
+      "description": "Petulant Mode Impact - wrong DNB flag per LDOPE"
+    },
+    {
+      "start": "2019-10-31T11:36:00.000Z",
+      "end": "2019-10-31T12:30:00.000Z",
+      "description": "Petulant Mode Impact - wrong DNB flag per LDOPE"
+    },
+    {
+      "start": "2019-10-31T09:54:00.000Z",
+      "end": "2019-10-31T10:54:00.000Z",
+      "description": "Petulant Mode Impact - wrong DNB flag per LDOPE"
+    },
+    {
+      "start": "2019-10-31T07:48:00.000Z",
+      "end": "2019-10-31T09:12:00.000Z",
+      "description": "Petulant Mode Impact; corrupt or wrong DNB per LDOPE"
+    },
+    {
+      "start": "2019-10-31T06:42:00.000Z",
+      "end": "2019-10-31T07:48:00.000Z",
+      "description": "Outade due to Petulant Mode"
+    },
+    {
+      "start": "2019-10-31T06:36:00.000Z",
+      "end": "2019-10-31T06:42:00.000Z",
+      "description": "Petulant Mode Impact - corrupt data per LDOPE"
+    },
+    {
+      "start": "2019-10-31T03:54:00.000Z",
+      "end": "2019-10-31T06:36:00.000Z",
+      "description": "Outage due to Petulant Mode"
+    },
+    {
+      "start": "2019-10-31T03:48:00.000Z",
+      "end": "2019-10-31T03:54:00.000Z",
+      "description": "Petulant Mode Impact - corrupt data per LDOPE"
+    },
+    {
+      "start": "2019-09-26T16:12:00.000Z",
+      "end": "2019-09-26T16:54:00.000Z",
+      "description": "IAM"
+    },
+    {
+      "start": "2019-05-14T21:12:00.000Z",
+      "end": "2019-05-14T21:24:00.000Z",
+      "description": "Maneuver"
+    },
+    {
+      "start": "2019-04-10T16:00:00.000Z",
+      "end": "2019-04-10T16:18:00.000Z",
+      "description": "DMU"
+    },
+    {
+      "start": "2019-02-01T14:36:00.000Z",
+      "end": "2019-02-01T15:06:00.000Z",
+      "description": "SC Outage for Pet Mode fix: 14:36-15:00 granules hidden"
+    },
+    {
+      "start": "2019-01-21T23:30:00.000Z",
+      "end": "2019-01-21T23:48:00.000Z",
+      "description": "SyncLoss, 2330 bad DNB; 2336-2342 corrupt per LDOPE"
+    },
+    {
+      "start": "2019-01-21T21:48:00.000Z",
+      "end": "2019-01-21T22:48:00.000Z",
+      "description": "SyncLoss, bad DNB (21:48 through 22:42) per LDOPE"
+    },
+    {
+      "start": "2019-01-21T17:06:00.000Z",
+      "end": "2019-01-21T21:06:00.000Z",
+      "description": "SyncLoss, 1706-2012 lost, 2018 bad, 2024-2100 bad dnb per LDOPE"
+    },
+    {
+      "start": "2019-01-17T09:06:00.000Z",
+      "end": "2019-01-17T09:12:00.000Z",
+      "description": "Maneuver"
+    },
+    {
+      "start": "2018-12-18T18:48:00.000Z",
+      "end": "2018-12-18T18:54:00.000Z",
+      "description": "Maneuver"
+    },
+    {
+      "start": "2018-11-19T01:00:00.000Z",
+      "end": "2018-11-19T01:12:00.000Z",
+      "description": "Maneuver"
+    },
+    {
+      "start": "2018-10-28T19:06:00.000Z",
+      "end": "2018-10-28T19:18:00.000Z",
+      "description": "RMM"
+    },
+    {
+      "start": "2018-09-27T16:36:00.000Z",
+      "end": "2018-09-27T17:12:00.000Z",
+      "description": "IAM"
+    },
+    {
+      "start": "2018-07-17T16:06:00.000Z",
+      "end": "2018-07-17T16:24:00.000Z",
+      "description": "DMU"
+    },
+    {
+      "start": "2018-07-05T22:48:00.000Z",
+      "end": "2018-07-05T22:54:00.000Z",
+      "description": "Maneuver"
+    },
+    {
+      "start": "2018-07-05T15:30:00.000Z",
+      "end": "2018-07-05T15:36:00.000Z",
+      "description": "Maneuver, LDOPE confirmed"
+    },
+    {
+      "start": "2018-05-25T05:00:00.000Z",
+      "end": "2018-05-25T05:06:00.000Z",
+      "description": "Maneuver"
+    },
+    {
+      "start": "2018-04-25T19:30:00.000Z",
+      "end": "2018-04-25T19:36:00.000Z",
+      "description": "Maneuver"
+    },
+    {
+      "start": "2018-02-28T17:48:00.000Z",
+      "end": "2018-02-28T18:06:00.000Z",
+      "description": "DMU"
+    },
+    {
+      "start": "2018-02-13T09:42:00.000Z",
+      "end": "2018-02-13T12:47:00.000Z",
+      "description": "s/c anomaly, SBC Lockup mode"
+    },
+    {
+      "start": "2018-01-29T20:06:00.000Z",
+      "end": "2018-01-29T20:12:00.000Z",
+      "description": "s/c anomaly, LDOPE confirmed"
+    },
+    {
+      "start": "2018-01-29T18:24:00.000Z",
+      "end": "2018-01-29T19:12:00.000Z",
+      "description": "s/c anomaly, LDOPE confirmed"
+    },
+    {
+      "start": "2018-01-29T16:24:00.000Z",
+      "end": "2018-01-29T18:24:00.000Z",
+      "description": "s/c anomaly, confirmed"
+    },
+    {
+      "start": "2018-01-27T20:12:00.000Z",
+      "end": "2018-01-27T20:18:00.000Z",
+      "description": "maneuver"
+    },
+    {
+      "start": "2017-12-29T09:12:00.000Z",
+      "end": "2017-12-29T09:18:00.000Z",
+      "description": "maneuver"
+    },
+    {
+      "start": "2017-11-29T20:30:00.000Z",
+      "end": "2017-11-29T20:42:00.000Z",
+      "description": "maneuver"
+    },
+    {
+      "start": "2017-09-29T13:06:00.000Z",
+      "end": "2017-09-29T22:30:00.000Z",
+      "description": "s/c systems outage, LDOPE confirmed"
+    },
+    {
+      "start": "2017-09-28T17:00:00.000Z",
+      "end": "2017-09-28T17:36:00.000Z",
+      "description": "IAM"
+    },
+    {
+      "start": "2017-08-27T22:00:00.000Z",
+      "end": "2017-08-27T22:06:00.000Z",
+      "description": "SBC lockout, LDOPE confirmed"
+    },
+    {
+      "start": "2017-08-27T20:18:00.000Z",
+      "end": "2017-08-27T21:06:00.000Z",
+      "description": "SBC lockout, LDOPE confirmed"
+    },
+    {
+      "start": "2017-08-27T18:06:00.000Z",
+      "end": "2017-08-27T20:18:00.000Z",
+      "description": "SBC lockout, LDOPE confirmed"
+    },
+    {
+      "start": "2017-07-19T16:12:00.000Z",
+      "end": "2017-07-19T16:30:00.000Z",
+      "description": "DMU"
+    },
+    {
+      "start": "2017-05-06T06:36:00.000Z",
+      "end": "2017-05-06T06:48:00.000Z",
+      "description": "Maneuver"
+    },
+    {
+      "start": "2017-04-06T19:24:00.000Z",
+      "end": "2017-04-06T19:30:00.000Z",
+      "description": "Maneuver"
+    },
+    {
+      "start": "2017-03-28T18:18:00.000Z",
+      "end": "2017-03-28T18:24:00.000Z",
+      "description": "DMU"
+    },
+    {
+      "start": "2017-03-08T09:54:00.000Z",
+      "end": "2017-03-08T10:06:00.000Z",
+      "description": "Maneuver, LDOPE confirmed"
+    },
+    {
+      "start": "2017-02-07T00:30:00.000Z",
+      "end": "2017-02-07T00:36:00.000Z",
+      "description": "Maneuver"
+    },
+    {
+      "start": "2017-01-08T18:30:00.000Z",
+      "end": "2017-01-08T18:42:00.000Z",
+      "description": "Maneuver"
+    },
+    {
+      "start": "2017-01-01T00:00:00.000Z",
+      "end": "2017-01-01T00:06:00.000Z",
+      "description": "LSI"
+    },
+    {
+      "start": "2016-12-20T18:30:00.000Z",
+      "end": "2016-12-20T21:42:00.000Z",
+      "description": "SBC Lock Up mode anomaly"
+    },
+    {
+      "start": "2016-12-10T07:36:00.000Z",
+      "end": "2016-12-10T07:42:00.000Z",
+      "description": "Maneuver"
+    },
+    {
+      "start": "2016-11-10T20:36:00.000Z",
+      "end": "2016-11-10T20:42:00.000Z",
+      "description": "Maneuver"
+    },
+    {
+      "start": "2016-09-29T17:30:00.000Z",
+      "end": "2016-09-29T19:12:00.000Z",
+      "description": "IAM"
+    },
+    {
+      "start": "2016-09-13T16:06:00.000Z",
+      "end": "2016-09-13T16:24:00.000Z",
+      "description": "DMU"
+    },
+    {
+      "start": "2016-09-08T15:54:00.000Z",
+      "end": "2016-09-08T16:06:00.000Z",
+      "description": "DMU"
+    },
+    {
+      "start": "2016-08-13T18:06:00.000Z",
+      "end": "2016-08-13T23:54:00.000Z",
+      "description": "Safe Mode, LDOPE confirmed"
+    },
+    {
+      "start": "2016-05-17T04:00:00.000Z",
+      "end": "2016-05-17T04:06:00.000Z",
+      "description": "Maneuver"
+    },
+    {
+      "start": "2016-04-19T21:36:00.000Z",
+      "end": "2016-04-19T21:42:00.000Z",
+      "description": "Outage - LDOPE confirmed"
+    },
+    {
+      "start": "2016-04-19T13:06:00.000Z",
+      "end": "2016-04-19T13:12:00.000Z",
+      "description": "Outage - LDOPE confirmed"
+    },
+    {
+      "start": "2016-04-17T11:42:00.000Z",
+      "end": "2016-04-17T11:48:00.000Z",
+      "description": "Outage - LDOPE confirmed"
+    },
+    {
+      "start": "2016-03-24T16:48:00.000Z",
+      "end": "2016-03-24T17:06:00.000Z",
+      "description": "DMU"
+    },
+    {
+      "start": "2016-03-18T21:06:00.000Z",
+      "end": "2016-03-18T21:12:00.000Z",
+      "description": "Outage - LDOPE confirmed"
+    },
+    {
+      "start": "2016-02-24T17:30:00.000Z",
+      "end": "2016-02-24T17:48:00.000Z",
+      "description": "DMU"
+    },
+    {
+      "start": "2016-02-18T08:18:00.000Z",
+      "end": "2016-02-18T08:24:00.000Z",
+      "description": "LRM"
+    },
+    {
+      "start": "2016-01-19T22:54:00.000Z",
+      "end": "2016-01-19T23:00:00.000Z",
+      "description": "Outage - LDOPE confirmed"
+    },
+    {
+      "start": "2015-12-21T13:36:00.000Z",
+      "end": "2015-12-21T13:42:00.000Z",
+      "description": "Outage - LDOPE confirmed"
+    },
+    {
+      "start": "2015-11-22T04:18:00.000Z",
+      "end": "2015-11-22T04:24:00.000Z",
+      "description": "LRM"
+    },
+    {
+      "start": "2015-11-05T23:36:00.000Z",
+      "end": "2015-11-05T23:54:00.000Z",
+      "description": "RMM"
+    },
+    {
+      "start": "2015-10-02T02:06:00.000Z",
+      "end": "2015-10-02T02:18:00.000Z",
+      "description": "Svalbard outage"
+    },
+    {
+      "start": "2015-09-23T17:06:00.000Z",
+      "end": "2015-09-23T18:54:00.000Z",
+      "description": "IAM"
+    },
+    {
+      "start": "2015-07-01T00:00:00.000Z",
+      "end": "2015-07-01T00:06:00.000Z",
+      "description": "LSI"
+    },
+    {
+      "start": "2015-04-30T18:06:00.000Z",
+      "end": "2015-04-30T18:24:00.000Z",
+      "description": "DMU"
+    },
+    {
+      "start": "2015-04-29T12:24:00.000Z",
+      "end": "2015-04-29T12:36:00.000Z",
+      "description": "maneuver"
+    },
+    {
+      "start": "2015-03-30T16:48:00.000Z",
+      "end": "2015-03-30T16:54:00.000Z",
+      "description": "Outage - LDOPE confirmed"
+    },
+    {
+      "start": "2015-03-01T00:30:00.000Z",
+      "end": "2015-03-01T00:42:00.000Z",
+      "description": "maneuver"
+    },
+    {
+      "start": "2015-02-04T17:54:00.000Z",
+      "end": "2015-02-04T18:06:00.000Z",
+      "description": "DMU"
+    },
+    {
+      "start": "2015-01-30T08:18:00.000Z",
+      "end": "2015-01-30T08:24:00.000Z",
+      "description": "LCM"
+    },
+    {
+      "start": "2014-12-31T19:36:00.000Z",
+      "end": "2014-12-31T19:42:00.000Z",
+      "description": "Outage - LDOPE confirmed"
+    },
+    {
+      "start": "2014-12-10T21:42:00.000Z",
+      "end": "2014-12-10T21:48:00.000Z",
+      "description": "flight software upgrade"
+    },
+    {
+      "start": "2014-12-10T20:00:00.000Z",
+      "end": "2014-12-10T20:12:00.000Z",
+      "description": "flight software upgrade"
+    },
+    {
+      "start": "2014-12-10T18:18:00.000Z",
+      "end": "2014-12-10T18:24:00.000Z",
+      "description": "flight software upgrade"
+    },
+    {
+      "start": "2014-12-10T16:36:00.000Z",
+      "end": "2014-12-10T16:42:00.000Z",
+      "description": "flight software upgrade"
+    },
+    {
+      "start": "2014-12-10T14:54:00.000Z",
+      "end": "2014-12-10T15:00:00.000Z",
+      "description": "flight software upgrade"
+    },
+    {
+      "start": "2014-12-10T13:06:00.000Z",
+      "end": "2014-12-10T13:12:00.000Z",
+      "description": "flight software upgrade"
+    },
+    {
+      "start": "2014-12-02T08:42:00.000Z",
+      "end": "2014-12-02T08:48:00.000Z",
+      "description": "maneuver outage"
+    },
+    {
+      "start": "2014-11-12T17:12:00.000Z",
+      "end": "2014-11-12T18:54:00.000Z",
+      "description": "IAM"
+    },
+    {
+      "start": "2014-11-03T01:06:00.000Z",
+      "end": "2014-11-03T01:12:00.000Z",
+      "description": "Outage - LDOPE confirmed"
+    },
+    {
+      "start": "2014-10-30T16:30:00.000Z",
+      "end": "2014-10-30T16:48:00.000Z",
+      "description": "DMU"
+    },
+    {
+      "start": "2014-10-15T17:36:00.000Z",
+      "end": "2014-10-15T20:18:00.000Z",
+      "description": "IAM"
+    },
+    {
+      "start": "2014-10-09T22:48:00.000Z",
+      "end": "2014-10-09T23:00:00.000Z",
+      "description": "Petulant Mode LDOPE confirmed"
+    },
+    {
+      "start": "2014-10-09T21:06:00.000Z",
+      "end": "2014-10-09T21:18:00.000Z",
+      "description": "Petulant Mode LDOPE confirmed"
+    },
+    {
+      "start": "2014-10-09T17:18:00.000Z",
+      "end": "2014-10-09T19:30:00.000Z",
+      "description": "Petulant Mode LDOPE confirmed"
+    },
+    {
+      "start": "2014-10-03T10:36:00.000Z",
+      "end": "2014-10-03T10:42:00.000Z",
+      "description": "Bad RDR"
+    },
+    {
+      "start": "2014-09-30T06:54:00.000Z",
+      "end": "2014-09-30T07:00:00.000Z",
+      "description": "Bad RDR"
+    },
+    {
+      "start": "2014-09-29T21:18:00.000Z",
+      "end": "2014-09-29T21:36:00.000Z",
+      "description": "RMM"
+    },
+    {
+      "start": "2014-09-26T21:48:00.000Z",
+      "end": "2014-09-26T22:06:00.000Z",
+      "description": "Petulant Mode"
+    },
+    {
+      "start": "2014-09-26T16:18:00.000Z",
+      "end": "2014-09-26T18:36:00.000Z",
+      "description": "Petulant Mode"
+    },
+    {
+      "start": "2014-09-10T18:36:00.000Z",
+      "end": "2014-09-10T20:30:00.000Z",
+      "description": "IAM"
+    },
+    {
+      "start": "2014-08-08T14:12:00.000Z",
+      "end": "2014-08-08T18:48:00.000Z",
+      "description": "DMU"
+    },
+    {
+      "start": "2014-07-30T21:54:00.000Z",
+      "end": "2014-07-30T23:42:00.000Z",
+      "description": "IAM"
+    },
+    {
+      "start": "2014-07-30T18:30:00.000Z",
+      "end": "2014-07-30T19:00:00.000Z",
+      "description": "VIIRS Lunar Calibration roll"
+    },
+    {
+      "start": "2014-07-01T17:36:00.000Z",
+      "end": "2014-07-01T18:00:00.000Z",
+      "description": "DMU"
+    },
+    {
+      "start": "2014-05-10T13:12:00.000Z",
+      "end": "2014-05-10T13:18:00.000Z",
+      "description": "Outage - LDOPE confirmed"
+    },
+    {
+      "start": "2014-04-10T20:48:00.000Z",
+      "end": "2014-04-10T21:00:00.000Z",
+      "description": "LCM - LDOPE confirmed"
+    },
+    {
+      "start": "2014-03-12T17:24:00.000Z",
+      "end": "2014-03-12T17:36:00.000Z",
+      "description": "DMU"
+    },
+    {
+      "start": "2014-03-12T01:12:00.000Z",
+      "end": "2014-03-12T01:18:00.000Z",
+      "description": "Outage - LDOPE confirmed"
+    },
+    {
+      "start": "2014-02-10T05:30:00.000Z",
+      "end": "2014-02-10T05:36:00.000Z",
+      "description": "Outage - LDOPE confirmed"
+    },
+    {
+      "start": "2014-02-04T23:12:00.000Z",
+      "end": "2014-02-04T23:24:00.000Z",
+      "description": "Petulant mode"
+    },
+    {
+      "start": "2014-02-04T17:36:00.000Z",
+      "end": "2014-02-04T21:42:00.000Z",
+      "description": "Petulant mode"
+    },
+    {
+      "start": "2014-01-21T19:36:00.000Z",
+      "end": "2014-01-21T19:54:00.000Z",
+      "description": "RMM"
+    },
+    {
+      "start": "2014-01-11T10:00:00.000Z",
+      "end": "2014-01-11T10:06:00.000Z",
+      "description": "Missing RDR"
+    },
+    {
+      "start": "2013-12-12T19:36:00.000Z",
+      "end": "2013-12-12T19:42:00.000Z",
+      "description": "DAS Load impact"
+    },
+    {
+      "start": "2013-11-19T17:30:00.000Z",
+      "end": "2013-11-19T17:48:00.000Z",
+      "description": "DMU"
+    },
+    {
+      "start": "2013-11-13T06:54:00.000Z",
+      "end": "2013-11-13T07:00:00.000Z",
+      "description": "Outage - LDOPE confirmed"
+    },
+    {
+      "start": "2013-10-14T21:36:00.000Z",
+      "end": "2013-10-14T21:42:00.000Z",
+      "description": "Outage - LDOPE confirmed"
+    },
+    {
+      "start": "2013-07-16T18:48:00.000Z",
+      "end": "2013-07-16T19:06:00.000Z",
+      "description": "DMU"
+    },
+    {
+      "start": "2013-04-21T19:48:00.000Z",
+      "end": "2013-04-21T19:54:00.000Z",
+      "description": "confirmed outage;"
+    },
+    {
+      "start": "2013-03-23T03:24:00.000Z",
+      "end": "2013-03-23T03:36:00.000Z",
+      "description": "Maneuver outage - LDOPE confirmed"
+    },
+    {
+      "start": "2013-02-24T11:12:00.000Z",
+      "end": "2013-02-24T11:24:00.000Z",
+      "description": "NPP Risk Mitigation Maneuver"
+    },
+    {
+      "start": "2013-01-22T12:12:00.000Z",
+      "end": "2013-01-22T12:18:00.000Z",
+      "description": "confirmed LDOPE outage;VCST outage;Roll maneuver"
+    },
+    {
+      "start": "2013-01-15T15:18:00.000Z",
+      "end": "2013-01-15T15:30:00.000Z",
+      "description": "DMU"
+    },
+    {
+      "start": "2012-12-23T14:48:00.000Z",
+      "end": "2012-12-23T15:12:00.000Z",
+      "description": "confirmed LDOPE outage;VCST outage;Roll maneuver"
+    },
+    {
+      "start": "2012-12-14T04:06:00.000Z",
+      "end": "2012-12-14T04:18:00.000Z",
+      "description": "Bad RDRs"
+    },
+    {
+      "start": "2012-11-23T21:06:00.000Z",
+      "end": "2012-11-23T21:30:00.000Z",
+      "description": "confirmed LDOPE outage;VCST outage;Roll maneuver"
+    },
+    {
+      "start": "2012-11-23T01:18:00.000Z",
+      "end": "2012-11-23T01:30:00.000Z",
+      "description": "Insufficient RDRs"
+    },
+    {
+      "start": "2012-11-22T23:42:00.000Z",
+      "end": "2012-11-22T23:54:00.000Z",
+      "description": "Petulant Mode"
+    },
+    {
+      "start": "2012-11-22T16:30:00.000Z",
+      "end": "2012-11-22T22:06:00.000Z",
+      "description": "Petulant Mode"
+    },
+    {
+      "start": "2012-10-25T06:54:00.000Z",
+      "end": "2012-10-25T07:00:00.000Z",
+      "description": "Outage - LDOPE confirmed"
+    },
+    {
+      "start": "2012-10-09T15:54:00.000Z",
+      "end": "2012-10-09T16:12:00.000Z",
+      "description": "DMU"
+    },
+    {
+      "start": "2012-09-29T13:48:00.000Z",
+      "end": "2012-09-29T13:56:00.000Z",
+      "description": "IDPS TOC degraded"
+    },
+    {
+      "start": "2012-07-01T00:00:00.000Z",
+      "end": "2012-07-01T02:06:00.000Z",
+      "description": "LSI"
+    },
+    {
+      "start": "2012-06-26T19:06:00.000Z",
+      "end": "2012-06-26T19:24:00.000Z",
+      "description": "DMU"
+    },
+    {
+      "start": "2012-06-22T00:00:00.000Z",
+      "end": "2012-06-22T14:42:00.000Z",
+      "description": "S/C CDP Reset - Safe Mode"
+    },
+    {
+      "start": "2012-06-21T18:00:00.000Z",
+      "end": "2012-06-22T00:00:00.000Z",
+      "description": "S/C CDP Reset - Safe Mode"
+    },
+    {
+      "start": "2012-05-19T20:36:00.000Z",
+      "end": "2012-05-19T20:42:00.000Z",
+      "description": "Bad RDR"
+    },
+    {
+      "start": "2012-05-02T10:18:00.000Z",
+      "end": "2012-05-02T10:24:00.000Z",
+      "description": "confirmed LDOPE outage;VCST outage;Roll maneuver"
+    },
+    {
+      "start": "2012-04-16T13:24:00.000Z",
+      "end": "2012-04-16T13:30:00.000Z",
+      "description": "LDOPE confirmed 9/14/17"
+    },
+    {
+      "start": "2012-04-02T23:00:00.000Z",
+      "end": "2012-04-02T23:12:00.000Z",
+      "description": "confirmed LDOPE outage;VCST outage;Roll maneuver"
+    },
+    {
+      "start": "2012-03-28T13:00:00.000Z",
+      "end": "2012-03-28T13:12:00.000Z",
+      "description": "Bad RDR"
+    },
+    {
+      "start": "2012-03-28T11:30:00.000Z",
+      "end": "2012-03-28T11:36:00.000Z",
+      "description": "Petulant Mode"
+    },
+    {
+      "start": "2012-03-28T09:42:00.000Z",
+      "end": "2012-03-28T10:00:00.000Z",
+      "description": "Petulant Mode"
+    },
+    {
+      "start": "2012-03-28T08:12:00.000Z",
+      "end": "2012-03-28T09:42:00.000Z",
+      "description": "Petulant Mode"
+    },
+    {
+      "start": "2012-03-28T04:06:00.000Z",
+      "end": "2012-03-28T08:12:00.000Z",
+      "description": "Petulant Mode"
+    },
+    {
+      "start": "2012-03-24T10:00:00.000Z",
+      "end": "2012-03-26T18:00:00.000Z",
+      "description": "S/C SCC"
+    },
+    {
+      "start": "2012-03-10T04:06:00.000Z",
+      "end": "2012-03-10T14:06:00.000Z",
+      "description": "SBC lockout. Confirmed with LDOPE."
+    },
+    {
+      "start": "2012-03-03T23:36:00.000Z",
+      "end": "2012-03-03T23:42:00.000Z",
+      "description": "confirmed LDOPE outage;VCST outage;Roll maneuver"
+    },
+    {
+      "start": "2012-03-01T20:00:00.000Z",
+      "end": "2012-03-01T23:30:00.000Z",
+      "description": "SVLBD line outage"
+    },
+    {
+      "start": "2012-02-29T18:54:00.000Z",
+      "end": "2012-02-29T20:18:00.000Z",
+      "description": "no s/c diary"
+    },
+    {
+      "start": "2012-02-25T01:42:00.000Z",
+      "end": "2012-02-25T02:48:00.000Z",
+      "description": "Unkown"
+    },
+    {
+      "start": "2012-02-22T15:18:00.000Z",
+      "end": "2012-02-22T15:24:00.000Z",
+      "description": "LDOPE confirmed 9/14/17"
+    },
+    {
+      "start": "2012-02-20T18:24:00.000Z",
+      "end": "2012-02-20T18:48:00.000Z",
+      "description": "LDOPE confirmed 9/14/17"
+    },
+    {
+      "start": "2012-02-18T04:12:00.000Z",
+      "end": "2012-02-18T12:06:00.000Z",
+      "description": "communications anomaly"
+    },
+    {
+      "start": "2012-02-11T04:42:00.000Z",
+      "end": "2012-02-11T09:00:00.000Z",
+      "description": "BUS Error"
+    },
+    {
+      "start": "2012-02-03T03:06:00.000Z",
+      "end": "2012-02-03T03:12:00.000Z",
+      "description": "IDPS fill-up"
+    },
+    {
+      "start": "2012-02-02T23:30:00.000Z",
+      "end": "2012-02-02T23:54:00.000Z",
+      "description": "IDPS fill-up"
+    },
+    {
+      "start": "2012-02-02T23:12:00.000Z",
+      "end": "2012-02-02T23:18:00.000Z",
+      "description": "IDPS fill-up"
+    },
+    {
+      "start": "2012-02-02T22:36:00.000Z",
+      "end": "2012-02-02T22:48:00.000Z",
+      "description": "IDPS fill-up"
+    },
+    {
+      "start": "2012-02-02T22:12:00.000Z",
+      "end": "2012-02-02T22:18:00.000Z",
+      "description": "IDPS fill-up"
+    },
+    {
+      "start": "2012-02-02T21:54:00.000Z",
+      "end": "2012-02-02T22:00:00.000Z",
+      "description": "IDPS fill-up"
+    },
+    {
+      "start": "2012-02-02T21:30:00.000Z",
+      "end": "2012-02-02T21:36:00.000Z",
+      "description": "IDPS fill-up"
+    },
+    {
+      "start": "2012-02-02T20:54:00.000Z",
+      "end": "2012-02-02T21:18:00.000Z",
+      "description": "IDPS fill-up"
+    },
+    {
+      "start": "2012-02-02T20:24:00.000Z",
+      "end": "2012-02-02T20:36:00.000Z",
+      "description": "IDPS fill-up"
+    },
+    {
+      "start": "2012-02-02T20:18:00.000Z",
+      "end": "2012-02-02T20:24:00.000Z",
+      "description": "IDPS fill-up"
+    },
+    {
+      "start": "2012-02-02T19:00:00.000Z",
+      "end": "2012-02-02T19:54:00.000Z",
+      "description": "IDPS fill-up"
+    },
+    {
+      "start": "2012-02-02T09:30:00.000Z",
+      "end": "2012-02-02T10:00:00.000Z",
+      "description": "IDPS fill-up"
+    },
+    {
+      "start": "2012-02-02T07:12:00.000Z",
+      "end": "2012-02-02T07:18:00.000Z",
+      "description": "IDPS fill-up"
+    },
+    {
+      "start": "2012-01-30T18:48:00.000Z",
+      "end": "2012-01-30T19:06:00.000Z",
+      "description": "NPP Collision Avoidance"
+    },
+    {
+      "start": "2012-01-27T22:24:00.000Z",
+      "end": "2012-01-27T22:42:00.000Z",
+      "description": "IDPS fill-up"
+    },
+    {
+      "start": "2012-01-26T20:06:00.000Z",
+      "end": "2012-01-26T20:12:00.000Z",
+      "description": "IDPS fill-up"
+    },
+    {
+      "start": "2012-01-24T09:06:00.000Z",
+      "end": "2012-01-24T09:24:00.000Z",
+      "description": "problem with data s/c downlink"
+    },
+    {
+      "start": "2012-01-17T19:30:00.000Z",
+      "end": "2012-01-17T19:48:00.000Z",
+      "description": "Station-Keeping Maneuver"
+    },
+    {
+      "start": "2012-01-12T13:48:00.000Z",
+      "end": "2012-01-12T14:06:00.000Z",
+      "description": "Early Mission Outage"
+    },
+    {
+      "start": "2012-01-12T12:06:00.000Z",
+      "end": "2012-01-12T12:36:00.000Z",
+      "description": "Early Mission Outage"
+    },
+    {
+      "start": "2012-01-04T08:40:00.000Z",
+      "end": "2012-01-04T09:00:00.000Z",
+      "description": "LDOPE outage;VCST outage;Roll maneuver"
+    },
+    {
+      "start": "2012-01-02T00:00:00.000Z",
+      "end": "2012-01-02T20:12:00.000Z",
+      "description": "Early Mission Outage"
+    },
+    {
+      "start": "2011-12-09T12:54:00.000Z",
+      "end": "2011-12-09T13:06:00.000Z",
+      "description": "Early Mission Outage"
+    },
+    {
+      "start": "2011-12-09T11:06:00.000Z",
+      "end": "2011-12-09T11:30:00.000Z",
+      "description": "Early Mission Outage"
+    },
+    {
+      "start": "2011-12-08T01:30:00.000Z",
+      "end": "2011-12-08T07:48:00.000Z",
+      "description": "Early Mission Outage"
+    },
+    {
+      "start": "2011-11-25T16:36:00.000Z",
+      "end": "2011-11-26T19:30:00.000Z",
+      "description": "Early Mission Outage"
+    },
+    {
+      "start": "2011-11-14T00:24:00.000Z",
+      "end": "2011-11-14T00:42:00.000Z",
+      "description": "Early Mission Outage"
+    }
+  ]
+}

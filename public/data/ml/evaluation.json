@@ -1,0 +1,3921 @@
+{
+  "schemaVersion": 2,
+  "modelId": "ember-day-ahead-v2",
+  "modelSha256": "e0a867bf7821d790a83a0798344fa64fdb68c146f29ca0daa3fdf6d992c9dcb1",
+  "modelType": "Histogram gradient-boosted trees, separate calibration and persistence blend selected by independent selection Brier",
+  "selectedLeaves": 15,
+  "trees": 120,
+  "featureNames": [
+    "fire_recent",
+    "fire_prior",
+    "distance_recent_km",
+    "distance_prior_km",
+    "density_3",
+    "density_7",
+    "nearest_east_km",
+    "nearest_north_km",
+    "elevation_m",
+    "slope_deg",
+    "aspect_sin",
+    "aspect_cos",
+    "elevation_above_fire_m",
+    "lag_precip_mm",
+    "lag_tmin_c",
+    "lag_tmax_c",
+    "lag_specific_humidity",
+    "lag_wind_ms",
+    "lag_wind_sin",
+    "lag_wind_cos",
+    "lag_erc",
+    "lag_pdsi",
+    "antecedent_gfs_temp_c",
+    "antecedent_gfs_specific_humidity",
+    "antecedent_gfs_vector_wind_ms"
+  ],
+  "source": {
+    "title": "WildfireSpreadTS v1.0",
+    "url": "https://zenodo.org/records/8006177",
+    "license": "CC-BY-4.0",
+    "selectedEvents": 250,
+    "downloadManifestSha256": "f43b3a050d2b52387f0aaefc4ba8270eb156d9d20366041a5d15bf4842f821f5"
+  },
+  "target": "At least one retained S-NPP VIIRS active-fire detection in a 1.5 km cell during the next UTC day, within 12 km of prior detections.",
+  "timing": {
+    "issue": "I, after the I00Z GFS run is available; live path requires at least06Z",
+    "target": "I+1 00:00\u201324:00 UTC",
+    "recentFire": "I\u22121 UTC day",
+    "priorFire": "I\u22122 UTC day",
+    "gridmet": "I\u22122 nominal day (ends07Z I\u22121)",
+    "gfs": "I00Z, F01\u2013F24, antecedent forecast conditions"
+  },
+  "excludedBands": {
+    "17": "Inconsistent GFS rain accumulation reductions",
+    "19": "Wind-direction quadrant loss",
+    "0\u20134": "Optical/composite availability and missingness",
+    "12\u201313": "Terrain gradients recomputed at1.5km",
+    "16": "Same-year annual cover risks hindsight"
+  },
+  "splits": {
+    "train": {
+      "years": [
+        2018,
+        2019
+      ],
+      "events": 43,
+      "cells": 19274,
+      "positives": 573,
+      "positiveEvents": 28,
+      "ids": [
+        "2018/fire_21459249",
+        "2018/fire_21615469",
+        "2018/fire_21617464",
+        "2018/fire_21688916",
+        "2018/fire_21690102",
+        "2018/fire_21804980",
+        "2018/fire_21804985",
+        "2018/fire_21889682",
+        "2018/fire_21889763",
+        "2018/fire_21890033",
+        "2018/fire_21890098",
+        "2018/fire_21890103",
+        "2018/fire_21890143",
+        "2018/fire_21890170",
+        "2018/fire_21997770",
+        "2018/fire_21997828",
+        "2018/fire_21997864",
+        "2018/fire_21998100",
+        "2018/fire_21998103",
+        "2018/fire_21998264",
+        "2018/fire_21998299",
+        "2018/fire_21999270",
+        "2018/fire_21999321",
+        "2018/fire_21999351",
+        "2018/fire_21999354",
+        "2018/fire_22141243",
+        "2018/fire_22141566",
+        "2018/fire_22141596",
+        "2018/fire_22343661",
+        "2018/fire_22343689",
+        "2019/fire_23036860",
+        "2019/fire_23036877",
+        "2019/fire_23159642",
+        "2019/fire_23159787",
+        "2019/fire_23159792",
+        "2019/fire_23160488",
+        "2019/fire_23160511",
+        "2019/fire_23300669",
+        "2019/fire_23300741",
+        "2019/fire_23410607",
+        "2019/fire_23410720",
+        "2019/fire_23493973",
+        "2019/fire_23493983"
+      ],
+      "excludedMissingFeatureCells": 11
+    },
+    "selection": {
+      "years": [
+        2020
+      ],
+      "events": 31,
+      "cells": 17335,
+      "positives": 853,
+      "positiveEvents": 20,
+      "ids": [
+        "2020/fire_24025605",
+        "2020/fire_24025610",
+        "2020/fire_24103571",
+        "2020/fire_24104639",
+        "2020/fire_24191384",
+        "2020/fire_24191418",
+        "2020/fire_24191741",
+        "2020/fire_24332592",
+        "2020/fire_24332647",
+        "2020/fire_24332700",
+        "2020/fire_24332731",
+        "2020/fire_24332746",
+        "2020/fire_24332760",
+        "2020/fire_24332761",
+        "2020/fire_24332764",
+        "2020/fire_24332808",
+        "2020/fire_24332939",
+        "2020/fire_24332949",
+        "2020/fire_24333039",
+        "2020/fire_24333270",
+        "2020/fire_24333277",
+        "2020/fire_24333285",
+        "2020/fire_24461607",
+        "2020/fire_24461618",
+        "2020/fire_24461623",
+        "2020/fire_24461780",
+        "2020/fire_24461996",
+        "2020/fire_24462212",
+        "2020/fire_24462691",
+        "2020/fire_24462819",
+        "2020/fire_24604435"
+      ],
+      "excludedMissingFeatureCells": 18
+    },
+    "calibration": {
+      "years": [
+        2020
+      ],
+      "events": 28,
+      "cells": 10599,
+      "positives": 334,
+      "positiveEvents": 17,
+      "ids": [
+        "2020/fire_23757522",
+        "2020/fire_24027563",
+        "2020/fire_24027570",
+        "2020/fire_24103582",
+        "2020/fire_24103590",
+        "2020/fire_24104628",
+        "2020/fire_24104674",
+        "2020/fire_24191357",
+        "2020/fire_24191393",
+        "2020/fire_24191395",
+        "2020/fire_24191411",
+        "2020/fire_24191756",
+        "2020/fire_24332768",
+        "2020/fire_24332791",
+        "2020/fire_24332815",
+        "2020/fire_24332934",
+        "2020/fire_24333000",
+        "2020/fire_24333006",
+        "2020/fire_24333012",
+        "2020/fire_24461771",
+        "2020/fire_24461789",
+        "2020/fire_24462847",
+        "2020/fire_24462867",
+        "2020/fire_24462882",
+        "2020/fire_24463227",
+        "2020/fire_24604456",
+        "2020/fire_24604754",
+        "2020/fire_24604832"
+      ],
+      "excludedMissingFeatureCells": 1
+    },
+    "test": {
+      "years": [
+        2021
+      ],
+      "events": 27,
+      "cells": 16694,
+      "positives": 1040,
+      "positiveEvents": 25,
+      "ids": [
+        "2021/fire_25088019",
+        "2021/fire_25294692",
+        "2021/fire_25294714",
+        "2021/fire_25294998",
+        "2021/fire_25295023",
+        "2021/fire_25295026",
+        "2021/fire_25295808",
+        "2021/fire_25295837",
+        "2021/fire_25295843",
+        "2021/fire_25295869",
+        "2021/fire_25295877",
+        "2021/fire_25410444",
+        "2021/fire_25410735",
+        "2021/fire_25410746",
+        "2021/fire_25410845",
+        "2021/fire_25410883",
+        "2021/fire_25410985",
+        "2021/fire_25411057",
+        "2021/fire_25411093",
+        "2021/fire_25411102",
+        "2021/fire_25411748",
+        "2021/fire_25411795",
+        "2021/fire_25548047",
+        "2021/fire_25548063",
+        "2021/fire_25548658",
+        "2021/fire_25548678",
+        "2021/fire_25639187"
+      ],
+      "excludedMissingFeatureCells": 7
+    }
+  },
+  "weighting": "Each eligible event equal total weight. No negative downsampling. No model refit on selection/calibration after selection. Calibration fits score offsets; independent selection chooses architecture/offset/mixture and each comparator threshold. Only the fresh 2021 test estimates performance.",
+  "spatialEmbargoKm": 25,
+  "spatialPolicy": "Metadata centers at least 25 km apart between every split; fresh test also at least 25 km from all 10 original selected 2021 incidents. Connected 2020 geographic components kept in one split. Geographic proximity is only a proxy for incident-complex identity.",
+  "skippedEvents": [
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21458801",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21458806",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21458836",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21459234",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21459239",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21459242",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21538827",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21615465",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21690064",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21748766",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21748783",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21748798",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21748801",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21751305",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21804572",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21804877",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21804899",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21804942",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21804961",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21889779",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21889808",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21889953",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21889990",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21889992",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21889995",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21890058",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21890072",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21890100",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21890208",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21890515",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21998023",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21998081",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21998119",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21998152",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21998255",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21999381",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_22141461",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_22141465",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_22141528",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_22141577",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_22141683",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_22343666",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_22863125",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_22863172",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_22938746",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23036542",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23036565",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23036871",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23037424",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23159836",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23159838",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23159841",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23159860",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23160475",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23300665",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23301106",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23301386",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24027566",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24103561",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24104640",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24191389",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24191760",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24332728",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24332784",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24332793",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24332872",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24332991",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24332995",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24333259",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24461899",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24462033",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24462127",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24463187",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24695557",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24695566",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24695584",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24103560",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24103584",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24104631",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24104644",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24104654",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24104857",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24191364",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24191680",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24332785",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24332894",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24332954",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24332956",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24332969",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24461320",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24462088",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24462263",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24462306",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24462753",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24463211",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24604676",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24604731",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24695532",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2021/fire_24935885",
+      "split": "test"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2021/fire_24936357",
+      "split": "test"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2021/fire_25084892",
+      "split": "test"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2021/fire_25138926",
+      "split": "test"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2021/fire_25205247",
+      "split": "test"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2021/fire_25205259",
+      "split": "test"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2021/fire_25205260",
+      "split": "test"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2021/fire_25205295",
+      "split": "test"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2021/fire_25205827",
+      "split": "test"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2021/fire_25205954",
+      "split": "test"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2021/fire_25294976",
+      "split": "test"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2021/fire_25294983",
+      "split": "test"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2021/fire_25295081",
+      "split": "test"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2021/fire_25295855",
+      "split": "test"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2021/fire_25295862",
+      "split": "test"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2021/fire_25295927",
+      "split": "test"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2021/fire_25295931",
+      "split": "test"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2021/fire_25295934",
+      "split": "test"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2021/fire_25295941",
+      "split": "test"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2021/fire_25295966",
+      "split": "test"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2021/fire_25410960",
+      "split": "test"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2021/fire_25411897",
+      "split": "test"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2021/fire_25411915",
+      "split": "test"
+    }
+  ],
+  "test": {
+    "model": {
+      "prAuc": 0.46861596791538696,
+      "brier": 0.036577206773677415,
+      "logLoss": 0.135707085779514,
+      "precision": 0.5164909390100311,
+      "recall": 0.5964177355781255,
+      "positiveRate": 0.05369958174472044,
+      "predictedPositiveRate": 0.06200957369565125,
+      "threshold": 0.19999999999999998,
+      "cells": 16694,
+      "positives": 1040
+    },
+    "previousVersion": {
+      "prAuc": 0.40229009573452607,
+      "brier": 0.05007558094925903,
+      "logLoss": 0.22454096730920223,
+      "precision": 0.3695471311131151,
+      "recall": 0.6192174181633322,
+      "positiveRate": 0.05369958174472044,
+      "predictedPositiveRate": 0.08997963605957184,
+      "threshold": 0.017,
+      "cells": 16694,
+      "positives": 1040
+    },
+    "smoothedPersistence": {
+      "prAuc": 0.3385799753392151,
+      "brier": 0.0385615512716957,
+      "logLoss": 0.1555051358158222,
+      "precision": 0.5678815709549501,
+      "recall": 0.5540458428581982,
+      "positiveRate": 0.05369958174472044,
+      "predictedPositiveRate": 0.05239125823163337,
+      "threshold": 0.35,
+      "cells": 16694,
+      "positives": 1040
+    },
+    "persistence": {
+      "prAuc": 0.3385799753392151,
+      "brier": 0.0465867799185805,
+      "logLoss": 0.7508902701510679,
+      "precision": 0.5678815709549501,
+      "recall": 0.5540458428581982,
+      "positiveRate": 0.05369958174472044,
+      "predictedPositiveRate": 0.05239125823163337,
+      "threshold": 0.9499999999999998,
+      "cells": 16694,
+      "positives": 1040
+    },
+    "logistic": {
+      "prAuc": 0.45523747453013175,
+      "brier": 0.03651652691224915,
+      "logLoss": 0.1360198267539937,
+      "precision": 0.460110400551501,
+      "recall": 0.6556686611577919,
+      "positiveRate": 0.05369958174472044,
+      "predictedPositiveRate": 0.07652322752342001,
+      "threshold": 0.15,
+      "cells": 16694,
+      "positives": 1040
+    },
+    "newActivity": {
+      "prAuc": 0.14539331270124212,
+      "brier": 0.02313671589645479,
+      "logLoss": 0.10126916069872585,
+      "precision": 0.26543085897462565,
+      "recall": 0.11841466849348259,
+      "positiveRate": 0.02527156057165999,
+      "predictedPositiveRate": 0.011274210839562373,
+      "threshold": 0.19999999999999998,
+      "cells": 15629,
+      "positives": 421
+    }
+  },
+  "confidenceIntervals": {
+    "method": "1,000 paired bootstrap resamples of whole geographic test clusters; 25 km connected metadata centers. Every Brier draw retained; undefined AP draws omitted.",
+    "bootstrapReplicates": 1000,
+    "geographicClusters": 25,
+    "undefinedPrAucDraws": 0,
+    "prAuc": [
+      0.3465283602530961,
+      0.591610399943692
+    ],
+    "brier": [
+      0.0232727187643225,
+      0.055232825140939544
+    ]
+  },
+  "pairedComparisons": {
+    "previousVersion": {
+      "brierDelta": -0.013498374175581609,
+      "brierDelta95": [
+        -0.019763613577010147,
+        -0.007452412030050026
+      ],
+      "prAucDelta": 0.06632587218086089,
+      "prAucDelta95": [
+        -0.015477687690998842,
+        0.13567518092411415
+      ],
+      "deltaConvention": "new minus comparator; negative Brier and positive PR-AUC favor new model"
+    },
+    "smoothedPersistence": {
+      "brierDelta": -0.0019843444980182797,
+      "brierDelta95": [
+        -0.00405293656073991,
+        -4.859380404519264e-05
+      ],
+      "prAucDelta": 0.13003599257617188,
+      "prAucDelta95": [
+        0.06843789917023112,
+        0.18741617313343778
+      ],
+      "deltaConvention": "new minus comparator; negative Brier and positive PR-AUC favor new model"
+    },
+    "persistence": {
+      "brierDelta": -0.010009573144903087,
+      "brierDelta95": [
+        -0.016192440864595186,
+        -0.004536626098483749
+      ],
+      "prAucDelta": 0.13003599257617188,
+      "prAucDelta95": [
+        0.06843789917023112,
+        0.18741617313343778
+      ],
+      "deltaConvention": "new minus comparator; negative Brier and positive PR-AUC favor new model"
+    },
+    "logistic": {
+      "brierDelta": 6.067986142826098e-05,
+      "brierDelta95": [
+        -0.0013618733845528037,
+        0.0015329175930619404
+      ],
+      "prAucDelta": 0.013378493385255208,
+      "prAucDelta95": [
+        -0.05439157728586442,
+        0.05606435529929134
+      ],
+      "deltaConvention": "new minus comparator; negative Brier and positive PR-AUC favor new model"
+    }
+  },
+  "reliability": [
+    {
+      "low": 0.005,
+      "high": 0.01,
+      "meanPredicted": 0.008074976609196328,
+      "observedRate": 0.007733862031816803,
+      "cells": 9940,
+      "positiveCells": 76
+    },
+    {
+      "low": 0.01,
+      "high": 0.025,
+      "meanPredicted": 0.01441447380846645,
+      "observedRate": 0.03271297662024332,
+      "cells": 3627,
+      "positiveCells": 99
+    },
+    {
+      "low": 0.025,
+      "high": 0.05,
+      "meanPredicted": 0.034498529468365874,
+      "observedRate": 0.061709116322649464,
+      "cells": 890,
+      "positiveCells": 46
+    },
+    {
+      "low": 0.05,
+      "high": 0.1,
+      "meanPredicted": 0.07024839297919049,
+      "observedRate": 0.1291227081856802,
+      "cells": 571,
+      "positiveCells": 72
+    },
+    {
+      "low": 0.1,
+      "high": 0.2,
+      "meanPredicted": 0.1421071938542094,
+      "observedRate": 0.2023487662164191,
+      "cells": 371,
+      "positiveCells": 71
+    },
+    {
+      "low": 0.2,
+      "high": 0.4,
+      "meanPredicted": 0.29228512075719293,
+      "observedRate": 0.47272078191288475,
+      "cells": 786,
+      "positiveCells": 374
+    },
+    {
+      "low": 0.4,
+      "high": 0.6,
+      "meanPredicted": 0.4860174893188321,
+      "observedRate": 0.5863983887433437,
+      "cells": 496,
+      "positiveCells": 294
+    },
+    {
+      "low": 0.6,
+      "high": 0.8,
+      "meanPredicted": 0.6108708241198854,
+      "observedRate": 0.6978285973273932,
+      "cells": 13,
+      "positiveCells": 8
+    }
+  ],
+  "previousVersion": {
+    "id": "ember-day-ahead-v1",
+    "sha256": "3b127ffaca8c46dd3b428a2be4407e49a9e49879b31a254772c6516f433bc062",
+    "originalThreshold": 0.05,
+    "selectionThreshold": 0.017,
+    "comparison": "Frozen original parameters on exactly the same finite-feature new test cells, with identical event weights."
+  },
+  "protocol": {
+    "id": "ember-day-ahead-v2-frozen-20261024",
+    "sha256": "39deafb0b54e6c2918d823c0c13e4df310fcec4c2c759d09669fc0029f3ad0b6",
+    "planSha256": "5e2367ffdbd80228c007fff2db50da925295d9dfb1e13e33afc4645e2c96b40b",
+    "selectionSha256": "1e01daf08e9dda9bcda624e5b285a1111b125cc6b91f2c6a5bb3833c8ba2f026",
+    "chosen": {
+      "leaves": 15,
+      "calibration": "offset",
+      "offset": 0.31293906348693024,
+      "treeWeight": 0.5,
+      "selectionBrier": 0.028579785647558007
+    },
+    "calibrationSupport": {
+      "method": "bounded regularized intercept only",
+      "enabled": true,
+      "positiveCells": 334,
+      "positiveEvents": 17,
+      "events": 28,
+      "offsets": {
+        "7": 0.13593987913504793,
+        "15": 0.31293906348693024,
+        "31": 0.37507062361908655
+      }
+    },
+    "releaseGate": "Default v2 only if new-test event-weighted Brier strictly lower than frozen v1 AND PR-AUC at least v1. Point estimates are only a release gate; no confident improvement claim unless paired interval supports it. If failed, retain v1; no test-guided changes or refit."
+  },
+  "releaseGate": {
+    "passed": true,
+    "brierImproved": true,
+    "rankingNotWorse": true,
+    "decision": "Eligible for default release after implementation checks"
+  },
+  "limitations": [
+    "250 fixed selected events yielded fewer eligible examples; no replacement was made after seeing labels or input eligibility. One randomly chosen target day per event is not nationwide or prospective validation.",
+    "Selection metrics are used for model choice and are optimistic. Calibration and selection are separate; neither replaces untouched test evidence.",
+    "25 km metadata-center grouping is only a proxy for incident complexes and leaves longer-range weather/spatial dependence.",
+    "Labels record retained S-NPP detections. Missing detections are not proof that a cell was observed clear or unburned. No satellite coverage mask is available.",
+    "The frozen historical eligibility rule does not remove NASA-listed satellite outage dates. Live source-health abstention is stricter; primary historical scores include any such gaps and are not a coverage-qualified live evaluation.",
+    "Finalized historical gridMET, WSTS rasterization and live provider differences mean historical skill does not establish live probability calibration.",
+    "Fuel structure, live/dead moisture, suppression, spotting and ignition processes are not fully observed. This is not a flame front, official warning, evacuation or crew allocation product.",
+    "S-NPP delivery cessation is scheduled for 2026-11-02 13:00 UTC. The model abstains without its matching source; another platform requires retraining."
+  ],
+  "events": [
+    {
+      "event": "2018/fire_21459249",
+      "split": "train",
+      "dates": [
+        "2018-01-30",
+        "2018-01-31",
+        "2018-02-01",
+        "2018-02-02"
+      ],
+      "center": [
+        37.44473605088499,
+        -112.86667514434491
+      ],
+      "sourceHashes": [
+        "d58f29204a49e1a1257e8b4b3eb5e21174397df24999c05b0789de03e72b3434",
+        "cfb2d9b6689f639eb033eaec3d8b13bd47f19b4e2ff3f39a1bd35a6516c8a2c9",
+        "75a823c3c6a736660a786f47dd2dfa4939dc8dd5be906286835baec0154cffb3",
+        "186382047cf114187d52b8c6a29b1c23b3d7e07ef9d228b1758c2fc06af8f623"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2018/fire_21615469",
+      "split": "train",
+      "dates": [
+        "2018-03-10",
+        "2018-03-11",
+        "2018-03-12",
+        "2018-03-13"
+      ],
+      "center": [
+        36.98376719087726,
+        -103.09102567790458
+      ],
+      "sourceHashes": [
+        "c5e4686b9ad79a3577ef901b279e0203285719ab3122f3a8267c6b46434ee0e7",
+        "a3c533d58a5921e4b231d5f79b8f78592a6434c08d71846a599cb2964a55d7a3",
+        "c844bc239e915563399ea0fa59583d827a86eda14477dac34bbde4373a560b05",
+        "5b74e21351e9f54e2cb72b6dae0473ccfc52fea37e767a5f34a4a098b5953b06"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2018/fire_21617464",
+      "split": "train",
+      "dates": [
+        "2018-02-28",
+        "2018-03-01",
+        "2018-03-02",
+        "2018-03-03"
+      ],
+      "center": [
+        40.263525428509986,
+        -103.72249658171391
+      ],
+      "sourceHashes": [
+        "09379ebca82eeaa3984f92be01f7f7ce5f2a0b63caff8b19cd695b61b012377c",
+        "54fa811708b2f70de3f26f1f910db1d3a09450732fa24e4762c1ec6f24775973",
+        "e3ac737b3b42dcbe9184aa3e035ce9a055c5951cbdf81547c1296eaad8507edb",
+        "e6d3e35aeb7c8bea96fdee4d2d7e88b2b3e480c304dfedf4c497aa129ee3d220"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2018/fire_21688916",
+      "split": "train",
+      "dates": [
+        "2018-04-21",
+        "2018-04-22",
+        "2018-04-23",
+        "2018-04-24"
+      ],
+      "center": [
+        33.613063404439046,
+        -109.45365041307358
+      ],
+      "sourceHashes": [
+        "229c7246b63b798a2dbaa4b001b1b408b4567f88cf52ad1fadf579bee628a185",
+        "7a0fb66d436ace53127faa632ae202826b56c808e86617a0ecac1b8bdf51e6f9",
+        "7c4027c22da5150f4a83a6ecdbd51066dce281520a9a7e25a24d59a3bfcc6827",
+        "a0c102b70e5229e8a5a9c53708fcf734824a7ec90ceccc56b5c3d3f6866b455a"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2018/fire_21690102",
+      "split": "train",
+      "dates": [
+        "2018-04-12",
+        "2018-04-13",
+        "2018-04-14",
+        "2018-04-15"
+      ],
+      "center": [
+        35.21269168662819,
+        -108.10314170093358
+      ],
+      "sourceHashes": [
+        "aff379f70a7f38090be09bb0e411209cbeca5a411b52ac8a60bc2c3536e862a0",
+        "7ae20f31d910c78899991a0b028918992c1540293d993b6fd2015925b6217b98",
+        "5207f13bed4756f5856056eac430cfeff96a4ec5310c728221cb6f129130df2b",
+        "476a1bb322169094dc7b9e6af4b22b14bda4d9c3ff21d0e517a3af58a4708653"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2018/fire_21804980",
+      "split": "train",
+      "dates": [
+        "2018-06-28",
+        "2018-06-29",
+        "2018-06-30",
+        "2018-07-01"
+      ],
+      "center": [
+        38.13572779673115,
+        -112.88684539006235
+      ],
+      "sourceHashes": [
+        "a78e0adbe693b8648697c4ef443e44d33abb3197302b0590c8bb1f098434e30c",
+        "2f8fa6bd7682609a9904c9905e59ea4ae38ada8dcef07438d98e5b01d4c9b06f",
+        "792c8a80fdf67d19300fa6eb7efe7362d8971afdc89c27ef444064ce911f52b4",
+        "046276219921905efce3ebf0dc1fe66108f1f824f040457489ba204b24067a98"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2018/fire_21804985",
+      "split": "train",
+      "dates": [
+        "2018-06-29",
+        "2018-06-30",
+        "2018-07-01",
+        "2018-07-02"
+      ],
+      "center": [
+        37.518634603741624,
+        -105.16217688645229
+      ],
+      "sourceHashes": [
+        "c75813d611872f21aa53a3349867ae67ed9f8054fe7691254bd8167f5647a6e2",
+        "6157edfde83467393202a7fa61c4865ce5224d2e1cd4005a1805bf14fc3e15c6",
+        "4ebae61a65a0e02bc195ce01bb27e0c2ae93c00c5fcd85e1573a7432af696b13",
+        "9b5007bdbd398771cdf52ef97c407e102ea6af2b5fceed28ad09e4818217cd13"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2018/fire_21889682",
+      "split": "train",
+      "dates": [
+        "2018-07-25",
+        "2018-07-26",
+        "2018-07-27",
+        "2018-07-28"
+      ],
+      "center": [
+        42.66264602531868,
+        -123.14505617018428
+      ],
+      "sourceHashes": [
+        "8ce2a68e6d796d7aa1c2186571886d25b30fbb1766edffe6ebf1a49ec6738526",
+        "cccf5dbd2e5bdc61d30d545f1dd31f1e76e4a099e5b39743080d22321ef1b89e",
+        "28040de4e4acf0e17ae1ba8515c48add3b1d89960ee5c0bb3e04d2f986384fb2",
+        "1a51da5f105cb7f3b9ba2c1644a52c13cb7a9a8b3b1512b6061c7f9eb2f203dd"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2018/fire_21889763",
+      "split": "train",
+      "dates": [
+        "2018-07-29",
+        "2018-07-30",
+        "2018-07-31",
+        "2018-08-01"
+      ],
+      "center": [
+        39.14573180658759,
+        -122.97924374557533
+      ],
+      "sourceHashes": [
+        "17f5207a62488bcbf5bfabadb5f396cd1d76ab276bfca49e331e0b37f4f330be",
+        "dce9d302106fc46fce700ff0a22fcb28701a00f7673949983cdc0ba0cb50489f",
+        "ec72c07b6d84a90641f1dee3119562ea295530fb9cc21e5f72ef49edaeeccb59",
+        "5f661db739db57e928cbcb1555fe88ced1c18282e0c19aa6759e37e388bc82d0"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2018/fire_21890033",
+      "split": "train",
+      "dates": [
+        "2018-07-16",
+        "2018-07-17",
+        "2018-07-18",
+        "2018-07-19"
+      ],
+      "center": [
+        43.177779670998014,
+        -114.72421494239757
+      ],
+      "sourceHashes": [
+        "46edf3b5cd0077bdff0000083844005e625f07577f430037c7c7efbd4208640a",
+        "33a5c04169a978f528e7415c44b8fec91a82380de27d1cbd38f05f2015643916",
+        "07e2666aee071d8c73508c5e5b64dc71ea578cb3fd8daac12d1b8788ad85492d",
+        "30ccb636a4de801d1014d36b86930d56c6b016b360a294f5e9b03e1a3c9d448e"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2018/fire_21890098",
+      "split": "train",
+      "dates": [
+        "2018-07-14",
+        "2018-07-15",
+        "2018-07-16",
+        "2018-07-17"
+      ],
+      "center": [
+        40.88286543185593,
+        -115.67166085532841
+      ],
+      "sourceHashes": [
+        "2bd666b59bff45896546462dd13eb2d6ea77dda4a835c49f6c7c8ebfce5ee413",
+        "5dc580f0936887e08507a5caaae535752dd8647523f3b5553bb527d8a66d319d",
+        "ad0f03aa62cf8557f724206c5b58a4c80a4a73052cb0833197fd00c0092142d6",
+        "fd2b7f4575d627a77787d1f9a92e439639e8599e1c378dcdf5d1eaf550d0a70f"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2018/fire_21890103",
+      "split": "train",
+      "dates": [
+        "2018-07-01",
+        "2018-07-02",
+        "2018-07-03",
+        "2018-07-04"
+      ],
+      "center": [
+        40.76192758476575,
+        -114.42333473724041
+      ],
+      "sourceHashes": [
+        "34a859997427ef7de9364bcc786da70ebc45dfa10bf011d54b782d86ca47e148",
+        "b780004acc6f2f20ea8a7301a9223daaf1ea58524b187a8b6aed5545be1acb92",
+        "8d6a9ebb947b82cfca5f1c0bc014593df820ad9c8bdc4ba55b641a8a0baa177f",
+        "1da6d3a35aa56956c40cd7ddb355ca126bda3d92c03a012d759d375d99af14e2"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2018/fire_21890143",
+      "split": "train",
+      "dates": [
+        "2018-08-07",
+        "2018-08-08",
+        "2018-08-09",
+        "2018-08-10"
+      ],
+      "center": [
+        39.29495727031169,
+        -109.87690896410949
+      ],
+      "sourceHashes": [
+        "a3f7466970156972d97a1499ceb96fdba5f7545cfee08d54163d8715fd404aae",
+        "729f3b9b9c79b852355b3b33af7a9000c6d4e0b82b96c8917c1dac1bc238dee6",
+        "50492dff0b05ca651f670e3c3fddaad1de5547e330a884dddbb87bb36149f83f",
+        "f75c8ac9c66b1f2c91deb780e1fbdc733e4fda7937b64e8d5c28596cf898b851"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2018/fire_21890170",
+      "split": "train",
+      "dates": [
+        "2018-07-25",
+        "2018-07-26",
+        "2018-07-27",
+        "2018-07-28"
+      ],
+      "center": [
+        37.7747705126234,
+        -108.64811337220046
+      ],
+      "sourceHashes": [
+        "dc38c8488cf31043409576c18763aec6744d4b6b933fe549c5ee87c1987e1d59",
+        "d7b8517463fc57673f782506af5697d48ab82e1fffaf9f05b267a6d132ebeb98",
+        "7d315dc71c349fa653565e24d7510f08999ffb5088f5bf437dfdf7700e77213a",
+        "12c5174076f9a52d794aef28c5db49d4bb22b16d014e94c39cd502124fb212e0"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2018/fire_21997770",
+      "split": "train",
+      "dates": [
+        "2018-08-28",
+        "2018-08-29",
+        "2018-08-30",
+        "2018-08-31"
+      ],
+      "center": [
+        41.86125260261101,
+        -121.37073277786664
+      ],
+      "sourceHashes": [
+        "2443f77fd84c0f69f37d16aeb14ae00b384047ef4c44445b3f754ece4a0905fb",
+        "549dcc579c4df33758be1c971e170f3ac5c36e83b6eda46b6bcefec20e4bf341",
+        "300bf04dc98327eaee526ddfbd3b2379473400340cd8089e7a005e68f20cfb2a",
+        "ca494746791a7a4e21a1b76fc9848049d74d15e0e3a15d65b04fd961b29b7374"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2018/fire_21997828",
+      "split": "train",
+      "dates": [
+        "2018-08-05",
+        "2018-08-06",
+        "2018-08-07",
+        "2018-08-08"
+      ],
+      "center": [
+        38.37965149084649,
+        -119.84653193551469
+      ],
+      "sourceHashes": [
+        "5bfa2f37fa927d8a32ba5fd4e57870e863e639f90b4b10ba623cf93026f0ece8",
+        "a494094ef2ed08e66e5dc2ea62f6af481ce053cd7eba887254962d6119604c4e",
+        "994690baae6df54f6af020ff6a6cb3fcea1b44d6f28690db50c2d2bf78694e11",
+        "b9720c9382760e2aa446319b2693b55fd8f19ac62803b905d7e32333009b2b85"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2018/fire_21997864",
+      "split": "train",
+      "dates": [
+        "2018-08-10",
+        "2018-08-11",
+        "2018-08-12",
+        "2018-08-13"
+      ],
+      "center": [
+        33.80418517673044,
+        -117.55973522732477
+      ],
+      "sourceHashes": [
+        "06cda2bf9712b14cc37e49997ba2975be7e7ab78b0dad92585fd8fba6ef3c374",
+        "f4a80ef8968308ae1105738de0dd4efbc87bdcd6392277300bd194346048b201",
+        "8b3f152b1ecf65abae58fc9a609c74b1cd58e9efec4051496f1e5ca028361d95",
+        "5577b824827842b1bb92fef460b4db79ead5600a32ea9ee995a46f532c2eb1be"
+      ],
+      "excludedMissingFeatureCells": 7
+    },
+    {
+      "event": "2018/fire_21998100",
+      "split": "train",
+      "dates": [
+        "2018-08-21",
+        "2018-08-22",
+        "2018-08-23",
+        "2018-08-24"
+      ],
+      "center": [
+        45.063466868535066,
+        -120.27866044548341
+      ],
+      "sourceHashes": [
+        "c5171b557aaf6471f95790606f65ff5d5b5d7d9ccd290c7236a8b25b86cc3b0c",
+        "53443358030550d26842e89672eb4f69e1d836d69b8772d7fcd85cc78f996106",
+        "67eb8f967b5e18b4b5870faf2cfc45ac8ffe85430b509f25b14104bbb18fea66",
+        "f57685cd40514efa15245f1c0a490f8ce459f2b568d1326ff7571295d2bd08a5"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2018/fire_21998103",
+      "split": "train",
+      "dates": [
+        "2018-08-18",
+        "2018-08-19",
+        "2018-08-20",
+        "2018-08-21"
+      ],
+      "center": [
+        45.10172654929299,
+        -113.49462988275555
+      ],
+      "sourceHashes": [
+        "93887caf071f993306f5f762498f31baa390d31c4224c35c795d8d318ef84587",
+        "c6161eb92e02dc2aa6a3e4518d4bea9454ae9665df94c98ba6eb40ae74372fe4",
+        "3c1d0fccf6da3d40a409e7c8754facd93b42d83795a9dd6b6ab239f077635218",
+        "7e9280120bb906f1289fbcab677417379ccb34cc1bb018ecb6574114ca062b27"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2018/fire_21998264",
+      "split": "train",
+      "dates": [
+        "2018-09-01",
+        "2018-09-02",
+        "2018-09-03",
+        "2018-09-04"
+      ],
+      "center": [
+        41.72709322100409,
+        -116.05086242978516
+      ],
+      "sourceHashes": [
+        "f8bffbc08270996e7db13fcfc2ead3d64b222536655f7d044924e565bd9663eb",
+        "1bcc0418331e65a3e6d427b6cc14914c05c23dcff0edab835f3f47693fa66376",
+        "129883ad148aa091e05a6bc4815484bc6fe675807d91101e5aefab3f1b6bfbf1",
+        "1164a06a1ca5127144005d2e68d77657748b51607d169ec2d3ef69c38a7c222f"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2018/fire_21998299",
+      "split": "train",
+      "dates": [
+        "2018-08-30",
+        "2018-08-31",
+        "2018-09-01",
+        "2018-09-02"
+      ],
+      "center": [
+        40.13929236591069,
+        -114.84155311074568
+      ],
+      "sourceHashes": [
+        "fba0fe94d706442df85fb4e3c0ce0e53dc2d885a276aad47ae0f2b094df02740",
+        "554be32a729775a8d68f2109c5af096a3f94e096f37d8ff21de6475a09b51efe",
+        "106838f02a38f5d4401c1d7333b1347fb2c3d0fd8bc1a09e6c9fa6bddcd69ee0",
+        "5508f212349892ecd858be80c7e0f30dcbe49a1b2647b7ad84c254d88f08ee71"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2018/fire_21999270",
+      "split": "train",
+      "dates": [
+        "2018-08-13",
+        "2018-08-14",
+        "2018-08-15",
+        "2018-08-16"
+      ],
+      "center": [
+        48.49830299649135,
+        -113.80205789199712
+      ],
+      "sourceHashes": [
+        "466d4863a5f91f2ae4abd864bd62ccdb4d0fb56f14896a599aea56071f02a9d7",
+        "9b967863a1d1f56d24eb4e9b94cbefe71f9bbeb03fdb67f1c162f8fbd6a03e9c",
+        "ee1af7631dea7843ef8c02ee8459dfa0b7c251e6c74ccb9846da5e745df3846a",
+        "91c993fe8e78e54cdf4bf308dc0203f79995d92d75502800a769d03044a811cc"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2018/fire_21999321",
+      "split": "train",
+      "dates": [
+        "2018-08-03",
+        "2018-08-04",
+        "2018-08-05",
+        "2018-08-06"
+      ],
+      "center": [
+        47.774837020918255,
+        -118.02645595328443
+      ],
+      "sourceHashes": [
+        "ff4e859ddde3b78926d04da0835519879e4a154b3db6b586d78a8e89a8807d3f",
+        "831fdd124910f61ce755b2a36e1b7bc6aeb8eafeffebeeee40e875cfafa6b3bf",
+        "42c3985b8c33c0d5387d7c24caf83ce8ad7ac30ac92fd9f94505952d7871c367",
+        "37ceda329c873e909fc0178ad37ff2807f4a1760fe1f7c68e1ad2ae871b69532"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2018/fire_21999351",
+      "split": "train",
+      "dates": [
+        "2018-08-13",
+        "2018-08-14",
+        "2018-08-15",
+        "2018-08-16"
+      ],
+      "center": [
+        45.05621510311053,
+        -111.86158357250521
+      ],
+      "sourceHashes": [
+        "dfd5af934781764981eccd58a1f425092a73061592c4cb1320881a622dda959d",
+        "dd96e4e4cc97edf8c7ccdd937f59b6598fb7fdbbd870d82efefe0fdbe16cd5be",
+        "4d611a741ed8836732e01e5d2321c2b3debb979be2fef09d67be89f4f08d4a2b",
+        "913b9289d6a988d0a317ea38913a7d8f6c618534752000b8650ba3751415b136"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2018/fire_21999354",
+      "split": "train",
+      "dates": [
+        "2018-08-12",
+        "2018-08-13",
+        "2018-08-14",
+        "2018-08-15"
+      ],
+      "center": [
+        45.07535480680792,
+        -111.8617025647846
+      ],
+      "sourceHashes": [
+        "285a1ee97ed08a8ff39680b9c40766a857b4b468e8073bbe43d22d3c851899a2",
+        "4ebc93273c7d7693e1cff7154938aeded051650ca82d08354d6a224e8b63c514",
+        "1b1a9b08f902fa89a2324ed7af526e38c877e89dcda2b4802017736863a12516",
+        "09c38630802349a84bf946e91db9187baf3148a20a2ee3a544f96d61ae2eaee8"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2018/fire_22141243",
+      "split": "train",
+      "dates": [
+        "2018-09-01",
+        "2018-09-02",
+        "2018-09-03",
+        "2018-09-04"
+      ],
+      "center": [
+        38.39761484635749,
+        -119.7549159948683
+      ],
+      "sourceHashes": [
+        "934d1ee76455bbac180e0c18d4000d81ca8e5d6183e774e0365c1018041405d7",
+        "f059c1542357af257e7524140e8a6d60c81444e087ccdce65c6519ef5787b480",
+        "e1b6301626869ea270c2ee1d0d50b8279d217817c015a9d166baeac2afdd6663",
+        "aae38df0c2b2c79dab5a6d7de420b2c7c8d06cbd31f6a66bef1d073aed1282e8"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2018/fire_22141566",
+      "split": "train",
+      "dates": [
+        "2018-08-30",
+        "2018-08-31",
+        "2018-09-01",
+        "2018-09-02"
+      ],
+      "center": [
+        41.6677689858556,
+        -115.9827011679623
+      ],
+      "sourceHashes": [
+        "18d4d2e34653f4b4e41d7c1883965f52b060730ea29df4474c586c0ecb0cbc9a",
+        "bc748ad393389804d86c97c0a0f28455a23badc7dc4d10d224535d674e726c61",
+        "b5a6366cb193c2fe51b1152a88e1b986453fe1ea9b05d9354b06c30b5f152e2c",
+        "290586dd2b6314e96f4eb91a3cfd98d306c2342ad8014492e758da9011f99c87"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2018/fire_22141596",
+      "split": "train",
+      "dates": [
+        "2018-09-21",
+        "2018-09-22",
+        "2018-09-23",
+        "2018-09-24"
+      ],
+      "center": [
+        39.97521678063388,
+        -111.52667163274509
+      ],
+      "sourceHashes": [
+        "0d7a55751136791eb69c09ff1950026c2668c0410c0a90eaa1244be11ee4b93b",
+        "2e8f3ca640197cfb6899e3208097b6b4909f5dd420bd1e80f570c77767f39d10",
+        "69deddc0ebc33bd827eb48bae0ed37ba04cfe1029d187a5bf697691425469bb3",
+        "90b6690386b558f49de751b307ed814c3363e5c23c49a846791d00c4d435e9bf"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2018/fire_22343661",
+      "split": "train",
+      "dates": [
+        "2018-11-19",
+        "2018-11-20",
+        "2018-11-21",
+        "2018-11-22"
+      ],
+      "center": [
+        39.79437556259312,
+        -121.44025829691384
+      ],
+      "sourceHashes": [
+        "d563f56a65f0ad6ddce73b9f03794ec0ad4dd9638bf31615e66bf2e5e959f630",
+        "7d9445f4ba7b746fdc8edcbbb9e73b3bc817e1ec52a424cc52ca0b33b6f78572",
+        "f51a0494ace81ac908dd3e3238ee7c56f33731d5616d189c2c50b41774854561",
+        "4d98c9429e60004c7c7e76dc58d9d8764546af215bd5840e5b6e1cc97e651945"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2018/fire_22343689",
+      "split": "train",
+      "dates": [
+        "2018-11-03",
+        "2018-11-04",
+        "2018-11-05",
+        "2018-11-06"
+      ],
+      "center": [
+        34.30789888810206,
+        -118.69360458357734
+      ],
+      "sourceHashes": [
+        "32e4ecdb2b1e2528f2161c97578425bfdf30c21b2e618f041ac3c97b7bc547c3",
+        "c96de182573314bb2adfa41c2c88ec74ce213e0834f5b922a3bddd8dee04c1f7",
+        "1a229056cd45aac7de4878dbd923a5338a298da4dfe28d1bd8175aa32101731f",
+        "2a9f34c04437f3764fe90d196be3824efc6fdb1dd44a33f7ea838841f27260f9"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2019/fire_23036860",
+      "split": "train",
+      "dates": [
+        "2019-07-10",
+        "2019-07-11",
+        "2019-07-12",
+        "2019-07-13"
+      ],
+      "center": [
+        44.51837388232533,
+        -115.02282452279168
+      ],
+      "sourceHashes": [
+        "55e61c46fb783f7206f701b331a16c89b16564352ab05b7b9c99d9c25c48d94b",
+        "9b11aa30bdcdeff8a25db559de1b6e7306140d062ce633bc9a33228a91975000",
+        "a593c82fa4c768bfcb2994c153524c8f3d7e2b8709188e261113df0b411f5d49",
+        "3f5ebdcc440ecdf29bdeb55283c8e32896ce3f9b5ebbc05a4f8ea1cff61cb576"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2019/fire_23036877",
+      "split": "train",
+      "dates": [
+        "2019-07-20",
+        "2019-07-21",
+        "2019-07-22",
+        "2019-07-23"
+      ],
+      "center": [
+        41.85934149623702,
+        -116.07511128652602
+      ],
+      "sourceHashes": [
+        "4a3f456ba6e5c322ea3d50e26414fbb62b427149945a70a02bcb77eab2549b7c",
+        "530600e68f2a5d9e63c4835b0a2b38034aaee00a095c8cb0cb2b127bc5942e6e",
+        "8b768ad8c9b9873b2a5728d16c944ac6cb4b16e42ab3584f66408f19b9393730",
+        "ce9b7d2a18fe35c5e6ea7dd6ceebbcf10b4429ad82343468f6334c00759e257a"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2019/fire_23159642",
+      "split": "train",
+      "dates": [
+        "2019-08-14",
+        "2019-08-15",
+        "2019-08-16",
+        "2019-08-17"
+      ],
+      "center": [
+        35.23002048712861,
+        -111.86730359534548
+      ],
+      "sourceHashes": [
+        "0821f20d17c052243b634ab5df7c10789d6294d1af33f9a63b30bbcd9fcce23f",
+        "00c2d6ad0ed2819022b4aad8a6b2d7f0e666c3879a07fc2249693ed9f4a83f20",
+        "a4c356e020be5b951f568e9a3aa85ae12fd896ca0c7d4adb83c8795a3fde9d01",
+        "d273e570a590c1b070429d9c1695ef1e5f664bc06ac6001c5c42e2736e9c3d2c"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2019/fire_23159787",
+      "split": "train",
+      "dates": [
+        "2019-08-04",
+        "2019-08-05",
+        "2019-08-06",
+        "2019-08-07"
+      ],
+      "center": [
+        45.331969580389725,
+        -114.44983047099865
+      ],
+      "sourceHashes": [
+        "70ff29b8359acc0b1a93593cb5691bb658da6f8928b2011781c2a3e361c87779",
+        "97edec8eee486ffdce409923b31d73930488b2547886d1178705dce785350045",
+        "1b5ccc3af6379e6aec8c8d7b364b4fe550f1ddd2abaa310ae9f8212df0cc1afe",
+        "b73ab04d71bcae7bf8f8bf8b4a74c3d1cc27ae05538d8d96ebc4326eb1ed9b0c"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2019/fire_23159792",
+      "split": "train",
+      "dates": [
+        "2019-08-04",
+        "2019-08-05",
+        "2019-08-06",
+        "2019-08-07"
+      ],
+      "center": [
+        45.22162264102912,
+        -117.55275848191066
+      ],
+      "sourceHashes": [
+        "4392490c8817595970c149960093458d1f7b5f44251b1b970927bd347ee26efe",
+        "5696b434d1290e862888526e42024608c521cbccf874b0d1f063c738d21919a9",
+        "a4362b27d7705da413936d771393d78fb2ea28f9e81e99c5a483b9d2061e12ed",
+        "b45484452fa4b7e5efe84073eebe854f42c74dc03202f99c9d4152571e3f12f3"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2019/fire_23160488",
+      "split": "train",
+      "dates": [
+        "2019-08-09",
+        "2019-08-10",
+        "2019-08-11",
+        "2019-08-12"
+      ],
+      "center": [
+        47.60281066225715,
+        -108.08874032801553
+      ],
+      "sourceHashes": [
+        "bd220a4f633d4eeab92edcf0de8ac47bc4664dfde4ceb2170358c9d0e26801ff",
+        "58b2b86f6e45a8bc8fedbc08ab9bf8783dc68160fcf48da9712a98b5eb000abf",
+        "3fd01f3f9a34a80209f89d79b5ccc09fd785ec8431d1ccb75e8afca7bb32f91f",
+        "21af6472f4df64d5cd8972010d105c7688c3272e71401ae9a978167d9b7133b6"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2019/fire_23160511",
+      "split": "train",
+      "dates": [
+        "2019-08-23",
+        "2019-08-24",
+        "2019-08-25",
+        "2019-08-26"
+      ],
+      "center": [
+        42.34400172321575,
+        -106.88726624445209
+      ],
+      "sourceHashes": [
+        "d04bc64f6c7af41cfbfd986eadecad04a460b814866700a3bd45e8d023366e91",
+        "be720c2a8d65b6b2423a70c12a8e1cd28bfaedab7be0dac9349baab726fa9691",
+        "f08f20c208f2f01dab3496a776950aebfb08d8b1678d562e94afae345021df30",
+        "cb3039b626b6d413eb7c96a78fcbe74545fcb30da8b1529b6a1e887d0056ec95"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2019/fire_23300669",
+      "split": "train",
+      "dates": [
+        "2019-09-12",
+        "2019-09-13",
+        "2019-09-14",
+        "2019-09-15"
+      ],
+      "center": [
+        40.08704228692245,
+        -120.59112135715534
+      ],
+      "sourceHashes": [
+        "0b1e62135bd238e45d602e116e9047539f402472606905724247b3b02e3f8d3c",
+        "af89830c7bf31ba7dfaacd82732f649261a88167f6c7efad60912bdafa9b7b53",
+        "631c7048dca58f65cc4778221183e9e39215d6ce759edf79bd1b3b402b2600e5",
+        "a507fa0c6a4ed4b59a5ed0c71a9fca9bd177aa26619c92acd446156f3a2ddafe"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2019/fire_23300741",
+      "split": "train",
+      "dates": [
+        "2019-09-06",
+        "2019-09-07",
+        "2019-09-08",
+        "2019-09-09"
+      ],
+      "center": [
+        33.97284708030223,
+        -111.96904122570821
+      ],
+      "sourceHashes": [
+        "a6b35e2a954b2789b0778bf40fce3ac30c824e1d4f8a28c761a574869b0bdc7d",
+        "4899010da4422014a2d25f3b5dff1725edbdc65b0db2f62976aba99ce916743b",
+        "cb647a4da7c2164ac05bc51fd5a6573819a8cb098dd88fdfb09b11cb845ca318",
+        "4d22c15292740f50000f37484b4507e14ac75bc586fc6ca3b31f839aab766388"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2019/fire_23410607",
+      "split": "train",
+      "dates": [
+        "2019-10-17",
+        "2019-10-18",
+        "2019-10-19",
+        "2019-10-20"
+      ],
+      "center": [
+        35.01452873299056,
+        -112.1126367647382
+      ],
+      "sourceHashes": [
+        "8adb710e334cb8505ca3a3dfb79df694f3db15b35dd37afbba66aaf922990e1e",
+        "febdffde4c4e6e15400a7b9f56138326272933169a55b7632f1a5eff6223aaa1",
+        "5b7bb9775719072d571dcc0cde70999e6d505c1198afe1616de80b82fc2782ac",
+        "71668f71dc3b2368ac62bdb740500b0347615d0ad65d699cda9361f8113de698"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2019/fire_23410720",
+      "split": "train",
+      "dates": [
+        "2019-10-02",
+        "2019-10-03",
+        "2019-10-04",
+        "2019-10-05"
+      ],
+      "center": [
+        46.55369162773516,
+        -119.1906381693546
+      ],
+      "sourceHashes": [
+        "a56355f4e265744ca5ba3d6e3e3776d1d3f89a5260dcb3137cf5c39edc132895",
+        "b43b55a357b2270f734e9b94203a4baabaa5130dc22b2f0a8bc8422613be7954",
+        "106384090b7cf0f7bb6cbb96ea8e8e138f76bc4b5cbb467f90d72fb9d9b695ee",
+        "2b357071e1b0f56709087753569870db1ad428a670787f0310f1d7aa6517af4e"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2019/fire_23493973",
+      "split": "train",
+      "dates": [
+        "2019-11-28",
+        "2019-11-29",
+        "2019-11-30",
+        "2019-12-01"
+      ],
+      "center": [
+        43.46937357862586,
+        -123.81917589014611
+      ],
+      "sourceHashes": [
+        "1819a4681c3565acef28e8bc53f71dd9de425e0cd73ea2f4362fe266033ce8b3",
+        "e7fe429634b746a588da6f73e06a8764dc71f5127c089f3a838f575a75cee263",
+        "bc5f301651154b54db0547cbfea8d689cfa4d536b3570b70490910652b7ab41c",
+        "8102166463d1deadd558fa4f05ea6a5ae61d29d896c40ff2442b73b6cb06adb1"
+      ],
+      "excludedMissingFeatureCells": 4
+    },
+    {
+      "event": "2019/fire_23493983",
+      "split": "train",
+      "dates": [
+        "2019-11-12",
+        "2019-11-13",
+        "2019-11-14",
+        "2019-11-15"
+      ],
+      "center": [
+        41.689081661910244,
+        -111.40249706411194
+      ],
+      "sourceHashes": [
+        "cd5f4ea779e1688f7a53e725556e18031c54bd4d39c9fadf16a518b74f3ef908",
+        "7345d85fbe3f7e12d87fef056a8d886a7996468f26761c6e2dd0566890e10abc",
+        "52e67c1ccaa4dc32b465149579f8ec40053beaeff96d018a5eaa86e3cce0492c",
+        "9364809eedf979a9023f4caae0023ce16a09d755b67c602e1ea3c8456dcd2984"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24025605",
+      "split": "selection",
+      "dates": [
+        "2020-05-30",
+        "2020-05-31",
+        "2020-06-01",
+        "2020-06-02"
+      ],
+      "center": [
+        34.16628869482793,
+        -112.13197415005143
+      ],
+      "sourceHashes": [
+        "90fe5f2c6a60ed72ee2cf53767dabc1b922d58bb87a3df808be9dda284671a15",
+        "611f49aebf83eec9c57e29f95b097f0f9afdac411e9c5bac8e88ccb4f00c7457",
+        "81c3b5861b65f731d9fc87e584b9a788bc8f9ffacad6291b21f8d708edc4cf18",
+        "65cee3eb35b270741f36bfa307d3b6a0e6381720873af5f1eea0a01d19494340"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24025610",
+      "split": "selection",
+      "dates": [
+        "2020-05-25",
+        "2020-05-26",
+        "2020-05-27",
+        "2020-05-28"
+      ],
+      "center": [
+        33.421462349396435,
+        -110.8751184685642
+      ],
+      "sourceHashes": [
+        "ff949d1ece66e29c523bc46433fd1a32017098946f44b8a763ae7dd8e230670d",
+        "76dc6da633399a65871b05ff141ffdbc95824411bf928781085a7e837a78d141",
+        "e75031b3ac8354778a97adcd2b57c578bd08f33dbc31802dcd91433392cb8574",
+        "4d437a8e2e218591c7e53518ae8785e5836ba5c5b3f490878292dbc714ea62ff"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24103571",
+      "split": "selection",
+      "dates": [
+        "2020-06-16",
+        "2020-06-17",
+        "2020-06-18",
+        "2020-06-19"
+      ],
+      "center": [
+        33.728507085323834,
+        -111.36323092155197
+      ],
+      "sourceHashes": [
+        "34b5f10496648b59be8cae576e10eee58e6e8cd3ec845729eedcb327e5299c47",
+        "0d4dedc33fe6a1a996666108e7930b40476e5491e7573717734c39d99da53111",
+        "8bfac33662502dc4e1fff11db8d4b2dbc628d3f098c8cd26d4949bc8729e5516",
+        "117ce38e802ff13bf8b8dca7fb11c8e30053b1b4609a67e26733b28c9f32425d"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24104639",
+      "split": "selection",
+      "dates": [
+        "2020-06-27",
+        "2020-06-28",
+        "2020-06-29",
+        "2020-06-30"
+      ],
+      "center": [
+        38.36681312367833,
+        -114.20626247274069
+      ],
+      "sourceHashes": [
+        "2a538ce8c1485e2c0c671bcd8a4e07734bc7238790b3a1e52913d0b9ed58fa65",
+        "624aa367f0e93cfc984552cde58370ff4841459fd318a652501be7bcc296c637",
+        "f458ac6ed62032fd598c6e1f2f1cbf64df2c86c7adf0cb2990d6e8ab00caf001",
+        "9f9029340059821e752e4343bd0c7dd19352824f473c68a68c09936d9ce863e1"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24191384",
+      "split": "selection",
+      "dates": [
+        "2020-07-03",
+        "2020-07-04",
+        "2020-07-05",
+        "2020-07-06"
+      ],
+      "center": [
+        37.22976977077269,
+        -121.75807864360885
+      ],
+      "sourceHashes": [
+        "78df2080be65eb49399a88bd7e45e6d039099c4a3d523d9929e62af3823cd9f5",
+        "9345b202629abbdd7544a31d9f0ecb8597e2e82af473428e3b6df9a5e261ec96",
+        "41e87da600644b4745541a37ef59d3299cc0171681d965958a3c5b427f3a8d48",
+        "8a6ae092255b8141a16cefbc884f8bd29fac5da4c5326e6b463832b6a4b99cd7"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24191418",
+      "split": "selection",
+      "dates": [
+        "2020-07-30",
+        "2020-07-31",
+        "2020-08-01",
+        "2020-08-02"
+      ],
+      "center": [
+        34.150449121626515,
+        -117.02993525142077
+      ],
+      "sourceHashes": [
+        "d908e2f76c8284dca52de900917045add664940f6648683eb918b922eed21203",
+        "4e0c5ac5a75b14d18debac050b5ebc2724d4ba9a260ffd78b44f00ac578f629e",
+        "85f5b08b23e23e5486e9cf37a2f417411873fd743981af158309cf792ba1da8f",
+        "e1094254999b16c695eb57a76a8a40299b8e06ebdb31f2bb977b537e3d40ae9c"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24191741",
+      "split": "selection",
+      "dates": [
+        "2020-07-15",
+        "2020-07-16",
+        "2020-07-17",
+        "2020-07-18"
+      ],
+      "center": [
+        40.823214871006975,
+        -114.25654466056746
+      ],
+      "sourceHashes": [
+        "7e2eb0c5fc3f0dd23aba1ef2c2b04b8c3be8d9bf366a943477ead27ba6a329c7",
+        "d71fa14a00081213cf2a0198cb0b8a502f0e7a97f2cf5a686b0c7db506616800",
+        "f07da944c8566bdd276a40c7392ac7a3e7b3ed4bea3ab596ac9a6bb6e87403f9",
+        "bec5ed6a448783f0d7e2ca41b7784f6a5c377f24f6b85c15dd880aea8fe19943"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24332592",
+      "split": "selection",
+      "dates": [
+        "2020-08-26",
+        "2020-08-27",
+        "2020-08-28",
+        "2020-08-29"
+      ],
+      "center": [
+        41.13060566067686,
+        -120.04188266009784
+      ],
+      "sourceHashes": [
+        "5bce8852dfe489543bcafcc2582224028b29dd705a5bfacf2889b483218902dc",
+        "af7752ba107ff4d8f371c56086ce92a192b5ba9c47ca0676cabfd05ddf47bd9d",
+        "28aec7e8026a693fc0a03a539680f3ffe239e9163f5afa72a41abec26ca501e3",
+        "bed9e94f482f1b9d8a050ad575c8e58f9c998297696df16ac86f3422ac7d687a"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24332647",
+      "split": "selection",
+      "dates": [
+        "2020-10-06",
+        "2020-10-07",
+        "2020-10-08",
+        "2020-10-09"
+      ],
+      "center": [
+        39.82673633488628,
+        -121.17898158062438
+      ],
+      "sourceHashes": [
+        "ccbc62d9a48295aed30a444d8ea5c5b625357e02ea43a6b7a6189e24a817fddb",
+        "22ae15e99c929a670d99f63457834a830ed20f9a80df47dccd8e3bacc9923dcd",
+        "36d37cc62b0b63a7135cabc589fcd7a7ff40965057bbdaec4f0d0fe0b591b5eb",
+        "be09bc08a43647c9ea0892bf203a803b9321b500543236a2652c6705e3285294"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24332700",
+      "split": "selection",
+      "dates": [
+        "2020-08-30",
+        "2020-08-31",
+        "2020-09-01",
+        "2020-09-02"
+      ],
+      "center": [
+        38.62880546997566,
+        -122.42852129643401
+      ],
+      "sourceHashes": [
+        "de2437a0180d0487fd8638a95b9ee563e5944007fdef820c325a7d2cc58232af",
+        "23acf7463b4c8158f62d93c513e468fe8aa686f5a688912a45583c76bef0892d",
+        "7cca2a7b5eaacb1d899908a5c88850e43f3a1be151614771ed99d6cbf0b700e0",
+        "02752e16d3df9a8f86895dd9f4bf286be3f004cb417db4f9759f42f40ae2c856"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24332731",
+      "split": "selection",
+      "dates": [
+        "2020-08-19",
+        "2020-08-20",
+        "2020-08-21",
+        "2020-08-22"
+      ],
+      "center": [
+        37.628602592744166,
+        -120.38332397849233
+      ],
+      "sourceHashes": [
+        "ce27ff63b849c469cf5add4f3027b1c9c54e115e51ed31e440a72344f046e27a",
+        "96bffd768cd73f3c706d17f50eabd63d8ef9fffe16db976007bd603bf5a7baa2",
+        "c0a9cab92a3ffdb97a5f926a0dbaff89c518cdd7be3a9703e707ab87ca0ef7fa",
+        "981892909b67ace63067fbbf74a3b9ddb816f517c38056263399a1052d0c939e"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24332746",
+      "split": "selection",
+      "dates": [
+        "2020-08-31",
+        "2020-09-01",
+        "2020-09-02",
+        "2020-09-03"
+      ],
+      "center": [
+        37.35439444173948,
+        -122.1071551707753
+      ],
+      "sourceHashes": [
+        "2f166b6a0d2bfad728c38769552b82fc688af7fd13228a377cff6ee8d6b4dee8",
+        "1301b64c1676e2b152201ca56a34bde94f9e7b33a228e0c7e20c96a5c429a67d",
+        "2540d627277ac59bafc9430591c87e0a09b87915d652730163ee7cd593a7f788",
+        "0f10c9b20ed7db25311e0cb84d23f2bd395941ce4bbd77bb74cfaf3792f1f9af"
+      ],
+      "excludedMissingFeatureCells": 10
+    },
+    {
+      "event": "2020/fire_24332760",
+      "split": "selection",
+      "dates": [
+        "2020-08-13",
+        "2020-08-14",
+        "2020-08-15",
+        "2020-08-16"
+      ],
+      "center": [
+        36.91166313739489,
+        -121.53645514314749
+      ],
+      "sourceHashes": [
+        "91fbb07bc2dc580a6c3ea8ea02846efdb149af10a46f68b7cacd7c6ab7ac73e2",
+        "fb86d1249870f8b870601fcc1152faede10d77c53dd6e829c0ff058ebaa36c1a",
+        "96245f0aa7076afd82d309b74114eb93898e6639da00807a92ccbdbe7caa88bf",
+        "dd38a3195726557596c35cfd9a074a3f2b4071495d2618fe11e47224b0d2baef"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24332761",
+      "split": "selection",
+      "dates": [
+        "2020-08-17",
+        "2020-08-18",
+        "2020-08-19",
+        "2020-08-20"
+      ],
+      "center": [
+        36.50859259856577,
+        -121.64182622908069
+      ],
+      "sourceHashes": [
+        "b8a83cc5234ca84f5fcd2e5d2b4a8757ad5a6fc0de32e791a49e215bfaa904bb",
+        "51f2c643a30d5e0b0bb16abc737b5118c9b98438ebd465cb32bf5ab3aab15132",
+        "85e303ab6fd5fcd05815ddfe0a872af99167aea2437fbfd4569cd7f9ad43df11",
+        "3965751ec618ca406dfc6a01ef31b8a5f14ae36e9858fc75a88c4bbeee8f100d"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24332764",
+      "split": "selection",
+      "dates": [
+        "2020-09-16",
+        "2020-09-17",
+        "2020-09-18",
+        "2020-09-19"
+      ],
+      "center": [
+        35.98561158683196,
+        -121.37910251438004
+      ],
+      "sourceHashes": [
+        "8f0f159e535bf6f6a46497a9a96c8ca50f49fe144da352e67a616ba779e9ae28",
+        "ad3ec3871293ba473a5336a155680ef7e9783d96d069b2d24b116829c298df94",
+        "8077362d9b1f12e25c3b0c426fd6f16fceae7540ecd2b678b4568791c4e782ba",
+        "26b0fbc66bf7aef40481de32db9c897ecfa9cd1e2f4885b86494a1ef2ed12bb4"
+      ],
+      "excludedMissingFeatureCells": 8
+    },
+    {
+      "event": "2020/fire_24332808",
+      "split": "selection",
+      "dates": [
+        "2020-08-22",
+        "2020-08-23",
+        "2020-08-24",
+        "2020-08-25"
+      ],
+      "center": [
+        33.422601281798194,
+        -111.40924538930376
+      ],
+      "sourceHashes": [
+        "aebfec654caadb1b099daf5dedb72854d7d92d0fae50fc3d4d1c80a89f57f7f6",
+        "6e7f522e4ce7e36b41511a629b5a3fce931df621dfa8fd99c19746b209bee5c7",
+        "f173508de9b9352124cb6abe54207bf921c9eaf3772e8d9751c0550e2eb1e8d2",
+        "af32e8d714e2731913e3e3a961f24f6847b5c061d6ad65a1eef40febb24d05f6"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24332939",
+      "split": "selection",
+      "dates": [
+        "2020-09-02",
+        "2020-09-03",
+        "2020-09-04",
+        "2020-09-05"
+      ],
+      "center": [
+        44.762873382434535,
+        -122.02999882173292
+      ],
+      "sourceHashes": [
+        "48f6867151f2bd9c3cc2fb900be5da2185c4549bfc24ed8f8d82942f7a1c941b",
+        "2908ed254202e22417280c4d3f9cc5e9cee3cf49ea3783c4da6030a1297be22d",
+        "8e9f4af5ac660e796823c510ba6f55fa1f1e63c476361fd90dd3fa016ea27ed5",
+        "6c1ada717d2db310cb5484f25648b0cf5d4079c07efe79bd98a0cd20068b247e"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24332949",
+      "split": "selection",
+      "dates": [
+        "2020-08-23",
+        "2020-08-24",
+        "2020-08-25",
+        "2020-08-26"
+      ],
+      "center": [
+        44.629386386579874,
+        -121.61368020505014
+      ],
+      "sourceHashes": [
+        "465ec33230220ab6911d6d710dfdb2094b578b762e8497f5e2e61ed8c079aa1b",
+        "8cadb523306a20f4ba41173f0fcb109d0d3ecb59a17bb2ef3a97b33e2966a3ab",
+        "33ed63e91c5b50c861064ff8ee6f05c915cc7a4e526208e5bff5bbe5c5c84339",
+        "b5d0bc3bac9974091f7de58780edda23e3e6019c75269033db076c92e43b1164"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24333039",
+      "split": "selection",
+      "dates": [
+        "2020-08-18",
+        "2020-08-19",
+        "2020-08-20",
+        "2020-08-21"
+      ],
+      "center": [
+        39.44516342670885,
+        -108.61896332754709
+      ],
+      "sourceHashes": [
+        "e8b6997ba41a6477a45ad2a4808336f3dda746ee82f197c5bf2a60a02053aabc",
+        "c679b0d815de3916c21967d0cb7ab227bca632f7b4c40768d7f4261fbc8657d0",
+        "26ed5e41a042e62821a7ad0b61cd3e4d9f61e29880bf3558fbc45a409d9d569e",
+        "0de8fa7d8f07def5779088a747aab0a63dfc2eccd4b6df2f3f30a93c95049a05"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24333270",
+      "split": "selection",
+      "dates": [
+        "2020-09-02",
+        "2020-09-03",
+        "2020-09-04",
+        "2020-09-05"
+      ],
+      "center": [
+        46.31629648506672,
+        -108.39938450936852
+      ],
+      "sourceHashes": [
+        "4828e6f46fb8d333788847757ed413d6919ade3a0173976665b0cf97b9614355",
+        "12ce3122c3e7272258938cf3436c7a4555e77581db8f23ee60ad5d4d4800cff8",
+        "b3c8e44f0cd6a8644a5d8277c8b690ba3d7932b39d893078651167aa007bf4eb",
+        "ed6f49e779092567b5fe584311ebf44532c7197bfc2724853014506f3e702338"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24333277",
+      "split": "selection",
+      "dates": [
+        "2020-08-28",
+        "2020-08-29",
+        "2020-08-30",
+        "2020-08-31"
+      ],
+      "center": [
+        45.637384626475125,
+        -106.30693300066838
+      ],
+      "sourceHashes": [
+        "9b2284e826356ba552da0c28ebbdf635c3c746de321cbefd392767c0065edf12",
+        "4f1bdd0171649383a1281f9e43b9778290a5b2db45af4fc7e6500006cc71eac4",
+        "0e02e467c029e4dad793f6667e06bd44b1a4bf596c0c28201c837f0d829e3864",
+        "37a615f71f198930323515883e5970bc29c832bf80dce7a78a77b65ce43266de"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24333285",
+      "split": "selection",
+      "dates": [
+        "2020-09-05",
+        "2020-09-06",
+        "2020-09-07",
+        "2020-09-08"
+      ],
+      "center": [
+        45.65510258786289,
+        -106.20024860697606
+      ],
+      "sourceHashes": [
+        "f3beefd47cd1fb6e78b71870156b1492e2380c90a78b3bd99b5719511b664e1b",
+        "65f1a36b78776891b33560bf632e56cf95c6b39df9873613441652ed1b2f2a6e",
+        "2f9da20e4b82195c232717a54c824b51e58f3404818873175d119ccb47d561f3",
+        "9c3dcf3429a1058e6c19674e35e97820889658b3feb67dfc39ada1747e051723"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24461607",
+      "split": "selection",
+      "dates": [
+        "2020-10-01",
+        "2020-10-02",
+        "2020-10-03",
+        "2020-10-04"
+      ],
+      "center": [
+        38.53190444010656,
+        -122.48996925044337
+      ],
+      "sourceHashes": [
+        "9d7ff8980cd564740399976e5db9a4c090f23e8b809e500015b0796d2d159111",
+        "8cc39ff3d402f05ef0d08668e31deea8390b790edb5764bfb14d172211060fd3",
+        "9fbe586dc683a797ad9498b49b2d3fd9cabae16a3962e1ef686e77cc4f643786",
+        "5e60641e1312aab543fd011a27499c0b7dce91649dcc0966560ee88c81dc7cff"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24461618",
+      "split": "selection",
+      "dates": [
+        "2020-09-10",
+        "2020-09-11",
+        "2020-09-12",
+        "2020-09-13"
+      ],
+      "center": [
+        37.67645827581068,
+        -119.48820437916744
+      ],
+      "sourceHashes": [
+        "895e55b8ff696c7a4f4e003531185c6db287102ee2e5dff369cd7a4639a83fd4",
+        "1595ca0443cdc324bf548a4694db76f5d68a2ce1c1cc1a3ed67be47296c660c9",
+        "d980986bef864df312568d48586058d0bb9baa741a7e86beb8cf0eaeb2fdf868",
+        "185a019dcdedc607d40aff2781eaf6b9a205a62e82c1a4653d42358ef03d2216"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24461623",
+      "split": "selection",
+      "dates": [
+        "2020-09-20",
+        "2020-09-21",
+        "2020-09-22",
+        "2020-09-23"
+      ],
+      "center": [
+        37.30363762929468,
+        -119.2607218529099
+      ],
+      "sourceHashes": [
+        "9a165bf8e7e3751a010841b65d1af212e1b4a632a681ecdf3d00042ee62d4fca",
+        "9232ebd9d574b332c2625e73c78cbbae21051937334ed789cc3a9d3f25d52c0e",
+        "3315332033e197a8ad215f1b601128cdb5724fc2aca743d5969dcbc069e55e30",
+        "cc2c109ed777019ca92eb1c6d9a587a2beded51aaf6661f1a26b8a41a1ff3040"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24461780",
+      "split": "selection",
+      "dates": [
+        "2020-09-08",
+        "2020-09-09",
+        "2020-09-10",
+        "2020-09-11"
+      ],
+      "center": [
+        34.06027997355107,
+        -116.95940941367603
+      ],
+      "sourceHashes": [
+        "433ab1d1d2af1603338e791c94e3d1e0174dcd2f26537d9ca6b57a3cf6439500",
+        "b54d7495dd12c2e94254909402f79b92022ed9fb23c7da1fcae36a5bcf07688d",
+        "5014ca5a18e3193d3f3d7dd872ef6717f7b1ede231b65d6b5a9260f5d34d8434",
+        "5a66cc6fe94528a05ed013a662232b3c9ef9ffd9ac3933f3b2a28916044c5fcf"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24461996",
+      "split": "selection",
+      "dates": [
+        "2020-09-07",
+        "2020-09-08",
+        "2020-09-09",
+        "2020-09-10"
+      ],
+      "center": [
+        47.60294177704937,
+        -118.54552051228279
+      ],
+      "sourceHashes": [
+        "23811cae852c03e73657bc5791aa8045a0c2c395c1083d2ea760292e2066912b",
+        "60ad52abf877e835b86d7cea036ab4aa2cc77e9a9f02280ac02ce48a43798c33",
+        "269e52491bdc2686e361d035f343b133cb61b521301756ff51dfd182e9c76783",
+        "cc1790e17693a6c6e5c64f233e0f3b9c0eea999164bba2655351eddb1fb83b01"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24462212",
+      "split": "selection",
+      "dates": [
+        "2020-09-07",
+        "2020-09-08",
+        "2020-09-09",
+        "2020-09-10"
+      ],
+      "center": [
+        45.886293639066245,
+        -122.16539127274562
+      ],
+      "sourceHashes": [
+        "e93dbc9960fc7467fc08c8dcee3d78f1607eaec178e7e27749e8a267e1508290",
+        "84518022378cce8e2b0f9bc069829b3eaeaad6fe75e9cbfe75e7da8f3dc77f24",
+        "ab5c98af3540b802f3ef8984581e2a6f882e0363826741182c216db8b5320423",
+        "e7b3979afb2af8fdd551b0987c327b2feab87e33f11805d91a82b26606045d54"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24462691",
+      "split": "selection",
+      "dates": [
+        "2020-09-10",
+        "2020-09-11",
+        "2020-09-12",
+        "2020-09-13"
+      ],
+      "center": [
+        43.20014993905669,
+        -122.14044683556737
+      ],
+      "sourceHashes": [
+        "3048349c559e1a312c3924c170cd117b66b2490c091ed0d457cd53daa929ca38",
+        "d976f01351839af6d6079b57960de5b701cf00881b412f4c34f32f5dca09af33",
+        "17f4607b06ea087988771c2f35c91c51dea970b7e73bb34b23523b8dfc328d50",
+        "0ab1cd5dc8eb4ff6eff91913c52042d421a86639b23289714b8115f575025c6e"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24462819",
+      "split": "selection",
+      "dates": [
+        "2020-10-10",
+        "2020-10-11",
+        "2020-10-12",
+        "2020-10-13"
+      ],
+      "center": [
+        41.05099157262155,
+        -106.20861154912294
+      ],
+      "sourceHashes": [
+        "43430f17c830be46ba43fb8a02f6aa55fa3a1664281f76d37d02f799ddfa3465",
+        "09126a9ac51ae724cd34ca51ac97b83ab66c0c754789ba26faab8792c2c5ed18",
+        "6f0630a659e2587bbe2b49a273f16a8a5c44509456888f1422073bad61157e99",
+        "e15ad04b2054ceb6033f02db996bccdaa4092857a3c89d1605f8dea84a32ed74"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24604435",
+      "split": "selection",
+      "dates": [
+        "2020-10-12",
+        "2020-10-13",
+        "2020-10-14",
+        "2020-10-15"
+      ],
+      "center": [
+        37.493791461448176,
+        -119.27328170734168
+      ],
+      "sourceHashes": [
+        "71fb6d093baede481d48dc11a245de14f77c81c4e720291fc444d3c4bbafa174",
+        "d6f7d8dc5de295c8b879d579596dd5f46e93ef0e89c2b94d7e809241ad80e520",
+        "06550bd881d95200c040964f01278b7fcdc4564cb4449dcaebed746c0de874d3",
+        "0834c11f5ed314e5bdec0b5d8a45fcc1048c3e2d2b36a9eb658359fc974d4849"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_23757522",
+      "split": "calibration",
+      "dates": [
+        "2020-03-05",
+        "2020-03-06",
+        "2020-03-07",
+        "2020-03-08"
+      ],
+      "center": [
+        40.24731903689088,
+        -104.90689291128277
+      ],
+      "sourceHashes": [
+        "8193da5286f5e0d6683eccd9fa78d9125975f1ffc4f8d102bca76bcc813148ed",
+        "93ceda3d098c709d3c286c97e71ae686b7e454779153f916bf92f1ddb659d493",
+        "c149e1c5ec3dc1791760a10a82afbc6bca3ee9730c5fcfbfcb4762866b7356fa",
+        "a4a33725f5813eb0761a8a978c10040f861873c4c5586357f36a8d1769d6bb02"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24027563",
+      "split": "calibration",
+      "dates": [
+        "2020-05-26",
+        "2020-05-27",
+        "2020-05-28",
+        "2020-05-29"
+      ],
+      "center": [
+        46.57919212913459,
+        -119.80184975991449
+      ],
+      "sourceHashes": [
+        "60a9f173495e786a5e9a0323a4e1f4010325a6b6379c8a631a24757ef95e0cd6",
+        "22ced7d292024d015fd3546d76a0decd73e667373138e466c75d2fcea179a511",
+        "587fc34cc48efa840d7da86af74d7e1d41cde4afa5cf7de5b995cdce2bead609",
+        "843436565b5ace44e3ea83150f9b58472c1270050d5388af6a11212f15c11003"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24027570",
+      "split": "calibration",
+      "dates": [
+        "2020-06-02",
+        "2020-06-03",
+        "2020-06-04",
+        "2020-06-05"
+      ],
+      "center": [
+        40.917317550219614,
+        -112.7353191861016
+      ],
+      "sourceHashes": [
+        "94b37ae0933355003c7fbf0db83d9a9c4789940d18e8e41e489e49ba4da5b70e",
+        "d40b5b962f5f18b4f93642b7f960dd2d72f568dab0322bc4301cc49bf377ad3d",
+        "7de9dd54ea4df698305748ca214299028eca5d3945db269d0fb843c260c9272f",
+        "022080ab2ca0ff3dfa7a8fbe192c039ee3e798488abade4d4dc8129774edb286"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24103582",
+      "split": "calibration",
+      "dates": [
+        "2020-06-14",
+        "2020-06-15",
+        "2020-06-16",
+        "2020-06-17"
+      ],
+      "center": [
+        33.44680205617681,
+        -109.31003968769195
+      ],
+      "sourceHashes": [
+        "e6e03e59ab73f06ce7d8d40178173829dc65c6e68472b5ee7516008ee94fdbde",
+        "24d635760017b9e39df20dcc67a08a2d4863f3b59ce1fe9a57d8240cd7142577",
+        "b39054da3c3befabfc26867eb4eea749a6041f6935d0abebe51eb8eeef11adc2",
+        "15dcdda4532f71d8254b22ba81637e9888c11ed9a437e220385516841a74c724"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24103590",
+      "split": "calibration",
+      "dates": [
+        "2020-05-31",
+        "2020-06-01",
+        "2020-06-02",
+        "2020-06-03"
+      ],
+      "center": [
+        33.7799322730833,
+        -117.47595352222777
+      ],
+      "sourceHashes": [
+        "27ec8a440b5e850e71a9f4b49c40008a2aebac072cb8ea992b163485016f0cbe",
+        "eb4461f362788bd59780a379e6467aa919b3389f70770be3b183587460c169dd",
+        "28f0e842e0936cfc52c5c8ded2b46500fb50fd1800d4e87d194de767d97037ce",
+        "339f8769dd4b84171c019d21806381855844e445b98d46dfd4381c03c55bcde4"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24104628",
+      "split": "calibration",
+      "dates": [
+        "2020-06-28",
+        "2020-06-29",
+        "2020-06-30",
+        "2020-07-01"
+      ],
+      "center": [
+        39.428411821654734,
+        -112.22550967302922
+      ],
+      "sourceHashes": [
+        "a221bba9afbfc100324073b78d20bbf16f1c64edea5fb759aa55e4228a87efca",
+        "05ccf2eef3c650f899b00c0aaee312692e51757e11ff13601e8f6e169f2d4eed",
+        "9a33cce907aaf1549eb6a45e5f66508cc8f8868869c96596efc5578241223206",
+        "524000501db80b451b18528d2337c2f573428a1e80b56c00b7628b07e339b487"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24104674",
+      "split": "calibration",
+      "dates": [
+        "2020-06-18",
+        "2020-06-19",
+        "2020-06-20",
+        "2020-06-21"
+      ],
+      "center": [
+        33.56856138062544,
+        -107.4182989698654
+      ],
+      "sourceHashes": [
+        "43e4a67b57ce1371221458fe7867b98e6b661ed553915d0fd78b47f2ac21eca3",
+        "7d2ff0edc4883c76aaba5a74077a03a65e0b1992f267d9a3fd1fb1ae9ad7fc1a",
+        "004bb80fea9ad1311ac7ba9144fd89c223d5a944908b16b7622c675aff0233b3",
+        "9af6edb862087d8ee86c599f7d380eeecde6e241683249d2faec9ca077a7d981"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24191357",
+      "split": "calibration",
+      "dates": [
+        "2020-07-23",
+        "2020-07-24",
+        "2020-07-25",
+        "2020-07-26"
+      ],
+      "center": [
+        41.15847928684867,
+        -120.8856191554693
+      ],
+      "sourceHashes": [
+        "f21cd4f76272ee54ff95bc68be9322140ec2f3b88d7618f58d8fe850b5544be1",
+        "6d5f8bc3cee1f1281b82a4dd8eaf061e35e59270a4a81438161aff730802a95d",
+        "060f5096a21d1bf747533714b1918f33c7d9bafd9ef3789fa6e0a564dc66b117",
+        "396cff5020aab61ab9870ed10ae5ca55974d0036040ef2807cd4d63eb3239742"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24191393",
+      "split": "calibration",
+      "dates": [
+        "2020-07-19",
+        "2020-07-20",
+        "2020-07-21",
+        "2020-07-22"
+      ],
+      "center": [
+        36.211672389309605,
+        -120.63894872410908
+      ],
+      "sourceHashes": [
+        "3821dde2cab6c3951e248a4d840c759430a114668f30e1de7bda59d3fd380b55",
+        "34d30396aaabe9b9f0aea8963c439f1a7245a631cd7d0dd04fc610d52eb86353",
+        "b5b0500de2169f840c4660eaf728da8e321f72da5825ef1e743455449d36f4e2",
+        "5421324107f6e26b940db7a9d14ff53038298beab67d17f2ca150f2990b7adb1"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24191395",
+      "split": "calibration",
+      "dates": [
+        "2020-07-29",
+        "2020-07-30",
+        "2020-07-31",
+        "2020-08-01"
+      ],
+      "center": [
+        36.01975113029518,
+        -117.45833381449512
+      ],
+      "sourceHashes": [
+        "eee703dbb27b2f99107e739b9f31fc5aece1f0390073f23237bc81acb005f004",
+        "880337a536ee9ecfe6beccdc1a23dd73efe8818a368cc9144ff95a98c8244b96",
+        "31bb09ae65f2bddcc82a6b1e58b365b05b25b95607ad5c332150697da37a4a71",
+        "98b31eb7c88ab0fa8f1088fa8232ab898510854e89126ce453f470c849e4ae2e"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24191411",
+      "split": "calibration",
+      "dates": [
+        "2020-07-20",
+        "2020-07-21",
+        "2020-07-22",
+        "2020-07-23"
+      ],
+      "center": [
+        34.29987104914136,
+        -111.81472764949564
+      ],
+      "sourceHashes": [
+        "c3c9bce50b9f8ec0dab51335a42c6d750d94d5918168f06667a772c4d863453b",
+        "8784e89c6b6befe449ce86267e83412d4e5a94f86bdcabce270cb71ffd6129de",
+        "790a61580fa344ab6bb8e59df81d89f6fc8e10aa27679cb81d9b7ded41e47a22",
+        "bf9fc55014d976ac1dadd683e78366fd01e32d11de3a3483c4a338f878073369"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24191756",
+      "split": "calibration",
+      "dates": [
+        "2020-07-14",
+        "2020-07-15",
+        "2020-07-16",
+        "2020-07-17"
+      ],
+      "center": [
+        37.97157111975667,
+        -114.0170847755721
+      ],
+      "sourceHashes": [
+        "002fffc9dc8f5f4d986ec336d894031883d2ec7fee42f7e11bd728533d249cb1",
+        "5cbe9f3cfb2fd7a213329edb9b48b30c98c2b49b0469486b72e176786f7f1114",
+        "adf3c88926e520c93cea7b668038233f043109a622e591e4a844ea9fa3934704",
+        "5c24bd38c3bb14456500f6edc4a329ba44d5988003324dbd3d0789d82a176caf"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24332768",
+      "split": "calibration",
+      "dates": [
+        "2020-08-20",
+        "2020-08-21",
+        "2020-08-22",
+        "2020-08-23"
+      ],
+      "center": [
+        36.05401774416914,
+        -117.58900491476622
+      ],
+      "sourceHashes": [
+        "5b718e30421f8a0846a07f7ae68943baf9cc6df22cd351f98ce54a59b408010e",
+        "7ee19517a00e474b784daf811973aafc38b93f83facf04aa03a8270ed4e9cc94",
+        "2171fd11fc1470cb656164a301672ea9ff76c796de0c59cfc0b297b11c8eb5d2",
+        "3c88e3796f0977860d6026f15a56262957a11c9cbeb6b67808e816ee4faba881"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24332791",
+      "split": "calibration",
+      "dates": [
+        "2020-08-09",
+        "2020-08-10",
+        "2020-08-11",
+        "2020-08-12"
+      ],
+      "center": [
+        33.97322383896323,
+        -118.03904307012255
+      ],
+      "sourceHashes": [
+        "968e768b5e3154966470f8a688dd2831919f4dedf056c2df3b8f2c06b6026756",
+        "fcf10e7744a0d792f59334a930b4127af47cf5d77e539320f83eada5ee307d62",
+        "d32a665b22a6d6e2445b2c459c5a97fbf8f9dc62c502f6b7da80aff3ffb10062",
+        "7d66ad5d4c86b67ed94594771b4b03c717bc384f6eb363b7682b01007f267d85"
+      ],
+      "excludedMissingFeatureCells": 1
+    },
+    {
+      "event": "2020/fire_24332815",
+      "split": "calibration",
+      "dates": [
+        "2020-08-30",
+        "2020-08-31",
+        "2020-09-01",
+        "2020-09-02"
+      ],
+      "center": [
+        33.414815069827114,
+        -110.86460073625679
+      ],
+      "sourceHashes": [
+        "d31d471f90f732191509113768463363a9f49951ef4b6774befdf7411884f105",
+        "bd65a7275cc1af9a803ccf659899e2810dae43f9246aea4b691bc8d625912d06",
+        "1023561697b8521b6c37807f0a1ccbe706fd00daea7653b824ce54f67d9db29c",
+        "579353ba3d040765c2205d6c8ea5bec6896620442cf49d3909d7134a72764573"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24332934",
+      "split": "calibration",
+      "dates": [
+        "2020-09-07",
+        "2020-09-08",
+        "2020-09-09",
+        "2020-09-10"
+      ],
+      "center": [
+        44.93612128504477,
+        -115.41032754707035
+      ],
+      "sourceHashes": [
+        "aed82b8f17a3289802ea7d231a6d7fcda3d62b51c1d0e81f04348be8186dad11",
+        "51372461a42cd92b18b7372bacc3dccdf09d9584f625cb081936b8e523812b2c",
+        "0fc85204475100ad8ff5828b8dc191fd06b63910546bcfddcad1365713e46c54",
+        "ea809b6d34b314821b5d9bdbb97a2e8cf7c878e174984b814f1c5cfa7bc12732"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24333000",
+      "split": "calibration",
+      "dates": [
+        "2020-09-27",
+        "2020-09-28",
+        "2020-09-29",
+        "2020-09-30"
+      ],
+      "center": [
+        40.60678212932772,
+        -110.61544413946469
+      ],
+      "sourceHashes": [
+        "a827b8e9f57db99ace8d131cc1f2cb5462ff9d217ee49c5b75613b5c95367ff9",
+        "594354f5ab738ae2f7b7bc9df622fa1f690dc9caa774444bad343832eb61af25",
+        "b4fc7206247b83c22fa3d54a67259ae8fb5e804dd8a76d051da36af7ddb8f9fd",
+        "4c610ed88391b95600e9d9e5d11473bb5deef4c0cf263ecbeb28cbb2d48376e8"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24333006",
+      "split": "calibration",
+      "dates": [
+        "2020-08-27",
+        "2020-08-28",
+        "2020-08-29",
+        "2020-08-30"
+      ],
+      "center": [
+        40.65274995694871,
+        -105.79644261479804
+      ],
+      "sourceHashes": [
+        "d592ec94ec7a1514dc8f6e1fc92317b54922d20b13ce8d6530e41226caf8f8a6",
+        "6e4bfbfcc219c6b3c41708c651b759acd3c0d2ff07441b9484e51407666814a3",
+        "695132c976b9bf551c90856a8d3e480d5de0668b64ca93a4fab74f24ed99ab4a",
+        "23754801901609b101476f5fe6e02fef26fe3fd6ebb5e8b415d198c441ac2025"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24333012",
+      "split": "calibration",
+      "dates": [
+        "2020-09-13",
+        "2020-09-14",
+        "2020-09-15",
+        "2020-09-16"
+      ],
+      "center": [
+        40.73781713053956,
+        -105.7164592086382
+      ],
+      "sourceHashes": [
+        "d74069e1b6899b65fabf2f371ed61372291080b83a1f7b0698476f76f5f2bae2",
+        "516c5f1b7c081acd0ace642308b4bb7f91fbe63b3b99ebf58633d8cc92539ba1",
+        "9e914847d6a1cbb79bebc6c730e8917d8ef902121fba2bf07432f2b7d8a98dd6",
+        "bdca35fc0ab7152e6dfd616b0c3578e692789c58ae7ba8b4e9e66345616a6a54"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24461771",
+      "split": "calibration",
+      "dates": [
+        "2020-09-09",
+        "2020-09-10",
+        "2020-09-11",
+        "2020-09-12"
+      ],
+      "center": [
+        34.188413525477024,
+        -117.99616790442641
+      ],
+      "sourceHashes": [
+        "d3817a9e7bfe651c0df57e0ed98b30eff66bbd53035806e1f11db2ab5cbb8240",
+        "34ad27ce706d88fabd04307fafba2c4a5c7e1639af85d0c4b6c99e807ae62f97",
+        "d1e13083181fdc0f474782cf52eebd536fa622e4ba4c9e4dd9b127077e5f8b4e",
+        "2a19ba227926df30ae84c608d436d4f415adec399db4b9233c7e8827c6c5d51e"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24461789",
+      "split": "calibration",
+      "dates": [
+        "2020-10-07",
+        "2020-10-08",
+        "2020-10-09",
+        "2020-10-10"
+      ],
+      "center": [
+        33.531803355746106,
+        -109.09201477939754
+      ],
+      "sourceHashes": [
+        "c3313b619e2baa6610d6c90e043f519dc8be592005b9b803e5d79205d7cb1a48",
+        "aeff49152e0a8b5942e0d174ff3ac456a374d6efe048c5d7bcf6149b34770850",
+        "0559d030e69ead15d708c663226d36054f70dcaa8fe074b28ded28f86a96de26",
+        "954c2dc0d033cc532d4be0a1df6704d5e3a52e1b38616f1ec7cce057aa8ec717"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24462847",
+      "split": "calibration",
+      "dates": [
+        "2020-10-01",
+        "2020-10-02",
+        "2020-10-03",
+        "2020-10-04"
+      ],
+      "center": [
+        40.857868975460995,
+        -105.81697957638399
+      ],
+      "sourceHashes": [
+        "9b63a632dc8504ce2191b5dc228bfbd6473f87e26b9e58985330cbd0f71a1d58",
+        "3b40a2cb549344a14f57fa4aed5ac8b62ddcbe42abdd6690bf296abf22a0bf64",
+        "76ac7511148575cd9bef0d1d598003a62fd21fba67d458b2828d8891848ede52",
+        "7b70260103eb783f7c4db6f5d7a301ab73b6d99f79c2b81558f21eb44b67ed82"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24462867",
+      "split": "calibration",
+      "dates": [
+        "2020-09-25",
+        "2020-09-26",
+        "2020-09-27",
+        "2020-09-28"
+      ],
+      "center": [
+        40.76692976128445,
+        -106.63580990725055
+      ],
+      "sourceHashes": [
+        "dac4d2349d2bd2a8558cbb145aa6b1ca05a901eebc6279ce645cfee1d0c94d84",
+        "188b39180c64bcaf328c68dc8953571fc6cd175a63b653a8cd6fda2bb011bc61",
+        "ed1f65a41f57c04f706345fa3820e937f4974b48c8476103f90bb940387ef70c",
+        "3b0a53afbab93929737284a18c350f520a9721f684280b0fc84fb36481f7d5b7"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24462882",
+      "split": "calibration",
+      "dates": [
+        "2020-09-13",
+        "2020-09-14",
+        "2020-09-15",
+        "2020-09-16"
+      ],
+      "center": [
+        40.741701226936186,
+        -105.71983854658883
+      ],
+      "sourceHashes": [
+        "f54648ab9190b762077d90446d834c1c510e359886c2c732729188802f5a22df",
+        "d6557230dd5d962020024245b14007f87ce4258b6d7dfad4c8cb958ecd86dfb4",
+        "a26cbd0ce0ff213055c1aea3b7bbcd143fef2950217e7427c88eae94d37f8378",
+        "33c9f1b2c0b625254f4035484fbc1b7918b8e78f087bbf1b3c08f2bcfa3512e7"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24463227",
+      "split": "calibration",
+      "dates": [
+        "2020-09-06",
+        "2020-09-07",
+        "2020-09-08",
+        "2020-09-09"
+      ],
+      "center": [
+        41.83295556420734,
+        -106.55807448701329
+      ],
+      "sourceHashes": [
+        "49ed7b0b31c436c294742935a0187b6812dae9e9bae5791019305eebee170b79",
+        "123b2a28a3adb2629667020f5d5df0fb850f281446fbd391d79d5501625a0440",
+        "e353cd1dabf5426d0de80a28c9cad40275b54703deffb49d60fbd40ccf087e02",
+        "79c5e4d81092f560af69b06529e3c585b5e95afde3e8fe4e7bfe072c1074db22"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24604456",
+      "split": "calibration",
+      "dates": [
+        "2020-10-19",
+        "2020-10-20",
+        "2020-10-21",
+        "2020-10-22"
+      ],
+      "center": [
+        34.255009080615984,
+        -112.39358149538594
+      ],
+      "sourceHashes": [
+        "a1560664a044da3ff07f7216bb71b7a9196535b83425067ce625c6e9baa5a509",
+        "819f1f56558df2b8236d70d380ba8e7ff9a25b85878593ac999004e8e9154626",
+        "98b16bd85a545797d147f8d68fe6ce36d4fd6fd65767126f0e2765225d0aef93",
+        "72c19f2ec1679fae82a037e036931bd3cc18249f24957395b75a5ac5edeccb20"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24604754",
+      "split": "calibration",
+      "dates": [
+        "2020-10-12",
+        "2020-10-13",
+        "2020-10-14",
+        "2020-10-15"
+      ],
+      "center": [
+        40.56969421700917,
+        -105.58777151064781
+      ],
+      "sourceHashes": [
+        "f3d1043e0cc30e803a62d711b4bb3c702f15fd61513a2c67c6038ee2bb358694",
+        "14da08aa0aa16d8ab94b7f128a209bca2a8fd3f2c2a7a0a6d113630310c14195",
+        "0a97aa9a7f38a488ad04ded5fbe26ada3915bcb1beffc921e55714c6ba5f9fb0",
+        "b8e00fcaf08399a4740b636c78a2e1d1c78e1f19a580e38a69766b6ecbec52be"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2020/fire_24604832",
+      "split": "calibration",
+      "dates": [
+        "2020-10-28",
+        "2020-10-29",
+        "2020-10-30",
+        "2020-10-31"
+      ],
+      "center": [
+        40.09136270566594,
+        -104.89654470461967
+      ],
+      "sourceHashes": [
+        "62ba7bab9b4e6d40b76d3eb31b97acd665256bbff1c482f5259b81a2be7ef15f",
+        "68150d15a7950a4ef4ce06100abbbe4dc1eacb796dc8bd53735a33943a7b5916",
+        "affef630afdd3bc4e5b99ff004f7bffb689898536e27bc26ae2201519249d332",
+        "ecf23311de6b494779f56072936db4fd6f7023dd78738fa1bc4492a67926f20b"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2021/fire_25088019",
+      "split": "test",
+      "dates": [
+        "2021-05-01",
+        "2021-05-02",
+        "2021-05-03",
+        "2021-05-04"
+      ],
+      "center": [
+        47.93556106135666,
+        -102.71619835512216
+      ],
+      "sourceHashes": [
+        "d028c426995e140a2d020040d112d954e47471dedeace20162c7b22b1baf9dc4",
+        "26495e658ffbdf8c75152ddc1d8562fe88cb4c99d0ec4e0cfe8f56357a1dd783",
+        "dfc5c579228fd3625f49a731ffb96064859335dcffcf5d492723d1de4f7656e3",
+        "15de16edfdff471e1cd391084e11c21a4d1c05095efeafce5d2d51dc5388fed6"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2021/fire_25294692",
+      "split": "test",
+      "dates": [
+        "2021-08-12",
+        "2021-08-13",
+        "2021-08-14",
+        "2021-08-15"
+      ],
+      "center": [
+        40.78664034734033,
+        -123.17458551114642
+      ],
+      "sourceHashes": [
+        "a3f2002f048d1b8cf419721147b3d02caf6a5ee143371a79fa1be25a59faf3fe",
+        "223a338993d45d52dba12b67eb5fc5a2468faa638ab76a586b9ea40d888d31e0",
+        "d5df801205d4f996a32c6952a4f9aabbb761834863069028b8513e065f01372e",
+        "7b1dd9df12ae0a4c800b6c7791137b525c75b684ed871f9b64f538b120c38197"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2021/fire_25294714",
+      "split": "test",
+      "dates": [
+        "2021-07-18",
+        "2021-07-19",
+        "2021-07-20",
+        "2021-07-21"
+      ],
+      "center": [
+        39.98893307787007,
+        -121.28261649703461
+      ],
+      "sourceHashes": [
+        "208141ba59701b15d3290ff9de5c933b9ccf75b47630e50ae2846dbeca129127",
+        "9bea2ae41dbb2c986f2180d426692ea28e6de347b7085bd569ab430ff12886c8",
+        "6bfe3017054deb6681eb10797b2294b9fa25060221c4f09149ea81e6e62a5708",
+        "f1ad63be9bffd2b9c5eb8f5dee96ff77125468b031075473e7bf104930e4e990"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2021/fire_25294998",
+      "split": "test",
+      "dates": [
+        "2021-07-15",
+        "2021-07-16",
+        "2021-07-17",
+        "2021-07-18"
+      ],
+      "center": [
+        46.08748006693533,
+        -116.80560059380794
+      ],
+      "sourceHashes": [
+        "826814e66f8f6223bf4b8f6e18fa62cc94e83d99201768123b7e39fe9cf97a3d",
+        "5986c2afffe0ca1122b33b5738ec4b80ced62de34dfc8733b03c6c17f21b61dc",
+        "cc7f1faa9c628f37fcba05a4de7e0a2a922444ca07466d1907792f94271307ab",
+        "8aa114398ad53a6fcd9969bfcddb9a4a9889f13c354769d3fc601470f529df9b"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2021/fire_25295023",
+      "split": "test",
+      "dates": [
+        "2021-07-25",
+        "2021-07-26",
+        "2021-07-27",
+        "2021-07-28"
+      ],
+      "center": [
+        46.08347722871259,
+        -117.5943925129097
+      ],
+      "sourceHashes": [
+        "8a80903a80b7580fb4b37eb2be7c38c3e86428609419251c1001e502d05f4089",
+        "173183735bdb092fa11a4adacdb4f3475aba2bd3dfddd5b76d73fcc386a4a393",
+        "c04c32c90d326fadcc8937be171587416cbafaa51a4af1ed0cbf53f41598f530",
+        "51b5a4580eb652fd3ed0ba993d8553a443c0bdfb7fce00ed38c0b016535c08d9"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2021/fire_25295026",
+      "split": "test",
+      "dates": [
+        "2021-07-24",
+        "2021-07-25",
+        "2021-07-26",
+        "2021-07-27"
+      ],
+      "center": [
+        45.88054591931623,
+        -115.14837239141427
+      ],
+      "sourceHashes": [
+        "4f2496f1095692769a510b120e39994ee8aa3d2b4cd356865f7c86396a36d7be",
+        "32bf28832807eee074cd83028092d606076337fa7b144c6795c501ee524c43ff",
+        "c00170438265c830805dbcde0bc31c7eb091d377817f8b092e15511f7d7a5c7a",
+        "4bb9e71b6fed81b9d8c984f677ad3c82e4f080119e51fe6368755d1a4659c509"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2021/fire_25295808",
+      "split": "test",
+      "dates": [
+        "2021-07-24",
+        "2021-07-25",
+        "2021-07-26",
+        "2021-07-27"
+      ],
+      "center": [
+        48.608416133286006,
+        -120.25987341137649
+      ],
+      "sourceHashes": [
+        "d4b5ff391738e08587d441d9ba99be34558717b0cf7e9771b0cb494c3fe14dbb",
+        "2e3ec743bafd57838db44cbc0d1ce6650ecae76323da600a90ec76874e5c351b",
+        "089bfd8e943e7f5b041548fec25d69386a09295e77d62c9db987fbd6c9da140b",
+        "80cc9edc58d47773575ece31d7e7866fff60f4be37ff17006142d3c55b7c19bb"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2021/fire_25295837",
+      "split": "test",
+      "dates": [
+        "2021-08-09",
+        "2021-08-10",
+        "2021-08-11",
+        "2021-08-12"
+      ],
+      "center": [
+        48.450416623803754,
+        -116.05030737512334
+      ],
+      "sourceHashes": [
+        "38c47838ed1567668caac6b5a4e8921ae3983a27bca17a768d49f680231db63e",
+        "20c66a15f15c8012184b914802e4b3385459149719669716aa940f100de90369",
+        "09251f090df8142830b37a15b759c567abdb9d4c86c0081b97e2d3a6fbf7c908",
+        "a45c80d941d02bcff60caf25faa3451a8169990aa5c4d9b66e0dc5653b8d1cf9"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2021/fire_25295843",
+      "split": "test",
+      "dates": [
+        "2021-07-16",
+        "2021-07-17",
+        "2021-07-18",
+        "2021-07-19"
+      ],
+      "center": [
+        48.21853375979781,
+        -118.69355931433674
+      ],
+      "sourceHashes": [
+        "b670f5d4f9604d07686ffce81167fb3681f81e80145113c73c03502974ce7d77",
+        "90861d8e278793766e4b1f4eeac549ef5203053c8aaf8ca94d1c559603ac5e09",
+        "b02adaa1d92ebae0dda9a00bf17abb27590adb240d0a6ee3326c60352f7cae52",
+        "014754a801eb06357ecc151e9514937266194855282401fd0091a59e2e5e3375"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2021/fire_25295869",
+      "split": "test",
+      "dates": [
+        "2021-07-31",
+        "2021-08-01",
+        "2021-08-02",
+        "2021-08-03"
+      ],
+      "center": [
+        47.10684303873159,
+        -111.70713602416318
+      ],
+      "sourceHashes": [
+        "50d8bcb8c2dcc84c58415f0b1b57eb8f45d6d7047ba457dba7280a57b59d487c",
+        "c438808ffe0b1ba92a8743653b591ff553817d5f622216a0a04f577d6438b918",
+        "7a4f8a3e69f03e04d6459e0aab74e5e2f04d5cf52bdd17d6b82fe0ecd6035d15",
+        "8f4da8785b396c810edce28f86bdeb6415d50d40109726eab14c16a788eec890"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2021/fire_25295877",
+      "split": "test",
+      "dates": [
+        "2021-07-27",
+        "2021-07-28",
+        "2021-07-29",
+        "2021-07-30"
+      ],
+      "center": [
+        46.82623157500946,
+        -111.04535716178545
+      ],
+      "sourceHashes": [
+        "876bee077adbf60e55a43773c0fbd0eacec15ad69eb0eb5b2c786edd8fcfebd4",
+        "a2819ff4463c61ec69de666098a8759293271ffee9652606b8fa717fda6d4a41",
+        "6916a7d561a6ad84631546c87ce6642916849b067dd368ae0535f5e2c13546c2",
+        "36de54990899806dd482302ea9913a1829f99557cf9a576bd7b2edb43b9987b7"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2021/fire_25410444",
+      "split": "test",
+      "dates": [
+        "2021-08-21",
+        "2021-08-22",
+        "2021-08-23",
+        "2021-08-24"
+      ],
+      "center": [
+        41.518152648513315,
+        -121.87017391205046
+      ],
+      "sourceHashes": [
+        "d6318a992b2fe1ff90d69e88a2b69fa1c80392d9d8950ae8ecd65feda212352e",
+        "2c0ada37a434550c90a0c554fb3669fa336c6a86aebf014e894106762a46896b",
+        "8600c6fc1f8c8c537f839ba93a88bad92a48a4f5bb398390e1d66c76b47d8002",
+        "4dad5648e254b496e4824b57f4f700d6d4c907b4de549532f3d24a3541ac9a73"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2021/fire_25410735",
+      "split": "test",
+      "dates": [
+        "2021-08-20",
+        "2021-08-21",
+        "2021-08-22",
+        "2021-08-23"
+      ],
+      "center": [
+        36.28481743410433,
+        -118.54265825494295
+      ],
+      "sourceHashes": [
+        "587d254ad12c99f8e345fb0defa45839c453a65629265b22afc66f0660d2362b",
+        "8eeb914597b86b9eac31a06ce4f49a1fe6d27e86bcefe1d0e3fe8917431371a4",
+        "c2e163cca14f7a92f382a0188e9bea2e3c0fbcb769d6cee041cda1574f1b7712",
+        "92172afc3ed2ecb4044b1f6b8389964c1a56d670fdd6a8d2941f4938402c8107"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2021/fire_25410746",
+      "split": "test",
+      "dates": [
+        "2021-09-05",
+        "2021-09-06",
+        "2021-09-07",
+        "2021-09-08"
+      ],
+      "center": [
+        35.562849214812,
+        -118.77103836579774
+      ],
+      "sourceHashes": [
+        "0ffd504bdd2e1ac46fdb1b0ac71c91b0127481c68736ed94f629b2d569821737",
+        "8e10db33c4dfcf811b5525a0858c052de94d216cf5d2792b7541128398d53fb7",
+        "77a4d2c54e80b6792909cb403207be729b7a1598cb341fa7eb80aaa0087e993f",
+        "7d2ccb2077b381d235d608cd1b9e1e1bfcbe7f62afdd90b52c9ccb684cc39a61"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2021/fire_25410845",
+      "split": "test",
+      "dates": [
+        "2021-09-02",
+        "2021-09-03",
+        "2021-09-04",
+        "2021-09-05"
+      ],
+      "center": [
+        47.95328245869939,
+        -120.33726467413258
+      ],
+      "sourceHashes": [
+        "2b01af7209bf4e4097a2ef360453202f979853528f9181497cd846040e7c0964",
+        "45e2b342799eb083dc230c1e5201aba2b1744e238b4173fffa6f546440374332",
+        "063227889ca10a0242e26c7a341c89da0d6a469eedb06f5b3bf1ab1997588369",
+        "17f0eead55110d782bdcdf599700b337e49977d703cf7423786f67c73af69835"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2021/fire_25410883",
+      "split": "test",
+      "dates": [
+        "2021-08-21",
+        "2021-08-22",
+        "2021-08-23",
+        "2021-08-24"
+      ],
+      "center": [
+        46.428921255444266,
+        -116.9319943322093
+      ],
+      "sourceHashes": [
+        "a6413d7bb2ebd845fc11cc67a7cb3bd5526d00d61b4f2b07441b38375b2a3e1c",
+        "b5a5a67bc2dd914cca8de82bea2fd02b321d324a3e49ec33aa086e728931b502",
+        "5c20983f96d31f9bf1289f9915026b9e79297290da63d8e438801a1778cbae7d",
+        "eb2fd9d7cc76498f9a2c81520c6e6d25ee2c751edcbdc1ccd826a145ca02bb37"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2021/fire_25410985",
+      "split": "test",
+      "dates": [
+        "2021-08-30",
+        "2021-08-31",
+        "2021-09-01",
+        "2021-09-02"
+      ],
+      "center": [
+        44.95475143480093,
+        -115.00945704344988
+      ],
+      "sourceHashes": [
+        "a9891b886c667aa2a29d478c67e2e81ae9a1c2c4fe849127778c5fb4723bfd4f",
+        "556df3c6796d10b17dc42c2c9d4880df7a1690f891345f79c661d997822e40b5",
+        "052318cba85f28ba72714c24e655c846e3bdf8a904973d6294edd7425eb30600",
+        "c3e2ccaeb24340602d7b067039b4eb617c39281a014d1c5e6ca9a79512263791"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2021/fire_25411057",
+      "split": "test",
+      "dates": [
+        "2021-08-16",
+        "2021-08-17",
+        "2021-08-18",
+        "2021-08-19"
+      ],
+      "center": [
+        43.274924505143964,
+        -122.68759136688685
+      ],
+      "sourceHashes": [
+        "cfcf88650262b03ffeb89b530d02874b06f57305539120f53d967a9c298d0c78",
+        "02eadebae3a13cbee2e9c99fe12ef9e4aaaa2bdb67fb2c9f6715c424ed4c057b",
+        "06c1b82225c2794b76168d23aecfc683dc197f5bd4de98b03deb575121a54867",
+        "f7426abae95ec7a0c61ecfa19bb5227777e4dda8f7d28fe6abc2a9e0215aadcf"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2021/fire_25411093",
+      "split": "test",
+      "dates": [
+        "2021-08-11",
+        "2021-08-12",
+        "2021-08-13",
+        "2021-08-14"
+      ],
+      "center": [
+        43.13797786987408,
+        -122.7628553870821
+      ],
+      "sourceHashes": [
+        "f6b78f7874548e00b4638f93579fb3ccd3b6a4e889aef79fd24516c198ddad7c",
+        "08ffafdcde51cabd374d75ac414c092e170a5e8bdb509d33076e92aa99a7eaff",
+        "ce9c3faf4229abdd53e87e8ebcec7c5d00c3ff013e94922d499bb9015e49c4a2",
+        "57f511be589eb43f79207b3ee5533cc171a2561059473471e3fc61ce546f4570"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2021/fire_25411102",
+      "split": "test",
+      "dates": [
+        "2021-08-08",
+        "2021-08-09",
+        "2021-08-10",
+        "2021-08-11"
+      ],
+      "center": [
+        43.0317623221311,
+        -122.82428716065836
+      ],
+      "sourceHashes": [
+        "4fb4f80ad79a8da65feb15bc0c27990d35b844c393109a92b0709e3a50139fc3",
+        "9c746add8825934a340a97b2a8f7992ded4d24e6017cb816d38eb1e0bf4315a4",
+        "c12226bc0f236065e8af6763fa9693407579b91a16b7d08046fc34dee514b2c9",
+        "8aac2b768f1a97d74e8bc2867686a14462afc19198983d8e167bb4fbf185c0ea"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2021/fire_25411748",
+      "split": "test",
+      "dates": [
+        "2021-08-15",
+        "2021-08-16",
+        "2021-08-17",
+        "2021-08-18"
+      ],
+      "center": [
+        48.66630410020879,
+        -119.764952413987
+      ],
+      "sourceHashes": [
+        "b949a743a65941c12011f18ce8cf3bc5c99d9ddff71538eb9058dacbd319569c",
+        "88c228248d0b049abcf0f3abdf7a987f5fc5fb1694d3d75377041783d901f3db",
+        "e8dccf02673d626719a8508a17eb34902761e8a0a4ecf0e10f7e507eb68f6903",
+        "c93bb24800d1c8ba7ced6f07466bc8ffa8d3adf5cbdbecb50a713a540bea7e9f"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2021/fire_25411795",
+      "split": "test",
+      "dates": [
+        "2021-08-17",
+        "2021-08-18",
+        "2021-08-19",
+        "2021-08-20"
+      ],
+      "center": [
+        48.814589860354396,
+        -118.29138243726044
+      ],
+      "sourceHashes": [
+        "abebb5a2a23d424021135705d762a4b780f6f3217da7d9788db7371ae83fb026",
+        "810870441b80dc9f2ab7e4ceca7b0e92bd7ccf8ce615814faef8e0976051539d",
+        "7208f04aa45811990560b23981738d492fb75b09dd06dff590bc8db34c639c1e",
+        "2550f25516aff44b9f6a22c22dc64048adb2d8a8f15cb09e2f43f5c34a77df90"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2021/fire_25548047",
+      "split": "test",
+      "dates": [
+        "2021-10-08",
+        "2021-10-09",
+        "2021-10-10",
+        "2021-10-11"
+      ],
+      "center": [
+        36.63324921869113,
+        -118.82702588676699
+      ],
+      "sourceHashes": [
+        "26005d50d3a58369b8bc25772694bff3a002e53bd8ee0f105244571bd82dcc42",
+        "aabc342cca7091cc38a3da863cc957dd81512b1a8b050a9876c604c924f4d287",
+        "024f3e94853cee491015af8a1b3888b2bd8331701864e9ab80f96b11a170a14a",
+        "8df476d094d3d7d334d6b3f8a006d2f0bb5e16533b597c3e38b9dbe5a8261865"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2021/fire_25548063",
+      "split": "test",
+      "dates": [
+        "2021-10-10",
+        "2021-10-11",
+        "2021-10-12",
+        "2021-10-13"
+      ],
+      "center": [
+        36.6021514997165,
+        -118.7876665433977
+      ],
+      "sourceHashes": [
+        "779f2957d5cba10631f0c7f2f8ccadde3ea2b38d964533769de59d9179b76942",
+        "0d5d5fa943a1dd84ca4e02d07691276867c1d1d1e324b66b462fc0f5e2b37c2a",
+        "ead6ad732fd140dded8e848e6c4e6c81da971d020d2e40e831a74606b92a8b55",
+        "24c0ea9ce59f0d50cf1791fb14661528a40101e9a10e0a61d197155a649a7924"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2021/fire_25548658",
+      "split": "test",
+      "dates": [
+        "2021-09-24",
+        "2021-09-25",
+        "2021-09-26",
+        "2021-09-27"
+      ],
+      "center": [
+        46.12849876896635,
+        -112.23158722784669
+      ],
+      "sourceHashes": [
+        "fde3bc1b119f45a32eee296be6b7713062b08d6a5d07a9d4ffcfa2885fe0d37f",
+        "cf3eb2d900c9bf305955225228afcc8d56c7e3f752cddaa97a7e9d93b59926da",
+        "2112c8897629332494c57f9f9e4a9e059d49b2e33547cf7e72c1e631b69b9ca2",
+        "f7a14146357b412b516ed68f513d615201d9f4252665a174c9d61916b1a1bde1"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2021/fire_25548678",
+      "split": "test",
+      "dates": [
+        "2021-09-05",
+        "2021-09-06",
+        "2021-09-07",
+        "2021-09-08"
+      ],
+      "center": [
+        45.66382438743359,
+        -113.66943851952674
+      ],
+      "sourceHashes": [
+        "9779c727b274aa690c0f399fa3b3035d28da4a23d8709da85296736b95e0de4e",
+        "9eed3038101b88242eddf5f39ba7cdf8b837f4c17c8a21d6870cd44710e2d146",
+        "dc75ae4c974aa71ad396eac5e25b2ee0175683903798a0214c682956a53e41f5",
+        "66235b6e713215372b6c4b8dfd7392756c33c6292541356c5d411f040a2f4fe1"
+      ],
+      "excludedMissingFeatureCells": 0
+    },
+    {
+      "event": "2021/fire_25639187",
+      "split": "test",
+      "dates": [
+        "2021-10-16",
+        "2021-10-17",
+        "2021-10-18",
+        "2021-10-19"
+      ],
+      "center": [
+        34.53763416232662,
+        -120.15746719323612
+      ],
+      "sourceHashes": [
+        "6a19117c919015a7f145500326b718d3859464d1eb5593552ebe67aed0b00493",
+        "f77368cf5c7369e94fce02fbdffd558bc643469666d33d751230db4b6869d507",
+        "c33ec5b56bc1fd55877b1d02d306014040df131ec7f762cdf572014d69899911",
+        "eedf8d85dde6c38bbce92efa17ffe8af81dacd41370e77c7d040eec790d6070e"
+      ],
+      "excludedMissingFeatureCells": 7
+    }
+  ],
+  "sourceAvailabilityDiagnostics": {
+    "sourceUrl": "https://modaps.modaps.eosdis.nasa.gov/services/production/outages_suomi_npp.html",
+    "sourceHtmlSha256": "779a0a18ee542f61fbb42b56994f58c22b443910eb923e6aa2d889c9d80f13a8",
+    "fetchedAt": "2026-10-25T05:02:17.791Z",
+    "auditSha256": "a1a828954e137bb578fc356fa5674a8284d55960a992ce37a0c1ef8501ab3b34",
+    "secondaryPlanSha256": "5da027359ff8cfe49f479fd38b20f1f422e86774267d1dbe4b080d3f2ea6d258",
+    "plannedSplitCounts": {
+      "train": {
+        "plannedEvents": 100,
+        "inputGapEvents": 5,
+        "targetGapEvents": 4,
+        "anyGapEvents": 8
+      },
+      "selection": {
+        "plannedEvents": 50,
+        "inputGapEvents": 1,
+        "targetGapEvents": 1,
+        "anyGapEvents": 2
+      },
+      "calibration": {
+        "plannedEvents": 50,
+        "inputGapEvents": 2,
+        "targetGapEvents": 0,
+        "anyGapEvents": 2
+      },
+      "test": {
+        "plannedEvents": 50,
+        "inputGapEvents": 2,
+        "targetGapEvents": 3,
+        "anyGapEvents": 5
+      }
+    },
+    "eligibleTestInputGapEvents": [],
+    "eligibleTestTargetGapEvents": [
+      "2021/fire_25295869"
+    ],
+    "knownInputGapExcluded": {
+      "events": 27,
+      "cells": 16694,
+      "positives": 1040,
+      "test": {
+        "model": {
+          "prAuc": 0.46861596791538696,
+          "brier": 0.036577206773677415,
+          "logLoss": 0.135707085779514,
+          "precision": 0.5164909390100311,
+          "recall": 0.5964177355781255,
+          "positiveRate": 0.05369958174472044,
+          "predictedPositiveRate": 0.06200957369565125,
+          "threshold": 0.19999999999999998,
+          "cells": 16694,
+          "positives": 1040
+        },
+        "previousVersion": {
+          "prAuc": 0.40229009573452607,
+          "brier": 0.05007558094925903,
+          "logLoss": 0.22454096730920223,
+          "precision": 0.3695471311131151,
+          "recall": 0.6192174181633322,
+          "positiveRate": 0.05369958174472044,
+          "predictedPositiveRate": 0.08997963605957184,
+          "threshold": 0.017,
+          "cells": 16694,
+          "positives": 1040
+        },
+        "smoothedPersistence": {
+          "prAuc": 0.3385799753392151,
+          "brier": 0.0385615512716957,
+          "logLoss": 0.1555051358158222,
+          "precision": 0.5678815709549501,
+          "recall": 0.5540458428581982,
+          "positiveRate": 0.05369958174472044,
+          "predictedPositiveRate": 0.05239125823163337,
+          "threshold": 0.35,
+          "cells": 16694,
+          "positives": 1040
+        },
+        "persistence": {
+          "prAuc": 0.3385799753392151,
+          "brier": 0.0465867799185805,
+          "logLoss": 0.7508902701510679,
+          "precision": 0.5678815709549501,
+          "recall": 0.5540458428581982,
+          "positiveRate": 0.05369958174472044,
+          "predictedPositiveRate": 0.05239125823163337,
+          "threshold": 0.9499999999999998,
+          "cells": 16694,
+          "positives": 1040
+        },
+        "logistic": {
+          "prAuc": 0.45523747453013175,
+          "brier": 0.03651652691224915,
+          "logLoss": 0.1360198267539937,
+          "precision": 0.460110400551501,
+          "recall": 0.6556686611577919,
+          "positiveRate": 0.05369958174472044,
+          "predictedPositiveRate": 0.07652322752342001,
+          "threshold": 0.15,
+          "cells": 16694,
+          "positives": 1040
+        }
+      }
+    },
+    "scope": "Secondary descriptive diagnostic predeclared before test access. Excludes events with NASA-listed required-input-day outages; target-day gaps remain. Primary scores, selection and release gate are unchanged. The retrospective catalogue and unknown local cloud/overpass coverage do not prove operational availability."
+  }
+}

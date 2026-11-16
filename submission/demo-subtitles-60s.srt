@@ -1,0 +1,60 @@
+1
+00:00:00,400 --> 00:00:02,600
+Córdoba, Argentina. October 2020.
+
+2
+00:00:03,000 --> 00:00:05,800
+NASA satellites spot fires like this from space.
+
+3
+00:00:06,000 --> 00:00:10,700
+Fire Watch turns 26 years of those sightings
+into a fire calendar for any place.
+
+4
+00:00:11,200 --> 00:00:14,000
+Fire moves around the world with the seasons.
+
+5
+00:00:14,600 --> 00:00:18,400
+Fire seasons come at different times
+in different places.
+
+6
+00:00:20,000 --> 00:00:24,600
+The catch: newer satellites pick up far more fire
+than the older ones.
+
+7
+00:00:24,900 --> 00:00:29,500
+Fire Watch converts the old counts to the new scale,
+so every year can be compared.
+
+8
+00:00:29,900 --> 00:00:36,000
+Now an unusual month stands out.
+October 2020 had 2.4× the usual fire activity.
+
+9
+00:00:37,200 --> 00:00:39,900
+Open that month’s biggest fire day in 3D.
+
+10
+00:00:40,200 --> 00:00:44,400
+The land and the fire locations are real.
+Flames and smoke are simulated.
+
+11
+00:00:45,000 --> 00:00:50,800
+Tested on years it had never seen, the error
+in monthly fire counts drops from 75% to 16%.
+
+12
+00:00:52,700 --> 00:00:56,300
+Pick any place or draw your own area,
+in English or Spanish.
+
+13
+00:00:56,700 --> 00:00:59,900
+Fire Watch.
+A fire calendar for any place on Earth.

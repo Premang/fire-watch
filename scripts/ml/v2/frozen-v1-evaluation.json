@@ -1,0 +1,1004 @@
+{
+  "schemaVersion": 1,
+  "modelId": "ember-day-ahead-v1",
+  "modelSha256": "3b127ffaca8c46dd3b428a2be4407e49a9e49879b31a254772c6516f433bc062",
+  "modelType": "Histogram gradient-boosted trees + validation Platt calibration",
+  "selectedLeaves": 7,
+  "trees": 120,
+  "featureNames": [
+    "fire_recent",
+    "fire_prior",
+    "distance_recent_km",
+    "distance_prior_km",
+    "density_3",
+    "density_7",
+    "nearest_east_km",
+    "nearest_north_km",
+    "elevation_m",
+    "slope_deg",
+    "aspect_sin",
+    "aspect_cos",
+    "elevation_above_fire_m",
+    "lag_precip_mm",
+    "lag_tmin_c",
+    "lag_tmax_c",
+    "lag_specific_humidity",
+    "lag_wind_ms",
+    "lag_wind_sin",
+    "lag_wind_cos",
+    "lag_erc",
+    "lag_pdsi",
+    "antecedent_gfs_temp_c",
+    "antecedent_gfs_specific_humidity",
+    "antecedent_gfs_vector_wind_ms"
+  ],
+  "source": {
+    "title": "WildfireSpreadTS v1.0",
+    "url": "https://zenodo.org/records/8006177",
+    "license": "CC-BY-4.0",
+    "selectedEvents": 60,
+    "downloadManifestSha256": "d0c32139617402b74229846ea7cae42861ef46c3b7c380a9d06cd2783a9a8666"
+  },
+  "target": "At least one retained S-NPP VIIRS active-fire detection in a 1.5 km cell during the next UTC day, within 12 km of prior detections.",
+  "timing": {
+    "issue": "I, after the I00Z GFS run is available; live path requires at least06Z",
+    "target": "I+1 00:00\u201324:00 UTC",
+    "recentFire": "I\u22121 UTC day",
+    "priorFire": "I\u22122 UTC day",
+    "gridmet": "I\u22122 nominal day (ends07Z I\u22121)",
+    "gfs": "I00Z, F01\u2013F24, antecedent forecast conditions"
+  },
+  "splits": {
+    "train": {
+      "years": [
+        2018,
+        2019
+      ],
+      "events": 17,
+      "cells": 8786,
+      "positives": 213,
+      "ids": [
+        "2018/fire_22141343",
+        "2018/fire_21804883",
+        "2018/fire_22141528",
+        "2018/fire_21998119",
+        "2018/fire_21890170",
+        "2018/fire_21458806",
+        "2018/fire_22141554",
+        "2018/fire_22257882",
+        "2018/fire_21889719",
+        "2018/fire_21999251",
+        "2018/fire_21999351",
+        "2018/fire_21889717",
+        "2019/fire_23300668",
+        "2019/fire_23301106",
+        "2019/fire_23493973",
+        "2019/fire_23410616",
+        "2019/fire_23300712"
+      ]
+    },
+    "validation": {
+      "years": [
+        2020
+      ],
+      "events": 5,
+      "cells": 1484,
+      "positives": 5,
+      "ids": [
+        "2020/fire_24104628",
+        "2020/fire_24333277",
+        "2020/fire_24332796",
+        "2020/fire_24191364",
+        "2020/fire_24333259"
+      ]
+    },
+    "test": {
+      "years": [
+        2021
+      ],
+      "events": 6,
+      "cells": 1705,
+      "positives": 65,
+      "ids": [
+        "2021/fire_25204877",
+        "2021/fire_25205354",
+        "2021/fire_25204859",
+        "2021/fire_25204820",
+        "2021/fire_25410972",
+        "2021/fire_25295956"
+      ]
+    }
+  },
+  "weighting": "Every event has equal total weight; all eligible cells retained, no negative downsampling. Validation both selects tree complexity and fits calibration/threshold; only test is held out.",
+  "spatialEmbargoKm": 25,
+  "embargoedTrainEvents": [
+    "2019/fire_23410607",
+    "2019/fire_23159637"
+  ],
+  "skippedEvents": [
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21688916",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21998157",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21617464",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21998255",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21690102",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21890160",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21804961",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21748813",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21997854",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21998291",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_22141461",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21804980",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21804577",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23036877",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23301386",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23036564",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23159842",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23159838",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23036806",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23300839",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23036871",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24332880",
+      "split": "validation"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24332779",
+      "split": "validation"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24025605",
+      "split": "validation"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24461328",
+      "split": "validation"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24191376",
+      "split": "validation"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2021/fire_25411825",
+      "split": "test"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2021/fire_25205245",
+      "split": "test"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2021/fire_25205306",
+      "split": "test"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2021/fire_25205936",
+      "split": "test"
+    }
+  ],
+  "test": {
+    "model": {
+      "prAuc": 0.36738770881177907,
+      "brier": 0.03376392448333873,
+      "logLoss": 0.15124632354076006,
+      "precision": 0.49389423592845794,
+      "recall": 0.30679358136195106,
+      "positiveRate": 0.036534900184887455,
+      "predictedPositiveRate": 0.0226944800263809,
+      "threshold": 0.05,
+      "cells": 1705,
+      "positives": 65
+    },
+    "smoothedPersistence": {
+      "prAuc": 0.22557261505500323,
+      "brier": 0.03064895319462366,
+      "logLoss": 0.14015608998803156,
+      "precision": 0.6263367996113017,
+      "recall": 0.3205105223532781,
+      "positiveRate": 0.036534900184887455,
+      "predictedPositiveRate": 0.018695724009271313,
+      "threshold": 0.05,
+      "cells": 1705,
+      "positives": 65
+    },
+    "persistence": {
+      "prAuc": 0.22557261505500323,
+      "brier": 0.031810984309392415,
+      "logLoss": 0.5127325846725047,
+      "precision": 0.6263367996113017,
+      "recall": 0.3205105223532781,
+      "positiveRate": 0.036534900184887455,
+      "predictedPositiveRate": 0.018695724009271313,
+      "threshold": 0.5,
+      "cells": 1705,
+      "positives": 65
+    },
+    "logistic": {
+      "prAuc": 0.18936661307875585,
+      "brier": 0.04248874863657316,
+      "logLoss": 0.1539740499670476,
+      "precision": 0.1013048613490919,
+      "recall": 0.8474298278985215,
+      "positiveRate": 0.036534900184887455,
+      "predictedPositiveRate": 0.3056197280531232,
+      "threshold": 0.05,
+      "cells": 1705,
+      "positives": 65
+    },
+    "newActivity": {
+      "prAuc": 0.20675845722066738,
+      "brier": 0.02437815611214325,
+      "logLoss": 0.12003893298753211,
+      "precision": 0.33333333333333326,
+      "recall": 0.12471159013203766,
+      "positiveRate": 0.02529804551951104,
+      "predictedPositiveRate": 0.009464878451912686,
+      "threshold": 0.05,
+      "cells": 1672,
+      "positives": 44
+    }
+  },
+  "confidenceIntervals": {
+    "method": "400 bootstrap resamples of whole test fires, 95% percentile intervals",
+    "prAuc": [
+      0.1510554363358201,
+      0.6254042488450771
+    ],
+    "brier": [
+      0.009588552136297213,
+      0.06949238238631512
+    ]
+  },
+  "reliability": [
+    {
+      "low": 0.0,
+      "meanPredicted": 0.003824351595468136,
+      "observedRate": 0.03151610445669244,
+      "cells": 1689
+    },
+    {
+      "low": 0.1,
+      "meanPredicted": 0.13057914095759263,
+      "observedRate": 0.5876764386536374,
+      "cells": 12
+    },
+    {
+      "low": 0.2,
+      "meanPredicted": 0.22793675768769764,
+      "observedRate": 0.75,
+      "cells": 4
+    }
+  ],
+  "permutationSensitivity": [
+    {
+      "group": "Recent fire pattern",
+      "brierIncrease": 0.002627598586624161
+    },
+    {
+      "group": "Terrain",
+      "brierIncrease": 0.0003965279772768157
+    },
+    {
+      "group": "Antecedent weather",
+      "brierIncrease": -9.367020292681827e-05
+    },
+    {
+      "group": "Fuel dryness / drought",
+      "brierIncrease": 0.00041933143352776425
+    },
+    {
+      "group": "Issued GFS conditions",
+      "brierIncrease": 0.0002629364991992844
+    }
+  ],
+  "limitations": [
+    "Small 60-event sample, only one target day per event; not nationwide validation.",
+    "Only 5 positive cells across 5 validation fires supported both model selection and calibration/threshold fitting. Those choices are especially unstable; independent-test Brier error is worse than smoothed persistence.",
+    "Label absence means no retained satellite detection, not known absence of burning; cloud validity is unavailable.",
+    "Historical finalized gridMET and retrospectively compiled fire masks do not prove operational data availability or calibration.",
+    "Live terrain product, GFS provider/lead aggregation, publication latency and changing satellite operations introduce transfer error.",
+    "Fuel structure, live/dead fuel moisture, suppression, spotting, human and lightning ignition processes are not modeled completely.",
+    "Not an official warning, perimeter, flame arrival time, crew allocation, or evacuation product."
+  ],
+  "excludedBands": {
+    "17": "Inconsistent GFS rain accumulation reductions",
+    "19": "Wind-direction quadrant loss",
+    "0\u20134": "Optical/composite availability and missingness",
+    "12\u201313": "Terrain gradients recomputed at1.5km",
+    "16": "Same-year annual cover risks hindsight"
+  },
+  "events": [
+    {
+      "event": "2018/fire_22141343",
+      "split": "train",
+      "dates": [
+        "2018-09-05",
+        "2018-09-06",
+        "2018-09-07",
+        "2018-09-08"
+      ],
+      "center": [
+        46.570430607872645,
+        -119.32855001479196
+      ],
+      "sourceHashes": [
+        "2f33209e632ce033c5b2f9e155f6e3c4fc8f4d0ffc9e7e081d4a6072bc9bdbbc",
+        "172b959c4e9515ac0dafd4ed4e4218928ac8ed15cc23f963af4f2ef6e0f8713c",
+        "a1a22ba0f41c06c4256b7fb93eaaba0ddf14d5054c8b4849d6d9ebd69f7cac85",
+        "d6e0aa721307527fbf784b9332c344b10420f74bcb49939c1fcd152b58fd4636"
+      ]
+    },
+    {
+      "event": "2018/fire_21804883",
+      "split": "train",
+      "dates": [
+        "2018-06-25",
+        "2018-06-26",
+        "2018-06-27",
+        "2018-06-28"
+      ],
+      "center": [
+        45.36775440736104,
+        -120.84184589880113
+      ],
+      "sourceHashes": [
+        "2ce5710506a1305676637ecf0154dce9edce9eb02fc7dfcc940224c794434899",
+        "1f7cd24a387b635b1397342518d541f6572b4391dcdd92e8222fc4515e5fae74",
+        "f8f650c4387835d1efe3d2257f1fe64165427d9c09be9cbc472aec02d46fa2da",
+        "3d1b6b55fe794b62f3c5b96ac921056196b59fa41ab61e3f68bb647fba260f53"
+      ]
+    },
+    {
+      "event": "2018/fire_22141528",
+      "split": "train",
+      "dates": [
+        "2018-09-23",
+        "2018-09-24",
+        "2018-09-25",
+        "2018-09-26"
+      ],
+      "center": [
+        42.9768372788896,
+        -110.4612726693806
+      ],
+      "sourceHashes": [
+        "f873a5ff821143801e88f761a68454831f7b3b272262c559dc3c21eead9f7148",
+        "3c5c11a12581e993b127f4201ead72b69ee6220df90386b395cdfd9f8c121493",
+        "c78e21f879fab505531d27e4528be64d39b0649aa3fe4f0fe53725ef83207640",
+        "a1689535bfc5deb8133c77d68fe45e8d76d6beacbdb594918019c31e7a30b7fe"
+      ]
+    },
+    {
+      "event": "2018/fire_21998119",
+      "split": "train",
+      "dates": [
+        "2018-08-17",
+        "2018-08-18",
+        "2018-08-19",
+        "2018-08-20"
+      ],
+      "center": [
+        45.031242429129136,
+        -120.2918560156137
+      ],
+      "sourceHashes": [
+        "726c001e3b2e3efa7d9ad7fadac1da7e2bc577d6b42508ba92381d54bca25f11",
+        "105c7cf95f9ddfd2e18229a07d903ed87f7f46fa3bde6e1ddf91595dea1691ac",
+        "0ec4e20c71e6f558acdb763366d0561dc5443c3e5c2a94968bb1f9b65f2c7b52",
+        "33f1e1633fbbde7abc299e4bae181593144bcf868d3153feb656aa6bd4f1f7e1"
+      ]
+    },
+    {
+      "event": "2018/fire_21890170",
+      "split": "train",
+      "dates": [
+        "2018-07-27",
+        "2018-07-28",
+        "2018-07-29",
+        "2018-07-30"
+      ],
+      "center": [
+        37.658114806431826,
+        -108.47017319493445
+      ],
+      "sourceHashes": [
+        "7d315dc71c349fa653565e24d7510f08999ffb5088f5bf437dfdf7700e77213a",
+        "12c5174076f9a52d794aef28c5db49d4bb22b16d014e94c39cd502124fb212e0",
+        "a89e4b0a9325267fbda668d4762b296067940c851dd6b3a6f66f24dcdc584b76",
+        "f0b1af9217ab45642d9b69ee838b0229676c141d58148c5d71eab9a6dbfcdffb"
+      ]
+    },
+    {
+      "event": "2018/fire_21458806",
+      "split": "train",
+      "dates": [
+        "2018-01-20",
+        "2018-01-21",
+        "2018-01-22",
+        "2018-01-23"
+      ],
+      "center": [
+        36.756915582801916,
+        -120.1762111455286
+      ],
+      "sourceHashes": [
+        "7398a4053ec5d43758171808b413a19df8ae6cddecf553bf291ac740ce038a7f",
+        "fdd83e7eb3380862ff613d4b2938914f1a27c5162523654f1f9ab4bfc0ccf13e",
+        "3dee30517dfaeb9f659e62d400b638d2fe95dfb46152df958f22b611afb58e33",
+        "0eaf79b115dacdfc4fabfac251523aaf40d35bd2c18b8475e4aa2bf847d7ba34"
+      ]
+    },
+    {
+      "event": "2018/fire_22141554",
+      "split": "train",
+      "dates": [
+        "2018-09-21",
+        "2018-09-22",
+        "2018-09-23",
+        "2018-09-24"
+      ],
+      "center": [
+        42.381813436428615,
+        -113.42971871104919
+      ],
+      "sourceHashes": [
+        "1ed1a9e4aa7e7d7ec416fd914d6ca89f7081e93a41b40e3f4437ea8995ac42d0",
+        "87bcae2e1c0a28adb873b0f96cae709c98dbd4d404dc3c3e0baacd47d77ef00b",
+        "db272e21ce8b633a01117fbc3aa1c134c2c1adcf30e9512f0bf2b463c35e198a",
+        "9089a15da89c80a58ac1f508fb64dffe487a13ceedf57def05fecda790c11d95"
+      ]
+    },
+    {
+      "event": "2018/fire_22257882",
+      "split": "train",
+      "dates": [
+        "2018-10-15",
+        "2018-10-16",
+        "2018-10-17",
+        "2018-10-18"
+      ],
+      "center": [
+        42.55013408557918,
+        -123.92025692177643
+      ],
+      "sourceHashes": [
+        "382e46181eca317bbb15ae0987a48568fd5bf583553fa84a2d786d11cba21dc6",
+        "f4b000883042cb532c8ab17158acedf8637c42a4c5ca2c33785d77d871dce038",
+        "06cfd359725feabac5308039ec01e7b95fc38136f6e0d0050045f0374acb2cf8",
+        "ff7b7b165fceb986c4407d4e5d6ec08abff87d987954db9059da7438e18e816a"
+      ]
+    },
+    {
+      "event": "2018/fire_21889719",
+      "split": "train",
+      "dates": [
+        "2018-08-19",
+        "2018-08-20",
+        "2018-08-21",
+        "2018-08-22"
+      ],
+      "center": [
+        42.02955563956579,
+        -123.62162428342573
+      ],
+      "sourceHashes": [
+        "1069dbc0e4158cf1a21ea5c260d50a1213a163c11784ebe8288ee40fe37e30c7",
+        "2cff59a9baff7262c040a4b7380ef21659685d117770ab314bc6d431eb667c51",
+        "6e6967c7adf89ba3e7add2c4eab809d96df58ab9d9c4241d1c995175634628e2",
+        "2ab6611f8b1b197d15d02464ed505ae7bfac90855e243f0867415f456a5dbaa8"
+      ]
+    },
+    {
+      "event": "2018/fire_21999251",
+      "split": "train",
+      "dates": [
+        "2018-08-20",
+        "2018-08-21",
+        "2018-08-22",
+        "2018-08-23"
+      ],
+      "center": [
+        48.77028250758759,
+        -118.11746819180765
+      ],
+      "sourceHashes": [
+        "5c5486fd300512a21208184dd556119fea6cec58ee34210082e193c8d75237d4",
+        "8aca6a5c369748c9c8c92ae51bed9d318aa088b39fb68056d80a50fc6f2d72ae",
+        "78f009200108349cb46d9e084951ea964eee52b4ab7e5213eebbcc3da5cb45ed",
+        "60215b56f5e6c6a253eb57fcf3cc8c15ce7241e6b1b9678d2729be6b1f9a88da"
+      ]
+    },
+    {
+      "event": "2018/fire_21999351",
+      "split": "train",
+      "dates": [
+        "2018-08-17",
+        "2018-08-18",
+        "2018-08-19",
+        "2018-08-20"
+      ],
+      "center": [
+        44.966755164374746,
+        -111.85991399301494
+      ],
+      "sourceHashes": [
+        "a3b479d15fa4f1d1398d9641c32429b9b00d86b4ae17debab7b5b5c5382b4656",
+        "6fa0c3b6a2fa68617122e55a80da84513c3410d0fff6582546e3e31a4cf8d017",
+        "e42605bb6855786ccd5d0d9ebb174cd454986687cdc1db3d9d6aa3eead7b7553",
+        "6a12ecb027ac16425b290510865bb801e0643ec3ee44d2f43e1c914dc7ced983"
+      ]
+    },
+    {
+      "event": "2018/fire_21889717",
+      "split": "train",
+      "dates": [
+        "2018-07-06",
+        "2018-07-07",
+        "2018-07-08",
+        "2018-07-09"
+      ],
+      "center": [
+        41.960785850200146,
+        -122.53234921919507
+      ],
+      "sourceHashes": [
+        "cdecdbfb78662e2b4eff6136dfe164d00aad2d8ecdda7753a0de32e3c3b5f673",
+        "96508196968ecdf70cefbacdff3a0dcc995f379c5b165845b5510b7b1bc5bcc0",
+        "fcdd574b2ce5a5d537001ebe2c6771dc4759a7fbd189859c7b3082f66dbe1778",
+        "6c70fbb86a4c89c830e0f17c228ad07852bfb593a13261868f0fd32ac6d622b0"
+      ]
+    },
+    {
+      "event": "2019/fire_23300668",
+      "split": "train",
+      "dates": [
+        "2019-09-04",
+        "2019-09-05",
+        "2019-09-06",
+        "2019-09-07"
+      ],
+      "center": [
+        40.22676801230759,
+        -122.76286292522227
+      ],
+      "sourceHashes": [
+        "9acfe585e21463ca51b72aa8f5b7aa69616990db2e93edfc3e8fad2808e4b8d3",
+        "d539944fe33f566d306b18d0aa6af54cc1f22e6f680c4735f07dc10eca0d0f3c",
+        "ecf3cbbc8ce6f08f41dd69c34b256f0695e211eea4560f92294b6fe38c77acf9",
+        "fd787fdeafb80d91fddc2d6c507d737fae9a4b49c450e4184d4fb87c4ab72fce"
+      ]
+    },
+    {
+      "event": "2019/fire_23301106",
+      "split": "train",
+      "dates": [
+        "2019-09-08",
+        "2019-09-09",
+        "2019-09-10",
+        "2019-09-11"
+      ],
+      "center": [
+        37.85100202287101,
+        -112.98908764147392
+      ],
+      "sourceHashes": [
+        "65b64e242a76ef7712414168528fb3e832418b1a5237cc3c05c87173b162a399",
+        "3e0cf265ae9a31af15d009ddbf6f89b36a4f90ad8b495d91bf8670456a5c075f",
+        "3b6f1438c9984dda035a8a06e66add3ab025245a389dee75137a5328e7486fb4",
+        "34cb7639e649e94ed9922f263df03ae782a278772b878f661a3c999cc8245dea"
+      ]
+    },
+    {
+      "event": "2019/fire_23493973",
+      "split": "train",
+      "dates": [
+        "2019-11-23",
+        "2019-11-24",
+        "2019-11-25",
+        "2019-11-26"
+      ],
+      "center": [
+        43.979483701279364,
+        -123.41502914817714
+      ],
+      "sourceHashes": [
+        "84b475162e3194895befda2e1569a31dd339a31737e298baa6814978c9ae0a24",
+        "f2b66bcc9a8e1fa2103c94479bf94fbc33e812e88dec6df7fc908ee0f7dc206e",
+        "8910b9940730984d12a08427a5cc6615ec859e08d7a6df52797ebb9a7d7393de",
+        "5e7f5d20661479634119f62ed45abdb5e19b40a4efa5cd3eee8e06a4031109c9"
+      ]
+    },
+    {
+      "event": "2019/fire_23410607",
+      "split": "train",
+      "dates": [
+        "2019-10-16",
+        "2019-10-17",
+        "2019-10-18",
+        "2019-10-19"
+      ],
+      "center": [
+        35.22238620723188,
+        -111.93479915706337
+      ],
+      "sourceHashes": [
+        "2cecc7aa176534201e073fd845f7464ef080c07d1702ae2bd1a2eefed7f64439",
+        "8adb710e334cb8505ca3a3dfb79df694f3db15b35dd37afbba66aaf922990e1e",
+        "febdffde4c4e6e15400a7b9f56138326272933169a55b7632f1a5eff6223aaa1",
+        "5b7bb9775719072d571dcc0cde70999e6d505c1198afe1616de80b82fc2782ac"
+      ]
+    },
+    {
+      "event": "2019/fire_23410616",
+      "split": "train",
+      "dates": [
+        "2019-10-29",
+        "2019-10-30",
+        "2019-10-31",
+        "2019-11-01"
+      ],
+      "center": [
+        34.252373397355825,
+        -118.49437121110637
+      ],
+      "sourceHashes": [
+        "fb5e384397c7f157e49bc45e9662295b5497fccffb1f0d308c516eacbc01252c",
+        "5e854758fb0039d521dbaf6d9302d6d923bd890a218ec191e8961330be267353",
+        "e6337796840a26f84abfddbb85e995931e518ee646e1b3a1b7bbf00975847e3a",
+        "62113c90f182645559614a7638d4b76340beaab74ba346491bd608dfb464dabc"
+      ]
+    },
+    {
+      "event": "2019/fire_23159637",
+      "split": "train",
+      "dates": [
+        "2019-08-16",
+        "2019-08-17",
+        "2019-08-18",
+        "2019-08-19"
+      ],
+      "center": [
+        35.200299332060595,
+        -111.95705408306173
+      ],
+      "sourceHashes": [
+        "cbd8e49bb5aa0ff6c6223c09923f7a09decd548c5c20555dc45460c6082891d0",
+        "34df563c726f5a4cb3bc8cf483d374c77df3ebca23ab0f3ba95ae157293dcfcb",
+        "14429fb7eaaaaddae85d632542e2f7baf27c90d69e99251952c4eca4f3cd420a",
+        "72b87446880d2e5308e24ff6865abfd55e161be9acbaa91ca479b2d041b92f19"
+      ]
+    },
+    {
+      "event": "2019/fire_23300712",
+      "split": "train",
+      "dates": [
+        "2019-09-10",
+        "2019-09-11",
+        "2019-09-12",
+        "2019-09-13"
+      ],
+      "center": [
+        37.01381157123107,
+        -118.3681273744106
+      ],
+      "sourceHashes": [
+        "77a1b6c6dfa403b692cd71b51f525d3f977c6f3fc2e281f84eca704cd7b1fcc3",
+        "dcc96a99ff53ebb4c6d31f30e7aafe7dfe612a86578cf422ea738a3b0dba0155",
+        "42347732ec5a9486a5c7e9b80e82b887863516d4ab43079a0517c7f97c0b79b5",
+        "c0e3a9836b04f07c187c2ce1ea1c81f525dbc748e67da95c3b9ca7cf0dc26bb6"
+      ]
+    },
+    {
+      "event": "2020/fire_24104628",
+      "split": "validation",
+      "dates": [
+        "2020-07-03",
+        "2020-07-04",
+        "2020-07-05",
+        "2020-07-06"
+      ],
+      "center": [
+        39.46743634474789,
+        -112.21073174665987
+      ],
+      "sourceHashes": [
+        "48d7dae81f6bfb35d2fde55e422a51a77e1e1dc12654f2ee7792b51395ba304d",
+        "88698e82b433da8f2d5126262328f6046e7e07f85390ed754ccc21f213e56acc",
+        "eea8a589d5960f1e2fdd9248e05054521123f3ff70a8e4aac0d4012bcd85478d",
+        "c7b109f0584c8a48762d12880a17767705c1b1fc813f29a708a778870f088c06"
+      ]
+    },
+    {
+      "event": "2020/fire_24333277",
+      "split": "validation",
+      "dates": [
+        "2020-09-04",
+        "2020-09-05",
+        "2020-09-06",
+        "2020-09-07"
+      ],
+      "center": [
+        45.67392842738231,
+        -106.18780497856878
+      ],
+      "sourceHashes": [
+        "b7853431c907270010989b2ed05b09a24445e40399a8052c7c206ed093ca3ff2",
+        "112c016873d39c8e7eddb42ffb1b305bc55ba25088af6f4c13ac32b257b065de",
+        "30c2cf0a3e1b463110b1ec9bb81dff56d4eacb532ea62e8df326aded4efb8287",
+        "98070abe8427bed1ce000d363d0cbbe4b96d0ce49a5a5a2419e396d75377fa67"
+      ]
+    },
+    {
+      "event": "2020/fire_24332796",
+      "split": "validation",
+      "dates": [
+        "2020-09-01",
+        "2020-09-02",
+        "2020-09-03",
+        "2020-09-04"
+      ],
+      "center": [
+        33.969573013169864,
+        -111.16497995290759
+      ],
+      "sourceHashes": [
+        "460ed25a69c525c464e7370575d8c6a3a6a5f7ff9148d191c2215edb2cda28bc",
+        "6990dfec0a16b0f4e4a0fb95d12fed46a2d69492495fa150e8669caa79a2e3f4",
+        "0feef61e6601ac59501e128461cb75fc8edbcb189a3b4f87e1da4801ad2a930c",
+        "43483e230368e7f9edd46db61764a7855ba04786977d707412e54a9f0a19fca7"
+      ]
+    },
+    {
+      "event": "2020/fire_24191364",
+      "split": "validation",
+      "dates": [
+        "2020-07-06",
+        "2020-07-07",
+        "2020-07-08",
+        "2020-07-09"
+      ],
+      "center": [
+        38.87188378819076,
+        -119.60104972047844
+      ],
+      "sourceHashes": [
+        "9cab15e493fd265b31c5ebef8077362e6ecca8737dabdbb7718988d231215255",
+        "546504a3bdad9724a947105b3c72132696330b908f9961adc63d9cd45c0601c4",
+        "5bfa966d01c4eacb227498d573790fd69894ef04b1ad944dfff485b8265b56db",
+        "4d1b8ede407d9ab8d7ed595b4c43c776ea4cf9ec778ca7b99f88c83f8648f764"
+      ]
+    },
+    {
+      "event": "2020/fire_24333259",
+      "split": "validation",
+      "dates": [
+        "2020-09-04",
+        "2020-09-05",
+        "2020-09-06",
+        "2020-09-07"
+      ],
+      "center": [
+        48.146401029265355,
+        -113.13703657846816
+      ],
+      "sourceHashes": [
+        "96056533ce7b226167d574f21bf698e486c286d34f1b8b93182ac2686122a88f",
+        "701b0956fe2843ca36552f8c9a71d7a0b3a5629fc960b40fcca6df3bf67d4cce",
+        "7071e166a477352918956a36c5a61f212099fbebba1dfdce6b55f6c7d6f8ef8b",
+        "d40e976c6b9a003d979c2cca813caf995d74ea0c81d349c37a0d009dfa3ec6fa"
+      ]
+    },
+    {
+      "event": "2021/fire_25204877",
+      "split": "test",
+      "dates": [
+        "2021-07-04",
+        "2021-07-05",
+        "2021-07-06",
+        "2021-07-07"
+      ],
+      "center": [
+        34.16568699450826,
+        -112.24532471045272
+      ],
+      "sourceHashes": [
+        "43337cf441a3e638020c806d929e39f6def6521b337be10ea6df0b1c58ccc287",
+        "a92619fb1c76e4a887327944a6148a178ea1cc6ef01d6434c4f97cc534d1ddf8",
+        "f0c979832e246b52cecd6181354c54884d591dc81d4131fba01c0feb7680a15f",
+        "0f1399689e3b5f71f5531a11719993937b33b008d3637714e979400d1e45a01a"
+      ]
+    },
+    {
+      "event": "2021/fire_25205354",
+      "split": "test",
+      "dates": [
+        "2021-06-15",
+        "2021-06-16",
+        "2021-06-17",
+        "2021-06-18"
+      ],
+      "center": [
+        39.782838938787364,
+        -111.07883453771372
+      ],
+      "sourceHashes": [
+        "e6e8c65d2e2dd1f2f6c17eb0f6a2ac93a60b1a04fc5a0ac2bbf17303c3a91921",
+        "92412584913f7fed3e5136203f9c18c294b6358ade8e38e71c1d13bb85965ec7",
+        "8a7366cab4ff6ef98dde8ec04cb0370134119de31a549b9897e7335436236e2a",
+        "fe47bc714c1972ad4cde7038768f48e2dee6ec0b3af9c72ab375963597ce2e14"
+      ]
+    },
+    {
+      "event": "2021/fire_25204859",
+      "split": "test",
+      "dates": [
+        "2021-07-01",
+        "2021-07-02",
+        "2021-07-03",
+        "2021-07-04"
+      ],
+      "center": [
+        35.086474515804824,
+        -111.91332197370873
+      ],
+      "sourceHashes": [
+        "af3d2461d63135c5b7ed5f8ee157f0aca7d176d533551bf9a9b25b0722a42d74",
+        "e86e836c5791273786e6879e3e33972c715ea481b56307ec38c77e8d72167600",
+        "428563aac82ac54bd5367c7f2a633334bd54a81a85bf1c2af85895a142f1ed35",
+        "e6142e927a23a1d4d6ba09190663ee52b239889b3d08c3f0c4cb215b1531bb41"
+      ]
+    },
+    {
+      "event": "2021/fire_25204820",
+      "split": "test",
+      "dates": [
+        "2021-06-25",
+        "2021-06-26",
+        "2021-06-27",
+        "2021-06-28"
+      ],
+      "center": [
+        40.73670431059571,
+        -122.32640954190491
+      ],
+      "sourceHashes": [
+        "258dd26e2aa90bff1d4c010f13ea31646cb52e15a29d4237da23d99f6ba63d99",
+        "68815a696b1dfb74265bfc2bfdcd928c6de493039a23d68aadd80ecce4a043c9",
+        "0e176b6dc5b05d2a631af1e23e97ffdc1568670625e1b66a58947eecde910fc9",
+        "3e2fd47e7befe1c53b63babcd513fcc1d2ef4735fd18e875f2a93c30d8bb46ea"
+      ]
+    },
+    {
+      "event": "2021/fire_25410972",
+      "split": "test",
+      "dates": [
+        "2021-09-03",
+        "2021-09-04",
+        "2021-09-05",
+        "2021-09-06"
+      ],
+      "center": [
+        45.53289113176217,
+        -115.7860614304394
+      ],
+      "sourceHashes": [
+        "3694c12d5d84671091b6a98fdcbda861670378686d6df157595c763036923e3e",
+        "42c71360bd4d203a6ab09df343c20bca8a3e77b325f6fdbf995e6f6842edbd57",
+        "a8ecd5ba5860b022a687fdd9f6e527bb9af5192e189597f701f7dcdd40bba6ab",
+        "ac1d78fb4a537927bb6ef23f6f6677308a16928d6d6a537a98f6cfc8da47e383"
+      ]
+    },
+    {
+      "event": "2021/fire_25295956",
+      "split": "test",
+      "dates": [
+        "2021-07-14",
+        "2021-07-15",
+        "2021-07-16",
+        "2021-07-17"
+      ],
+      "center": [
+        44.728269523983926,
+        -111.59685494024868
+      ],
+      "sourceHashes": [
+        "64849c8a909f008f8204c09c459be6dc240919c89da41547bd6d4432d1331949",
+        "c4a3938e3bd8c4607dab85a84f685e4009b0799affd21cce66c205bbf9ac0280",
+        "b6b9c8275438d56d66fc8d4f1258ff076504034030006c5923ab5565d28cec31",
+        "0d5d5fca81af00f174de05978b4e660087009a6b9c3b8060b8dbc961f13d459f"
+      ]
+    }
+  ],
+  "implementationReview": "The final artifact corrects floating-point neighborhood-count artifacts found in cross-language feature review. The same preregistered candidates, validation selection and held-out event split were retained. Test results were recalculated after the correction; the test was not used to optimize hyperparameters."
+}

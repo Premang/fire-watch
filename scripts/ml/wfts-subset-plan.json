@@ -1,0 +1,2121 @@
+{
+  "seed": 42,
+  "events": 60,
+  "files": 240,
+  "compressedBytes": 874003110,
+  "selection": "random events within year and random four-consecutive-day windows; no label/feature-dependent selection",
+  "splits": {
+    "train": [
+      "2018",
+      "2019"
+    ],
+    "validation": [
+      "2020"
+    ],
+    "test": [
+      "2021"
+    ]
+  },
+  "selectionDetails": [
+    {
+      "event": "2018/fire_22141343",
+      "split": "train",
+      "files": [
+        {
+          "name": "2018/fire_22141343/2018-09-05.tif",
+          "bytes": 3103441,
+          "compressedBytes": 3049420,
+          "offset": 2352067814,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_22141343/2018-09-06.tif",
+          "bytes": 3110468,
+          "compressedBytes": 3056721,
+          "offset": 2349011002,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_22141343/2018-09-07.tif",
+          "bytes": 3160080,
+          "compressedBytes": 3101805,
+          "offset": 2345909106,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_22141343/2018-09-08.tif",
+          "bytes": 3147636,
+          "compressedBytes": 3091794,
+          "offset": 2333623570,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 12299740
+    },
+    {
+      "event": "2018/fire_21804883",
+      "split": "train",
+      "files": [
+        {
+          "name": "2018/fire_21804883/2018-06-25.tif",
+          "bytes": 3135483,
+          "compressedBytes": 3075909,
+          "offset": 5319512213,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21804883/2018-06-26.tif",
+          "bytes": 3100122,
+          "compressedBytes": 3042060,
+          "offset": 5322588213,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21804883/2018-06-27.tif",
+          "bytes": 3102724,
+          "compressedBytes": 3046166,
+          "offset": 5353451888,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21804883/2018-06-28.tif",
+          "bytes": 3114120,
+          "compressedBytes": 3055877,
+          "offset": 5338081555,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 12220012
+    },
+    {
+      "event": "2018/fire_21688916",
+      "split": "train",
+      "files": [
+        {
+          "name": "2018/fire_21688916/2018-04-09.tif",
+          "bytes": 4410425,
+          "compressedBytes": 4330596,
+          "offset": 5729902570,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21688916/2018-04-10.tif",
+          "bytes": 4385225,
+          "compressedBytes": 4305529,
+          "offset": 5677262848,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21688916/2018-04-11.tif",
+          "bytes": 4458436,
+          "compressedBytes": 4377903,
+          "offset": 5624356593,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21688916/2018-04-12.tif",
+          "bytes": 4484117,
+          "compressedBytes": 4402575,
+          "offset": 5646218086,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 17416603
+    },
+    {
+      "event": "2018/fire_21998157",
+      "split": "train",
+      "files": [
+        {
+          "name": "2018/fire_21998157/2018-08-16.tif",
+          "bytes": 3122566,
+          "compressedBytes": 3045190,
+          "offset": 13459105854,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21998157/2018-08-17.tif",
+          "bytes": 3122358,
+          "compressedBytes": 3046832,
+          "offset": 13474379559,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21998157/2018-08-18.tif",
+          "bytes": 3109247,
+          "compressedBytes": 3036763,
+          "offset": 13480477666,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21998157/2018-08-19.tif",
+          "bytes": 3120682,
+          "compressedBytes": 3045701,
+          "offset": 13440753955,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 12174486
+    },
+    {
+      "event": "2018/fire_21617464",
+      "split": "train",
+      "files": [
+        {
+          "name": "2018/fire_21617464/2018-03-05.tif",
+          "bytes": 4505157,
+          "compressedBytes": 4422026,
+          "offset": 8625107567,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21617464/2018-03-06.tif",
+          "bytes": 4515452,
+          "compressedBytes": 4436701,
+          "offset": 8620670775,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21617464/2018-03-07.tif",
+          "bytes": 4465703,
+          "compressedBytes": 4378124,
+          "offset": 8607487643,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21617464/2018-03-08.tif",
+          "bytes": 4474313,
+          "compressedBytes": 4386836,
+          "offset": 8603100716,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 17623687
+    },
+    {
+      "event": "2018/fire_22141528",
+      "split": "train",
+      "files": [
+        {
+          "name": "2018/fire_22141528/2018-09-23.tif",
+          "bytes": 4147610,
+          "compressedBytes": 4073953,
+          "offset": 9429838180,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_22141528/2018-09-24.tif",
+          "bytes": 4147021,
+          "compressedBytes": 4073819,
+          "offset": 9397909179,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_22141528/2018-09-25.tif",
+          "bytes": 4142876,
+          "compressedBytes": 4065269,
+          "offset": 9437978593,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_22141528/2018-09-26.tif",
+          "bytes": 4156529,
+          "compressedBytes": 4082132,
+          "offset": 9410076200,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 16295173
+    },
+    {
+      "event": "2018/fire_21998255",
+      "split": "train",
+      "files": [
+        {
+          "name": "2018/fire_21998255/2018-08-14.tif",
+          "bytes": 4089289,
+          "compressedBytes": 4013861,
+          "offset": 5895905861,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21998255/2018-08-15.tif",
+          "bytes": 4078262,
+          "compressedBytes": 4002757,
+          "offset": 5944133815,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21998255/2018-08-16.tif",
+          "bytes": 4072694,
+          "compressedBytes": 3997487,
+          "offset": 5948136663,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21998255/2018-08-17.tif",
+          "bytes": 4091586,
+          "compressedBytes": 4016788,
+          "offset": 5875677176,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 16030893
+    },
+    {
+      "event": "2018/fire_21998119",
+      "split": "train",
+      "files": [
+        {
+          "name": "2018/fire_21998119/2018-08-17.tif",
+          "bytes": 3186381,
+          "compressedBytes": 3121268,
+          "offset": 3750894604,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21998119/2018-08-18.tif",
+          "bytes": 3120405,
+          "compressedBytes": 3061044,
+          "offset": 3744746234,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21998119/2018-08-19.tif",
+          "bytes": 3143426,
+          "compressedBytes": 3082092,
+          "offset": 3763422745,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21998119/2018-08-20.tif",
+          "bytes": 3127571,
+          "compressedBytes": 3066239,
+          "offset": 3769606536,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 12330643
+    },
+    {
+      "event": "2018/fire_21890170",
+      "split": "train",
+      "files": [
+        {
+          "name": "2018/fire_21890170/2018-07-27.tif",
+          "bytes": 4599592,
+          "compressedBytes": 4519020,
+          "offset": 3235361051,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21890170/2018-07-28.tif",
+          "bytes": 3851110,
+          "compressedBytes": 3772726,
+          "offset": 3156272873,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21890170/2018-07-29.tif",
+          "bytes": 4535895,
+          "compressedBytes": 4457184,
+          "offset": 3151815598,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21890170/2018-07-30.tif",
+          "bytes": 4485905,
+          "compressedBytes": 4400212,
+          "offset": 3204384947,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 17149142
+    },
+    {
+      "event": "2018/fire_21690102",
+      "split": "train",
+      "files": [
+        {
+          "name": "2018/fire_21690102/2018-04-25.tif",
+          "bytes": 4462353,
+          "compressedBytes": 4383258,
+          "offset": 3037409424,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21690102/2018-04-26.tif",
+          "bytes": 4465512,
+          "compressedBytes": 4387552,
+          "offset": 3120766135,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21690102/2018-04-27.tif",
+          "bytes": 4471090,
+          "compressedBytes": 4396144,
+          "offset": 3076978533,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21690102/2018-04-28.tif",
+          "bytes": 4605468,
+          "compressedBytes": 4525242,
+          "offset": 3133952927,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 17692196
+    },
+    {
+      "event": "2018/fire_21890160",
+      "split": "train",
+      "files": [
+        {
+          "name": "2018/fire_21890160/2018-08-24.tif",
+          "bytes": 4450368,
+          "compressedBytes": 4366084,
+          "offset": 8134834248,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21890160/2018-08-25.tif",
+          "bytes": 4487849,
+          "compressedBytes": 4406173,
+          "offset": 8030103830,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21890160/2018-08-26.tif",
+          "bytes": 4536191,
+          "compressedBytes": 4457373,
+          "offset": 8043187891,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21890160/2018-08-27.tif",
+          "bytes": 4478062,
+          "compressedBytes": 4397739,
+          "offset": 8095574712,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 17627369
+    },
+    {
+      "event": "2018/fire_21804961",
+      "split": "train",
+      "files": [
+        {
+          "name": "2018/fire_21804961/2018-07-09.tif",
+          "bytes": 4722184,
+          "compressedBytes": 4638623,
+          "offset": 7103646258,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21804961/2018-07-10.tif",
+          "bytes": 4782330,
+          "compressedBytes": 4695816,
+          "offset": 7094150033,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21804961/2018-07-11.tif",
+          "bytes": 4735059,
+          "compressedBytes": 4652678,
+          "offset": 7145928486,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21804961/2018-07-12.tif",
+          "bytes": 4924543,
+          "compressedBytes": 4836409,
+          "offset": 7061266896,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 18823526
+    },
+    {
+      "event": "2018/fire_21748813",
+      "split": "train",
+      "files": [
+        {
+          "name": "2018/fire_21748813/2018-05-05.tif",
+          "bytes": 4576454,
+          "compressedBytes": 4494315,
+          "offset": 1579866236,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21748813/2018-05-06.tif",
+          "bytes": 4561956,
+          "compressedBytes": 4481963,
+          "offset": 1543982406,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21748813/2018-05-07.tif",
+          "bytes": 4577738,
+          "compressedBytes": 4497683,
+          "offset": 1526004722,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21748813/2018-05-08.tif",
+          "bytes": 4567308,
+          "compressedBytes": 4484205,
+          "offset": 1539498110,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 17958166
+    },
+    {
+      "event": "2018/fire_21458806",
+      "split": "train",
+      "files": [
+        {
+          "name": "2018/fire_21458806/2018-01-20.tif",
+          "bytes": 3203163,
+          "compressedBytes": 3152972,
+          "offset": 9387625715,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21458806/2018-01-21.tif",
+          "bytes": 3167946,
+          "compressedBytes": 3117312,
+          "offset": 9337443602,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21458806/2018-01-22.tif",
+          "bytes": 3149962,
+          "compressedBytes": 3098937,
+          "offset": 9375140377,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21458806/2018-01-23.tif",
+          "bytes": 3200430,
+          "compressedBytes": 3149202,
+          "offset": 9384476422,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 12518423
+    },
+    {
+      "event": "2018/fire_21997854",
+      "split": "train",
+      "files": [
+        {
+          "name": "2018/fire_21997854/2018-08-07.tif",
+          "bytes": 3253132,
+          "compressedBytes": 3196543,
+          "offset": 13596313991,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21997854/2018-08-08.tif",
+          "bytes": 3254608,
+          "compressedBytes": 3198196,
+          "offset": 13599510625,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21997854/2018-08-09.tif",
+          "bytes": 3238903,
+          "compressedBytes": 3186061,
+          "offset": 13609114681,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21997854/2018-08-10.tif",
+          "bytes": 3271482,
+          "compressedBytes": 3218741,
+          "offset": 13580315348,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 12799541
+    },
+    {
+      "event": "2018/fire_21998291",
+      "split": "train",
+      "files": [
+        {
+          "name": "2018/fire_21998291/2018-08-29.tif",
+          "bytes": 3543464,
+          "compressedBytes": 3476055,
+          "offset": 7573551179,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21998291/2018-08-30.tif",
+          "bytes": 3558375,
+          "compressedBytes": 3492637,
+          "offset": 7559637012,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21998291/2018-08-31.tif",
+          "bytes": 3576637,
+          "compressedBytes": 3510054,
+          "offset": 7577027325,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21998291/2018-09-01.tif",
+          "bytes": 3523274,
+          "compressedBytes": 3456097,
+          "offset": 7563129740,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 13934843
+    },
+    {
+      "event": "2018/fire_22141461",
+      "split": "train",
+      "files": [
+        {
+          "name": "2018/fire_22141461/2018-10-04.tif",
+          "bytes": 3448081,
+          "compressedBytes": 3368315,
+          "offset": 11234756581,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_22141461/2018-10-05.tif",
+          "bytes": 3443537,
+          "compressedBytes": 3360733,
+          "offset": 11210712767,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_22141461/2018-10-06.tif",
+          "bytes": 3416213,
+          "compressedBytes": 3340085,
+          "offset": 11231416405,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_22141461/2018-10-07.tif",
+          "bytes": 3307790,
+          "compressedBytes": 3245701,
+          "offset": 11193165093,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 13314834
+    },
+    {
+      "event": "2018/fire_22141554",
+      "split": "train",
+      "files": [
+        {
+          "name": "2018/fire_22141554/2018-09-21.tif",
+          "bytes": 3131054,
+          "compressedBytes": 3086541,
+          "offset": 10854045091,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_22141554/2018-09-22.tif",
+          "bytes": 3721920,
+          "compressedBytes": 3660312,
+          "offset": 10871798597,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_22141554/2018-09-23.tif",
+          "bytes": 3753594,
+          "compressedBytes": 3692237,
+          "offset": 10860775814,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_22141554/2018-09-24.tif",
+          "bytes": 3693958,
+          "compressedBytes": 3630657,
+          "offset": 10864468142,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 14069747
+    },
+    {
+      "event": "2018/fire_22257882",
+      "split": "train",
+      "files": [
+        {
+          "name": "2018/fire_22257882/2018-10-15.tif",
+          "bytes": 2673307,
+          "compressedBytes": 2627943,
+          "offset": 12715535012,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_22257882/2018-10-16.tif",
+          "bytes": 2652485,
+          "compressedBytes": 2607033,
+          "offset": 12762046243,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_22257882/2018-10-17.tif",
+          "bytes": 3184817,
+          "compressedBytes": 3101223,
+          "offset": 12712433698,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_22257882/2018-10-18.tif",
+          "bytes": 3181539,
+          "compressedBytes": 3097346,
+          "offset": 12743258237,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 11433545
+    },
+    {
+      "event": "2018/fire_21889719",
+      "split": "train",
+      "files": [
+        {
+          "name": "2018/fire_21889719/2018-08-19.tif",
+          "bytes": 3208903,
+          "compressedBytes": 3119927,
+          "offset": 791701294,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21889719/2018-08-20.tif",
+          "bytes": 3222943,
+          "compressedBytes": 3127737,
+          "offset": 825926010,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21889719/2018-08-21.tif",
+          "bytes": 3225518,
+          "compressedBytes": 3124926,
+          "offset": 751159781,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21889719/2018-08-22.tif",
+          "bytes": 3213728,
+          "compressedBytes": 3119975,
+          "offset": 735469180,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 12492565
+    },
+    {
+      "event": "2018/fire_21999251",
+      "split": "train",
+      "files": [
+        {
+          "name": "2018/fire_21999251/2018-08-20.tif",
+          "bytes": 2898876,
+          "compressedBytes": 2834931,
+          "offset": 6300802563,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21999251/2018-08-21.tif",
+          "bytes": 2922228,
+          "compressedBytes": 2857681,
+          "offset": 6329303406,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21999251/2018-08-22.tif",
+          "bytes": 2899098,
+          "compressedBytes": 2836457,
+          "offset": 6349190566,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21999251/2018-08-23.tif",
+          "bytes": 2918937,
+          "compressedBytes": 2856174,
+          "offset": 6374761643,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 11385243
+    },
+    {
+      "event": "2018/fire_21999351",
+      "split": "train",
+      "files": [
+        {
+          "name": "2018/fire_21999351/2018-08-17.tif",
+          "bytes": 3949788,
+          "compressedBytes": 3883851,
+          "offset": 8570071613,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21999351/2018-08-18.tif",
+          "bytes": 3956779,
+          "compressedBytes": 3889327,
+          "offset": 8554599459,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21999351/2018-08-19.tif",
+          "bytes": 4011502,
+          "compressedBytes": 3945638,
+          "offset": 8546802023,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21999351/2018-08-20.tif",
+          "bytes": 4016170,
+          "compressedBytes": 3955183,
+          "offset": 8531319267,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 15673999
+    },
+    {
+      "event": "2018/fire_21804980",
+      "split": "train",
+      "files": [
+        {
+          "name": "2018/fire_21804980/2018-06-30.tif",
+          "bytes": 3982423,
+          "compressedBytes": 3908065,
+          "offset": 11863154627,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21804980/2018-07-01.tif",
+          "bytes": 3986947,
+          "compressedBytes": 3915750,
+          "offset": 11859238786,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21804980/2018-07-02.tif",
+          "bytes": 3996890,
+          "compressedBytes": 3922616,
+          "offset": 11827933900,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21804980/2018-07-03.tif",
+          "bytes": 3988748,
+          "compressedBytes": 3915237,
+          "offset": 11851418659,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 15661668
+    },
+    {
+      "event": "2018/fire_21804577",
+      "split": "train",
+      "files": [
+        {
+          "name": "2018/fire_21804577/2018-06-28.tif",
+          "bytes": 3292104,
+          "compressedBytes": 3220189,
+          "offset": 9100366253,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21804577/2018-06-29.tif",
+          "bytes": 3294116,
+          "compressedBytes": 3221924,
+          "offset": 9074647117,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21804577/2018-06-30.tif",
+          "bytes": 3282811,
+          "compressedBytes": 3208724,
+          "offset": 9055357129,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21804577/2018-07-01.tif",
+          "bytes": 3266364,
+          "compressedBytes": 3188896,
+          "offset": 9097177266,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 12839733
+    },
+    {
+      "event": "2018/fire_21889717",
+      "split": "train",
+      "files": [
+        {
+          "name": "2018/fire_21889717/2018-07-06.tif",
+          "bytes": 3197897,
+          "compressedBytes": 3113522,
+          "offset": 11460827428,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21889717/2018-07-07.tif",
+          "bytes": 3193074,
+          "compressedBytes": 3107987,
+          "offset": 11485659119,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21889717/2018-07-08.tif",
+          "bytes": 3192632,
+          "compressedBytes": 3109233,
+          "offset": 11488767197,
+          "compression": 8
+        },
+        {
+          "name": "2018/fire_21889717/2018-07-09.tif",
+          "bytes": 3200278,
+          "compressedBytes": 3114894,
+          "offset": 11482544134,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 12445636
+    },
+    {
+      "event": "2019/fire_23300668",
+      "split": "train",
+      "files": [
+        {
+          "name": "2019/fire_23300668/2019-09-04.tif",
+          "bytes": 3330043,
+          "compressedBytes": 3261822,
+          "offset": 17843107465,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23300668/2019-09-05.tif",
+          "bytes": 3253700,
+          "compressedBytes": 3166039,
+          "offset": 17824342597,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23300668/2019-09-06.tif",
+          "bytes": 2902244,
+          "compressedBytes": 2845261,
+          "offset": 17840262113,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23300668/2019-09-07.tif",
+          "bytes": 3255528,
+          "compressedBytes": 3172372,
+          "offset": 17837089650,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 12445494
+    },
+    {
+      "event": "2019/fire_23301106",
+      "split": "train",
+      "files": [
+        {
+          "name": "2019/fire_23301106/2019-09-08.tif",
+          "bytes": 3982605,
+          "compressedBytes": 3913369,
+          "offset": 15897767920,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23301106/2019-09-09.tif",
+          "bytes": 3996411,
+          "compressedBytes": 3925226,
+          "offset": 15924760480,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23301106/2019-09-10.tif",
+          "bytes": 4091909,
+          "compressedBytes": 4024534,
+          "offset": 15920735855,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23301106/2019-09-11.tif",
+          "bytes": 4064218,
+          "compressedBytes": 3992987,
+          "offset": 15908886526,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 15856116
+    },
+    {
+      "event": "2019/fire_23036877",
+      "split": "train",
+      "files": [
+        {
+          "name": "2019/fire_23036877/2019-07-18.tif",
+          "bytes": 3580762,
+          "compressedBytes": 3515913,
+          "offset": 13893429327,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23036877/2019-07-19.tif",
+          "bytes": 3581962,
+          "compressedBytes": 3516936,
+          "offset": 13851097239,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23036877/2019-07-20.tif",
+          "bytes": 3579297,
+          "compressedBytes": 3514236,
+          "offset": 13865154101,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23036877/2019-07-21.tif",
+          "bytes": 3559192,
+          "compressedBytes": 3493071,
+          "offset": 13854614266,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 14040156
+    },
+    {
+      "event": "2019/fire_23493973",
+      "split": "train",
+      "files": [
+        {
+          "name": "2019/fire_23493973/2019-11-23.tif",
+          "bytes": 3091382,
+          "compressedBytes": 3024632,
+          "offset": 18232588341,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23493973/2019-11-24.tif",
+          "bytes": 3146599,
+          "compressedBytes": 3073188,
+          "offset": 18256927393,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23493973/2019-11-25.tif",
+          "bytes": 3146615,
+          "compressedBytes": 3072928,
+          "offset": 18269045893,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23493973/2019-11-26.tif",
+          "bytes": 3159872,
+          "compressedBytes": 3085836,
+          "offset": 18260000672,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 12256584
+    },
+    {
+      "event": "2019/fire_23301386",
+      "split": "train",
+      "files": [
+        {
+          "name": "2019/fire_23301386/2019-09-04.tif",
+          "bytes": 3681797,
+          "compressedBytes": 3616761,
+          "offset": 15521766308,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23301386/2019-09-05.tif",
+          "bytes": 3678968,
+          "compressedBytes": 3611288,
+          "offset": 15562244063,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23301386/2019-09-06.tif",
+          "bytes": 3831082,
+          "compressedBytes": 3772952,
+          "offset": 15551144033,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23301386/2019-09-07.tif",
+          "bytes": 3787377,
+          "compressedBytes": 3722955,
+          "offset": 15543760772,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 14723956
+    },
+    {
+      "event": "2019/fire_23410607",
+      "split": "train",
+      "files": [
+        {
+          "name": "2019/fire_23410607/2019-10-16.tif",
+          "bytes": 4191758,
+          "compressedBytes": 4121580,
+          "offset": 18573780594,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23410607/2019-10-17.tif",
+          "bytes": 4220657,
+          "compressedBytes": 4146522,
+          "offset": 18561406564,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23410607/2019-10-18.tif",
+          "bytes": 4198481,
+          "compressedBytes": 4122331,
+          "offset": 18549009927,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23410607/2019-10-19.tif",
+          "bytes": 4180979,
+          "compressedBytes": 4103490,
+          "offset": 18569677013,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 16493923
+    },
+    {
+      "event": "2019/fire_23036564",
+      "split": "train",
+      "files": [
+        {
+          "name": "2019/fire_23036564/2019-07-30.tif",
+          "bytes": 4575969,
+          "compressedBytes": 4494457,
+          "offset": 16110549037,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23036564/2019-07-31.tif",
+          "bytes": 4497358,
+          "compressedBytes": 4416521,
+          "offset": 16058040700,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23036564/2019-08-01.tif",
+          "bytes": 4406906,
+          "compressedBytes": 4320450,
+          "offset": 16031818200,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23036564/2019-08-02.tif",
+          "bytes": 4434701,
+          "compressedBytes": 4349814,
+          "offset": 16119463173,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 17581242
+    },
+    {
+      "event": "2019/fire_23159842",
+      "split": "train",
+      "files": [
+        {
+          "name": "2019/fire_23159842/2019-08-02.tif",
+          "bytes": 3762994,
+          "compressedBytes": 3690809,
+          "offset": 14396519429,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23159842/2019-08-03.tif",
+          "bytes": 3762809,
+          "compressedBytes": 3688066,
+          "offset": 14403976893,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23159842/2019-08-04.tif",
+          "bytes": 3809618,
+          "compressedBytes": 3734838,
+          "offset": 14385444353,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23159842/2019-08-05.tif",
+          "bytes": 3820183,
+          "compressedBytes": 3747068,
+          "offset": 14377973247,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 14860781
+    },
+    {
+      "event": "2019/fire_23410616",
+      "split": "train",
+      "files": [
+        {
+          "name": "2019/fire_23410616/2019-10-29.tif",
+          "bytes": 3607445,
+          "compressedBytes": 3534146,
+          "offset": 16939065931,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23410616/2019-10-30.tif",
+          "bytes": 3642651,
+          "compressedBytes": 3571986,
+          "offset": 16946138231,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23410616/2019-10-31.tif",
+          "bytes": 3613754,
+          "compressedBytes": 3537977,
+          "offset": 16973903037,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23410616/2019-11-01.tif",
+          "bytes": 2998933,
+          "compressedBytes": 2944126,
+          "offset": 16963855088,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 13588235
+    },
+    {
+      "event": "2019/fire_23159838",
+      "split": "train",
+      "files": [
+        {
+          "name": "2019/fire_23159838/2019-08-07.tif",
+          "bytes": 3597926,
+          "compressedBytes": 3534271,
+          "offset": 17694720859,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23159838/2019-08-08.tif",
+          "bytes": 3678620,
+          "compressedBytes": 3617701,
+          "offset": 17667224883,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23159838/2019-08-09.tif",
+          "bytes": 3665488,
+          "compressedBytes": 3604994,
+          "offset": 17663619798,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23159838/2019-08-10.tif",
+          "bytes": 3637825,
+          "compressedBytes": 3572604,
+          "offset": 17677273572,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 14329570
+    },
+    {
+      "event": "2019/fire_23036806",
+      "split": "train",
+      "files": [
+        {
+          "name": "2019/fire_23036806/2019-07-19.tif",
+          "bytes": 3119830,
+          "compressedBytes": 3064100,
+          "offset": 14349040166,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23036806/2019-07-20.tif",
+          "bytes": 3122020,
+          "compressedBytes": 3065367,
+          "offset": 14361341925,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23036806/2019-07-21.tif",
+          "bytes": 3123010,
+          "compressedBytes": 3066532,
+          "offset": 14345973543,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23036806/2019-07-22.tif",
+          "bytes": 3093771,
+          "compressedBytes": 3039653,
+          "offset": 14330688955,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 12235652
+    },
+    {
+      "event": "2019/fire_23159637",
+      "split": "train",
+      "files": [
+        {
+          "name": "2019/fire_23159637/2019-08-16.tif",
+          "bytes": 4213907,
+          "compressedBytes": 4141515,
+          "offset": 15973581332,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23159637/2019-08-17.tif",
+          "bytes": 4195631,
+          "compressedBytes": 4123410,
+          "offset": 15961133128,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23159637/2019-08-18.tif",
+          "bytes": 4169545,
+          "compressedBytes": 4096508,
+          "offset": 15948606960,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23159637/2019-08-19.tif",
+          "bytes": 4138702,
+          "compressedBytes": 4070184,
+          "offset": 16006959667,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 16431617
+    },
+    {
+      "event": "2019/fire_23300839",
+      "split": "train",
+      "files": [
+        {
+          "name": "2019/fire_23300839/2019-09-07.tif",
+          "bytes": 3475420,
+          "compressedBytes": 3396249,
+          "offset": 17994932616,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23300839/2019-09-08.tif",
+          "bytes": 3594495,
+          "compressedBytes": 3522422,
+          "offset": 17971282518,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23300839/2019-09-09.tif",
+          "bytes": 3585844,
+          "compressedBytes": 3518229,
+          "offset": 17944292714,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23300839/2019-09-10.tif",
+          "bytes": 3525369,
+          "compressedBytes": 3456028,
+          "offset": 17985111727,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 13892928
+    },
+    {
+      "event": "2019/fire_23036871",
+      "split": "train",
+      "files": [
+        {
+          "name": "2019/fire_23036871/2019-07-19.tif",
+          "bytes": 3686412,
+          "compressedBytes": 3626872,
+          "offset": 14321393471,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23036871/2019-07-20.tif",
+          "bytes": 3700760,
+          "compressedBytes": 3638956,
+          "offset": 14292082184,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23036871/2019-07-21.tif",
+          "bytes": 3687694,
+          "compressedBytes": 3625034,
+          "offset": 14295721231,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23036871/2019-07-22.tif",
+          "bytes": 3696078,
+          "compressedBytes": 3633228,
+          "offset": 14266487260,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 14524090
+    },
+    {
+      "event": "2019/fire_23300712",
+      "split": "train",
+      "files": [
+        {
+          "name": "2019/fire_23300712/2019-09-10.tif",
+          "bytes": 3728862,
+          "compressedBytes": 3665363,
+          "offset": 13766853698,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23300712/2019-09-11.tif",
+          "bytes": 3661454,
+          "compressedBytes": 3596793,
+          "offset": 13759594455,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23300712/2019-09-12.tif",
+          "bytes": 3133911,
+          "compressedBytes": 3078237,
+          "offset": 13756516127,
+          "compression": 8
+        },
+        {
+          "name": "2019/fire_23300712/2019-09-13.tif",
+          "bytes": 3690972,
+          "compressedBytes": 3628294,
+          "offset": 13785320917,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 13968687
+    },
+    {
+      "event": "2020/fire_24332880",
+      "split": "validation",
+      "files": [
+        {
+          "name": "2020/fire_24332880/2020-08-22.tif",
+          "bytes": 3112140,
+          "compressedBytes": 3049442,
+          "offset": 28238262612,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24332880/2020-08-23.tif",
+          "bytes": 3083962,
+          "compressedBytes": 3023066,
+          "offset": 28256461379,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24332880/2020-08-24.tif",
+          "bytes": 3084248,
+          "compressedBytes": 3023906,
+          "offset": 28259484536,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24332880/2020-08-25.tif",
+          "bytes": 3090829,
+          "compressedBytes": 3029931,
+          "offset": 28250440214,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 12126345
+    },
+    {
+      "event": "2020/fire_24104628",
+      "split": "validation",
+      "files": [
+        {
+          "name": "2020/fire_24104628/2020-07-03.tif",
+          "bytes": 3502698,
+          "compressedBytes": 3436381,
+          "offset": 26428556710,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24104628/2020-07-04.tif",
+          "bytes": 2908962,
+          "compressedBytes": 2863897,
+          "offset": 26422879585,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24104628/2020-07-05.tif",
+          "bytes": 2853682,
+          "compressedBytes": 2813046,
+          "offset": 26425743573,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24104628/2020-07-06.tif",
+          "bytes": 2834232,
+          "compressedBytes": 2792025,
+          "offset": 26443706218,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 11905349
+    },
+    {
+      "event": "2020/fire_24333277",
+      "split": "validation",
+      "files": [
+        {
+          "name": "2020/fire_24333277/2020-09-04.tif",
+          "bytes": 4168497,
+          "compressedBytes": 4094929,
+          "offset": 20963563451,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24333277/2020-09-05.tif",
+          "bytes": 4212432,
+          "compressedBytes": 4136944,
+          "offset": 20980200340,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24333277/2020-09-06.tif",
+          "bytes": 4266779,
+          "compressedBytes": 4193951,
+          "offset": 20967658471,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24333277/2020-09-07.tif",
+          "bytes": 4334651,
+          "compressedBytes": 4262577,
+          "offset": 21009120175,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 16688401
+    },
+    {
+      "event": "2020/fire_24332779",
+      "split": "validation",
+      "files": [
+        {
+          "name": "2020/fire_24332779/2020-08-09.tif",
+          "bytes": 3706749,
+          "compressedBytes": 3636845,
+          "offset": 29814402847,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24332779/2020-08-10.tif",
+          "bytes": 3742837,
+          "compressedBytes": 3673055,
+          "offset": 29810729701,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24332779/2020-08-11.tif",
+          "bytes": 3744994,
+          "compressedBytes": 3674197,
+          "offset": 29821701855,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24332779/2020-08-12.tif",
+          "bytes": 3714886,
+          "compressedBytes": 3645389,
+          "offset": 29781485495,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 14629486
+    },
+    {
+      "event": "2020/fire_24025605",
+      "split": "validation",
+      "files": [
+        {
+          "name": "2020/fire_24025605/2020-06-07.tif",
+          "bytes": 4202331,
+          "compressedBytes": 4129290,
+          "offset": 32159760407,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24025605/2020-06-08.tif",
+          "bytes": 4193273,
+          "compressedBytes": 4122255,
+          "offset": 32155638061,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24025605/2020-06-09.tif",
+          "bytes": 4199144,
+          "compressedBytes": 4122076,
+          "offset": 32180408645,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24025605/2020-06-10.tif",
+          "bytes": 4152933,
+          "compressedBytes": 4077021,
+          "offset": 32163889788,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 16450642
+    },
+    {
+      "event": "2020/fire_24332796",
+      "split": "validation",
+      "files": [
+        {
+          "name": "2020/fire_24332796/2020-09-01.tif",
+          "bytes": 4410474,
+          "compressedBytes": 4331207,
+          "offset": 28300268895,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24332796/2020-09-02.tif",
+          "bytes": 4348782,
+          "compressedBytes": 4264166,
+          "offset": 28330385838,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24332796/2020-09-03.tif",
+          "bytes": 4319352,
+          "compressedBytes": 4235446,
+          "offset": 28326150301,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24332796/2020-09-04.tif",
+          "bytes": 4310477,
+          "compressedBytes": 4230793,
+          "offset": 28364895930,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 17061612
+    },
+    {
+      "event": "2020/fire_24461328",
+      "split": "validation",
+      "files": [
+        {
+          "name": "2020/fire_24461328/2020-09-23.tif",
+          "bytes": 3368315,
+          "compressedBytes": 3301980,
+          "offset": 32868220308,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24461328/2020-09-24.tif",
+          "bytes": 3331714,
+          "compressedBytes": 3263318,
+          "offset": 32871522379,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24461328/2020-09-25.tif",
+          "bytes": 3326779,
+          "compressedBytes": 3261948,
+          "offset": 32899860434,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24461328/2020-09-26.tif",
+          "bytes": 3226118,
+          "compressedBytes": 3127274,
+          "offset": 32830524344,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 12954520
+    },
+    {
+      "event": "2020/fire_24191364",
+      "split": "validation",
+      "files": [
+        {
+          "name": "2020/fire_24191364/2020-07-06.tif",
+          "bytes": 3108084,
+          "compressedBytes": 3057238,
+          "offset": 20314667174,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24191364/2020-07-07.tif",
+          "bytes": 3083298,
+          "compressedBytes": 3033659,
+          "offset": 20324615917,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24191364/2020-07-08.tif",
+          "bytes": 3073598,
+          "compressedBytes": 3025199,
+          "offset": 20305724507,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24191364/2020-07-09.tif",
+          "bytes": 3115223,
+          "compressedBytes": 3063310,
+          "offset": 20299617412,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 12179406
+    },
+    {
+      "event": "2020/fire_24333259",
+      "split": "validation",
+      "files": [
+        {
+          "name": "2020/fire_24333259/2020-09-04.tif",
+          "bytes": 3683068,
+          "compressedBytes": 3612719,
+          "offset": 20039917393,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24333259/2020-09-05.tif",
+          "bytes": 3684686,
+          "compressedBytes": 3616600,
+          "offset": 19963698662,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24333259/2020-09-06.tif",
+          "bytes": 3758585,
+          "compressedBytes": 3693558,
+          "offset": 19992736465,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24333259/2020-09-07.tif",
+          "bytes": 3780943,
+          "compressedBytes": 3719026,
+          "offset": 19981819382,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 14641903
+    },
+    {
+      "event": "2020/fire_24191376",
+      "split": "validation",
+      "files": [
+        {
+          "name": "2020/fire_24191376/2020-07-12.tif",
+          "bytes": 3267542,
+          "compressedBytes": 3213186,
+          "offset": 29402053416,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24191376/2020-07-13.tif",
+          "bytes": 3896984,
+          "compressedBytes": 3827510,
+          "offset": 29398225815,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24191376/2020-07-14.tif",
+          "bytes": 3870964,
+          "compressedBytes": 3800940,
+          "offset": 29365219174,
+          "compression": 8
+        },
+        {
+          "name": "2020/fire_24191376/2020-07-15.tif",
+          "bytes": 3871235,
+          "compressedBytes": 3798998,
+          "offset": 29350863222,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 14640634
+    },
+    {
+      "event": "2021/fire_25204877",
+      "split": "test",
+      "files": [
+        {
+          "name": "2021/fire_25204877/2021-07-04.tif",
+          "bytes": 3512858,
+          "compressedBytes": 3454314,
+          "offset": 48298440619,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25204877/2021-07-05.tif",
+          "bytes": 3472552,
+          "compressedBytes": 3416987,
+          "offset": 48310024576,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25204877/2021-07-06.tif",
+          "bytes": 4140105,
+          "compressedBytes": 4068420,
+          "offset": 48286213100,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25204877/2021-07-07.tif",
+          "bytes": 4099915,
+          "compressedBytes": 4025935,
+          "offset": 48301895024,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 14965656
+    },
+    {
+      "event": "2021/fire_25205354",
+      "split": "test",
+      "files": [
+        {
+          "name": "2021/fire_25205354/2021-06-15.tif",
+          "bytes": 4163596,
+          "compressedBytes": 4089070,
+          "offset": 34903804582,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25205354/2021-06-16.tif",
+          "bytes": 4150382,
+          "compressedBytes": 4074840,
+          "offset": 34887627394,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25205354/2021-06-17.tif",
+          "bytes": 3746458,
+          "compressedBytes": 3677628,
+          "offset": 34835504900,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25205354/2021-06-18.tif",
+          "bytes": 4214503,
+          "compressedBytes": 4136477,
+          "offset": 34920046703,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 15978015
+    },
+    {
+      "event": "2021/fire_25204859",
+      "split": "test",
+      "files": [
+        {
+          "name": "2021/fire_25204859/2021-07-01.tif",
+          "bytes": 4260570,
+          "compressedBytes": 4189069,
+          "offset": 45032364969,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25204859/2021-07-02.tif",
+          "bytes": 3502771,
+          "compressedBytes": 3441888,
+          "offset": 45040719077,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25204859/2021-07-03.tif",
+          "bytes": 4356159,
+          "compressedBytes": 4278728,
+          "offset": 45068438668,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25204859/2021-07-04.tif",
+          "bytes": 3580693,
+          "compressedBytes": 3518613,
+          "offset": 45003947537,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 15428298
+    },
+    {
+      "event": "2021/fire_25204820",
+      "split": "test",
+      "files": [
+        {
+          "name": "2021/fire_25204820/2021-06-25.tif",
+          "bytes": 3212494,
+          "compressedBytes": 3128916,
+          "offset": 37665216110,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25204820/2021-06-26.tif",
+          "bytes": 3233058,
+          "compressedBytes": 3140610,
+          "offset": 37705056543,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25204820/2021-06-27.tif",
+          "bytes": 3235920,
+          "compressedBytes": 3140495,
+          "offset": 37708197244,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25204820/2021-06-28.tif",
+          "bytes": 3227228,
+          "compressedBytes": 3136633,
+          "offset": 37717624339,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 12546654
+    },
+    {
+      "event": "2021/fire_25410972",
+      "split": "test",
+      "files": [
+        {
+          "name": "2021/fire_25410972/2021-09-03.tif",
+          "bytes": 3577816,
+          "compressedBytes": 3504056,
+          "offset": 43196661725,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25410972/2021-09-04.tif",
+          "bytes": 3553243,
+          "compressedBytes": 3480809,
+          "offset": 43216513065,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25410972/2021-09-05.tif",
+          "bytes": 3573403,
+          "compressedBytes": 3500060,
+          "offset": 43203109096,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25410972/2021-09-06.tif",
+          "bytes": 3602241,
+          "compressedBytes": 3532073,
+          "offset": 43157988825,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 14016998
+    },
+    {
+      "event": "2021/fire_25295956",
+      "split": "test",
+      "files": [
+        {
+          "name": "2021/fire_25295956/2021-07-14.tif",
+          "bytes": 3839870,
+          "compressedBytes": 3771132,
+          "offset": 38698023037,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25295956/2021-07-15.tif",
+          "bytes": 3900708,
+          "compressedBytes": 3836283,
+          "offset": 38686556974,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25295956/2021-07-16.tif",
+          "bytes": 3860131,
+          "compressedBytes": 3793961,
+          "offset": 38678845893,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25295956/2021-07-17.tif",
+          "bytes": 3825801,
+          "compressedBytes": 3758590,
+          "offset": 38709086187,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 15159966
+    },
+    {
+      "event": "2021/fire_25411825",
+      "split": "test",
+      "files": [
+        {
+          "name": "2021/fire_25411825/2021-08-30.tif",
+          "bytes": 3841009,
+          "compressedBytes": 3778557,
+          "offset": 34405146712,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25411825/2021-08-31.tif",
+          "bytes": 3838445,
+          "compressedBytes": 3774616,
+          "offset": 34365367482,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25411825/2021-09-01.tif",
+          "bytes": 3810371,
+          "compressedBytes": 3746177,
+          "offset": 34369142189,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25411825/2021-09-02.tif",
+          "bytes": 3807721,
+          "compressedBytes": 3744777,
+          "offset": 34412385792,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 15044127
+    },
+    {
+      "event": "2021/fire_25205245",
+      "split": "test",
+      "files": [
+        {
+          "name": "2021/fire_25205245/2021-06-27.tif",
+          "bytes": 3186768,
+          "compressedBytes": 3128998,
+          "offset": 44768886462,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25205245/2021-06-28.tif",
+          "bytes": 3179875,
+          "compressedBytes": 3121293,
+          "offset": 44753288822,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25205245/2021-06-29.tif",
+          "bytes": 3156351,
+          "compressedBytes": 3101359,
+          "offset": 44731969994,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25205245/2021-06-30.tif",
+          "bytes": 3157029,
+          "compressedBytes": 3101258,
+          "offset": 44762661395,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 12452908
+    },
+    {
+      "event": "2021/fire_25205306",
+      "split": "test",
+      "files": [
+        {
+          "name": "2021/fire_25205306/2021-06-09.tif",
+          "bytes": 4545128,
+          "compressedBytes": 4460639,
+          "offset": 38813961471,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25205306/2021-06-10.tif",
+          "bytes": 4536436,
+          "compressedBytes": 4453752,
+          "offset": 38747514308,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25205306/2021-06-11.tif",
+          "bytes": 4563279,
+          "compressedBytes": 4478700,
+          "offset": 38778067469,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25205306/2021-06-12.tif",
+          "bytes": 4557661,
+          "compressedBytes": 4473859,
+          "offset": 38751968151,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 17866950
+    },
+    {
+      "event": "2021/fire_25205936",
+      "split": "test",
+      "files": [
+        {
+          "name": "2021/fire_25205936/2021-06-20.tif",
+          "bytes": 4025926,
+          "compressedBytes": 3947795,
+          "offset": 44904186682,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25205936/2021-06-21.tif",
+          "bytes": 3961998,
+          "compressedBytes": 3881517,
+          "offset": 44985554302,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25205936/2021-06-22.tif",
+          "bytes": 4057278,
+          "compressedBytes": 3975685,
+          "offset": 44912187945,
+          "compression": 8
+        },
+        {
+          "name": "2021/fire_25205936/2021-06-23.tif",
+          "bytes": 4093690,
+          "compressedBytes": 4019799,
+          "offset": 44896809082,
+          "compression": 8
+        }
+      ],
+      "compressedBytes": 15824796
+    }
+  ]
+}

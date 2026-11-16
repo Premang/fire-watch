@@ -1,0 +1,39 @@
+1
+00:00:00,300 --> 00:00:02,500
+Córdoba, Argentina. October 2020.
+
+2
+00:00:02,700 --> 00:00:05,500
+NASA satellites spot fires like this from space.
+
+3
+00:00:05,700 --> 00:00:08,900
+Fire Watch turns 26 years of that
+into one fire calendar.
+
+4
+00:00:09,100 --> 00:00:10,800
+Fire follows the seasons.
+
+5
+00:00:11,000 --> 00:00:13,500
+Old and new satellites count fire differently.
+
+6
+00:00:13,800 --> 00:00:16,200
+Fire Watch puts them on one scale.
+
+7
+00:00:16,500 --> 00:00:20,400
+October 2020:
+2.4× the usual fire activity.
+
+8
+00:00:20,600 --> 00:00:24,600
+Tested on years it never saw,
+the error drops from 75% to 16%.
+
+9
+00:00:24,900 --> 00:00:29,500
+A fire calendar for any place on Earth.
+Fire Watch.

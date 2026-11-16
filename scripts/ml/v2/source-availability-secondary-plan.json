@@ -1,0 +1,7 @@
+{
+  "createdAt": "2026-10-25T05:02:55.436856+00:00",
+  "planSha256": "5e2367ffdbd80228c007fff2db50da925295d9dfb1e13e33afc4645e2c96b40b",
+  "sourceGapAuditSha256": "a1a828954e137bb578fc356fa5674a8284d55960a992ce37a0c1ef8501ab3b34",
+  "testLabelsOpened": false,
+  "secondaryAnalysis": "Report all fixed-model comparator metrics on the subset of eligible test events without a NASA-listed outage overlapping either required input-mask day. Original event weighting and already-frozen thresholds apply. No target-gap exclusion, no refit, no new gate. Primary eligibility and release gate remain unchanged. Retrospective source availability does not prove historical issue-time knowledge or clear local observation."
+}

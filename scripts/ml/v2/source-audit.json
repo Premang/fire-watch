@@ -1,0 +1,12 @@
+{
+  "events": 250,
+  "files": 1000,
+  "eventsByYear": {
+    "2018": 72,
+    "2019": 28,
+    "2020": 100,
+    "2021": 50
+  },
+  "uniqueRasterShapes": 233,
+  "alignment": "All four daily TIFFs share shape, CRS, tiepoint and375m spacing."
+}

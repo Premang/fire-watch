@@ -1,0 +1,18 @@
+{
+  "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 10:07:17) [Clang 14.0.6 ]",
+  "packages": {
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "scikit-learn": "1.4.2",
+    "tifffile": "2023.4.12",
+    "pyproj": "3.8.0"
+  },
+  "protocolSha256": "39deafb0b54e6c2918d823c0c13e4df310fcec4c2c759d09669fc0029f3ad0b6",
+  "trainerSha256": "3e70a30b8874d7c652eaed437148b80f851879aeaaa71713c5b0561a8562df41",
+  "featureBuilderSha256": "5c287ed31900f88cbb1b421ad19365348b476d16b7f38330591e521ce2e27cc9",
+  "selectedModelSha256": "e0a867bf7821d790a83a0798344fa64fdb68c146f29ca0daa3fdf6d992c9dcb1",
+  "finalModelSha256": "e0a867bf7821d790a83a0798344fa64fdb68c146f29ca0daa3fdf6d992c9dcb1",
+  "testOpenedAfterSelection": true,
+  "selectionFrozenAt": "2026-10-25T05:10:33.731548+00:00",
+  "testOpenedAt": "2026-10-25T05:10:33.732905+00:00"
+}

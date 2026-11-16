@@ -1,0 +1,30 @@
+[
+ {
+  "scale": "40km",
+  "unitAreaKm2": 1600,
+  "aqua": 0.4168,
+  "terra": 0.7187,
+  "noaa20": 0.1596
+ },
+ {
+  "scale": "320km",
+  "unitAreaKm2": 102400,
+  "aqua": 0.1621,
+  "terra": 0.2646,
+  "noaa20": 0.0515
+ },
+ {
+  "scale": "1280km",
+  "unitAreaKm2": 1638400,
+  "aqua": 0.1029,
+  "terra": 0.1653,
+  "noaa20": 0.0284
+ },
+ {
+  "scale": "global",
+  "unitAreaKm2": null,
+  "aqua": 0.0422,
+  "terra": 0.0666,
+  "noaa20": 0.0077
+ }
+]

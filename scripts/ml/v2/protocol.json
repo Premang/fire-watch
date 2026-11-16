@@ -1,0 +1,223 @@
+{
+  "id": "ember-day-ahead-v2-frozen-20261024",
+  "createdAt": "2026-10-25T04:57:45.855950+00:00",
+  "seed": 20261024,
+  "planSha256": "5e2367ffdbd80228c007fff2db50da925295d9dfb1e13e33afc4645e2c96b40b",
+  "metadataHashes": {
+    "wfts-events-2018.yml": "398ab0b5d7c55e7b6f6348fb7ccb842f34a9579dfce854554a461cb0ca5a1212",
+    "wfts-events-2019.yml": "a63c4b64a723b8e25b1e3e94c155a3313b97416b520a674491376e52d1f9b847",
+    "wfts-events-2020.yml": "dfc885b732c7d08a1f25985c3bc716da61719b190da569f8796c1b7aba8d2c3d",
+    "wfts-events-2021.yml": "1f8eed83a87af0348aaa2a8989a26bc46b519bf4ecbc5647de630711fcc21219"
+  },
+  "sourceIndexSha256": "d0af305e0aab64ac3ee57707a3eff0bca7c82c9c7bbc664eae7b40465749cd1f",
+  "frozenV1Sha256": "3b127ffaca8c46dd3b428a2be4407e49a9e49879b31a254772c6516f433bc062",
+  "splitCounts": {
+    "train": 100,
+    "selection": 50,
+    "calibration": 50,
+    "test": 50
+  },
+  "excludedOriginal2021Events": [
+    "2021/fire_25204877",
+    "2021/fire_25205354",
+    "2021/fire_25204859",
+    "2021/fire_25204820",
+    "2021/fire_25410972",
+    "2021/fire_25295956",
+    "2021/fire_25411825",
+    "2021/fire_25205245",
+    "2021/fire_25205306",
+    "2021/fire_25205936"
+  ],
+  "spatialEmbargoKm": 25,
+  "spatialPolicy": "Metadata centers at least 25 km apart between every split; fresh test also at least 25 km from all 10 original selected 2021 incidents. Connected 2020 geographic components kept in one split. Geographic proximity is only a proxy for incident-complex identity.",
+  "testClusters": [
+    [
+      "2021/fire_24935885"
+    ],
+    [
+      "2021/fire_24936357"
+    ],
+    [
+      "2021/fire_25084892"
+    ],
+    [
+      "2021/fire_25088019"
+    ],
+    [
+      "2021/fire_25138926"
+    ],
+    [
+      "2021/fire_25205247",
+      "2021/fire_25294998"
+    ],
+    [
+      "2021/fire_25205259"
+    ],
+    [
+      "2021/fire_25205260"
+    ],
+    [
+      "2021/fire_25205295"
+    ],
+    [
+      "2021/fire_25205827"
+    ],
+    [
+      "2021/fire_25205954"
+    ],
+    [
+      "2021/fire_25294692"
+    ],
+    [
+      "2021/fire_25294714"
+    ],
+    [
+      "2021/fire_25294976"
+    ],
+    [
+      "2021/fire_25294983"
+    ],
+    [
+      "2021/fire_25295023"
+    ],
+    [
+      "2021/fire_25295026"
+    ],
+    [
+      "2021/fire_25295081"
+    ],
+    [
+      "2021/fire_25295808"
+    ],
+    [
+      "2021/fire_25295837"
+    ],
+    [
+      "2021/fire_25295843"
+    ],
+    [
+      "2021/fire_25295855"
+    ],
+    [
+      "2021/fire_25295862"
+    ],
+    [
+      "2021/fire_25295869"
+    ],
+    [
+      "2021/fire_25295877"
+    ],
+    [
+      "2021/fire_25295927"
+    ],
+    [
+      "2021/fire_25295931"
+    ],
+    [
+      "2021/fire_25295934"
+    ],
+    [
+      "2021/fire_25295941",
+      "2021/fire_25548678"
+    ],
+    [
+      "2021/fire_25295966"
+    ],
+    [
+      "2021/fire_25410444"
+    ],
+    [
+      "2021/fire_25410735"
+    ],
+    [
+      "2021/fire_25410746"
+    ],
+    [
+      "2021/fire_25410845"
+    ],
+    [
+      "2021/fire_25410883"
+    ],
+    [
+      "2021/fire_25410960"
+    ],
+    [
+      "2021/fire_25410985"
+    ],
+    [
+      "2021/fire_25411057"
+    ],
+    [
+      "2021/fire_25411093",
+      "2021/fire_25411102"
+    ],
+    [
+      "2021/fire_25411748"
+    ],
+    [
+      "2021/fire_25411795"
+    ],
+    [
+      "2021/fire_25411897"
+    ],
+    [
+      "2021/fire_25411915"
+    ],
+    [
+      "2021/fire_25548047",
+      "2021/fire_25548063"
+    ],
+    [
+      "2021/fire_25548658"
+    ],
+    [
+      "2021/fire_25639187"
+    ]
+  ],
+  "eligibility": "Same 1.5 km cells within 12 km of recent fire, three-cell raster border excluded, CONUS. Additionally require all 25 features finite to match live deployment. Skip no-input-fire/non-CONUS events without replacement. Never filter on target labels.",
+  "features": "Unchanged 25 v1 features and strict day-ahead timing. GFS forecasts describe issue day, not target day. Integer convolution densities and circular wind aggregation retained.",
+  "candidates": {
+    "maxLeafNodes": [
+      7,
+      15,
+      31
+    ],
+    "maxIter": 120,
+    "learningRate": 0.06,
+    "minSamplesLeaf": 40,
+    "l2Regularization": 5,
+    "earlyStopping": false,
+    "randomState": 42,
+    "calibration": [
+      "identity",
+      "offset"
+    ],
+    "calibrationFit": "Calibration split only; minimize event-weighted binary log loss + 0.005 * offset^2, offset bounded [-2,2]. Identity slope 1. Offset only available with at least 50 positive cells across at least 5 positive-containing calibration events and at least 50 negative cells.",
+    "treeWeights": [
+      0,
+      0.25,
+      0.5,
+      0.75,
+      1
+    ],
+    "blend": "Convex average of calibrated tree score and train-fitted two-rate smoothed persistence. No prevalence rebalancing.",
+    "selection": "Lowest event-weighted selection Brier across fixed candidates; deterministic tie order: fewer leaves, identity before offset, lower tree weight. Calibration is fit before selection; neither is an independent performance estimate."
+  },
+  "baselines": [
+    "Frozen v1 on exactly the same new test cells",
+    "Train-fitted smoothed persistence",
+    "Hard persistence",
+    "Train-fitted imputed, standardized logistic regression C=0.1"
+  ],
+  "thresholds": "Each model/baseline separately maximizes selection F1 on fixed grid 0.001..0.099 by .001, 0.1..0.95 by .025; ties choose larger threshold. Frozen v1 keeps original .05 as additional historical threshold; its comparison table uses independently selected threshold. Thresholds do not affect Brier/AP release gate.",
+  "weighting": "Each eligible event equal total weight. No negative downsampling. No model refit on selection/calibration after selection.",
+  "uncertainty": "1000 seeded paired bootstrap resamples of whole test geographic clusters (25 km connected metadata centers). Preserve all Brier draws; omit and report AP draws with no positives.",
+  "releaseGate": "Default v2 only if new-test event-weighted Brier strictly lower than frozen v1 AND PR-AUC at least v1. Point estimates are only a release gate; no confident improvement claim unless paired interval supports it. If failed, retain v1; no test-guided changes or refit.",
+  "testAccess": "Prepare/evaluate test labels only after selected model, calibration, mixture and all thresholds are frozen in selection.json. Test is one-shot; no replacement or tuning after test.",
+  "limitations": [
+    "2020/2021 are historical datasets, not prospective live validation.",
+    "Metadata separation does not prove distinct incident complexes; limited regional coverage persists.",
+    "Finalized analysis data and satellite missingness limit operational claims."
+  ]
+}

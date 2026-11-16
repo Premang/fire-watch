@@ -1,0 +1,799 @@
+{
+  "protocolSha256": "39deafb0b54e6c2918d823c0c13e4df310fcec4c2c759d09669fc0029f3ad0b6",
+  "planSha256": "5e2367ffdbd80228c007fff2db50da925295d9dfb1e13e33afc4645e2c96b40b",
+  "modelSha256": "e0a867bf7821d790a83a0798344fa64fdb68c146f29ca0daa3fdf6d992c9dcb1",
+  "winner": {
+    "leaves": 15,
+    "calibration": "offset",
+    "offset": 0.31293906348693024,
+    "treeWeight": 0.5,
+    "selectionBrier": 0.028579785647558007
+  },
+  "candidates": [
+    {
+      "leaves": 7,
+      "calibration": "identity",
+      "offset": 0.0,
+      "treeWeight": 0,
+      "selectionBrier": 0.029930110239170662
+    },
+    {
+      "leaves": 7,
+      "calibration": "identity",
+      "offset": 0.0,
+      "treeWeight": 0.25,
+      "selectionBrier": 0.029042111478146403
+    },
+    {
+      "leaves": 7,
+      "calibration": "identity",
+      "offset": 0.0,
+      "treeWeight": 0.5,
+      "selectionBrier": 0.028725653026493762
+    },
+    {
+      "leaves": 7,
+      "calibration": "identity",
+      "offset": 0.0,
+      "treeWeight": 0.75,
+      "selectionBrier": 0.028980734884212715
+    },
+    {
+      "leaves": 7,
+      "calibration": "identity",
+      "offset": 0.0,
+      "treeWeight": 1,
+      "selectionBrier": 0.02980735705130328
+    },
+    {
+      "leaves": 7,
+      "calibration": "offset",
+      "offset": 0.13593987913504793,
+      "treeWeight": 0,
+      "selectionBrier": 0.029930110239170662
+    },
+    {
+      "leaves": 7,
+      "calibration": "offset",
+      "offset": 0.13593987913504793,
+      "treeWeight": 0.25,
+      "selectionBrier": 0.028993253846344352
+    },
+    {
+      "leaves": 7,
+      "calibration": "offset",
+      "offset": 0.13593987913504793,
+      "treeWeight": 0.5,
+      "selectionBrier": 0.028691015592543632
+    },
+    {
+      "leaves": 7,
+      "calibration": "offset",
+      "offset": 0.13593987913504793,
+      "treeWeight": 0.75,
+      "selectionBrier": 0.02902339547776851
+    },
+    {
+      "leaves": 7,
+      "calibration": "offset",
+      "offset": 0.13593987913504793,
+      "treeWeight": 1,
+      "selectionBrier": 0.02999039350201897
+    },
+    {
+      "leaves": 15,
+      "calibration": "identity",
+      "offset": 0.0,
+      "treeWeight": 0,
+      "selectionBrier": 0.029930110239170662
+    },
+    {
+      "leaves": 15,
+      "calibration": "identity",
+      "offset": 0.0,
+      "treeWeight": 0.25,
+      "selectionBrier": 0.02899155407723661
+    },
+    {
+      "leaves": 15,
+      "calibration": "identity",
+      "offset": 0.0,
+      "treeWeight": 0.5,
+      "selectionBrier": 0.02865275306720273
+    },
+    {
+      "leaves": 15,
+      "calibration": "identity",
+      "offset": 0.0,
+      "treeWeight": 0.75,
+      "selectionBrier": 0.02891370720906901
+    },
+    {
+      "leaves": 15,
+      "calibration": "identity",
+      "offset": 0.0,
+      "treeWeight": 1,
+      "selectionBrier": 0.029774416502835462
+    },
+    {
+      "leaves": 15,
+      "calibration": "offset",
+      "offset": 0.31293906348693024,
+      "treeWeight": 0,
+      "selectionBrier": 0.029930110239170662
+    },
+    {
+      "leaves": 15,
+      "calibration": "offset",
+      "offset": 0.31293906348693024,
+      "treeWeight": 0.25,
+      "selectionBrier": 0.028886436727134368
+    },
+    {
+      "leaves": 15,
+      "calibration": "offset",
+      "offset": 0.31293906348693024,
+      "treeWeight": 0.5,
+      "selectionBrier": 0.028579785647558007
+    },
+    {
+      "leaves": 15,
+      "calibration": "offset",
+      "offset": 0.31293906348693024,
+      "treeWeight": 0.75,
+      "selectionBrier": 0.02901015700044157
+    },
+    {
+      "leaves": 15,
+      "calibration": "offset",
+      "offset": 0.31293906348693024,
+      "treeWeight": 1,
+      "selectionBrier": 0.03017755078578506
+    },
+    {
+      "leaves": 31,
+      "calibration": "identity",
+      "offset": 0.0,
+      "treeWeight": 0,
+      "selectionBrier": 0.029930110239170662
+    },
+    {
+      "leaves": 31,
+      "calibration": "identity",
+      "offset": 0.0,
+      "treeWeight": 0.25,
+      "selectionBrier": 0.02920355191482901
+    },
+    {
+      "leaves": 31,
+      "calibration": "identity",
+      "offset": 0.0,
+      "treeWeight": 0.5,
+      "selectionBrier": 0.029112320529681216
+    },
+    {
+      "leaves": 31,
+      "calibration": "identity",
+      "offset": 0.0,
+      "treeWeight": 0.75,
+      "selectionBrier": 0.02965641608372728
+    },
+    {
+      "leaves": 31,
+      "calibration": "identity",
+      "offset": 0.0,
+      "treeWeight": 1,
+      "selectionBrier": 0.03083583857696721
+    },
+    {
+      "leaves": 31,
+      "calibration": "offset",
+      "offset": 0.37507062361908655,
+      "treeWeight": 0,
+      "selectionBrier": 0.029930110239170662
+    },
+    {
+      "leaves": 31,
+      "calibration": "offset",
+      "offset": 0.37507062361908655,
+      "treeWeight": 0.25,
+      "selectionBrier": 0.02909582046863847
+    },
+    {
+      "leaves": 31,
+      "calibration": "offset",
+      "offset": 0.37507062361908655,
+      "treeWeight": 0.5,
+      "selectionBrier": 0.029034184332195016
+    },
+    {
+      "leaves": 31,
+      "calibration": "offset",
+      "offset": 0.37507062361908655,
+      "treeWeight": 0.75,
+      "selectionBrier": 0.02974520182984031
+    },
+    {
+      "leaves": 31,
+      "calibration": "offset",
+      "offset": 0.37507062361908655,
+      "treeWeight": 1,
+      "selectionBrier": 0.031228872961574342
+    }
+  ],
+  "calibration": {
+    "method": "bounded regularized intercept only",
+    "enabled": true,
+    "positiveCells": 334,
+    "positiveEvents": 17,
+    "events": 28,
+    "offsets": {
+      "7": 0.13593987913504793,
+      "15": 0.31293906348693024,
+      "31": 0.37507062361908655
+    }
+  },
+  "thresholds": {
+    "model": 0.19999999999999998,
+    "previousVersion": 0.017,
+    "smoothedPersistence": 0.35,
+    "persistence": 0.9499999999999998,
+    "logistic": 0.15
+  },
+  "selectionMetrics": {
+    "model": {
+      "prAuc": 0.3185814801210042,
+      "brier": 0.028579785647558007,
+      "logLoss": 0.11354022360416405,
+      "precision": 0.342158718480312,
+      "recall": 0.4833762356268128,
+      "positiveRate": 0.03596225313070168,
+      "predictedPositiveRate": 0.05080478036679825,
+      "threshold": 0.19999999999999998,
+      "cells": 17335,
+      "positives": 853
+    },
+    "previousVersion": {
+      "prAuc": 0.3419129255107027,
+      "brier": 0.03407828289629267,
+      "logLoss": 0.15602717976553568,
+      "precision": 0.33804318625792873,
+      "recall": 0.5072558304055282,
+      "positiveRate": 0.03596225313070168,
+      "predictedPositiveRate": 0.05396370439234166,
+      "threshold": 0.017,
+      "cells": 17335,
+      "positives": 853
+    },
+    "smoothedPersistence": {
+      "prAuc": 0.17757824161585706,
+      "brier": 0.029930110239170662,
+      "logLoss": 0.12680244999875614,
+      "precision": 0.34212423603744746,
+      "recall": 0.46255249309738417,
+      "positiveRate": 0.03596225313070168,
+      "predictedPositiveRate": 0.04862102152033682,
+      "threshold": 0.35,
+      "cells": 17335,
+      "positives": 853
+    },
+    "persistence": {
+      "prAuc": 0.17757824161585706,
+      "brier": 0.051314414965027574,
+      "logLoss": 0.8270907435646809,
+      "precision": 0.34212423603744746,
+      "recall": 0.46255249309738417,
+      "positiveRate": 0.03596225313070168,
+      "predictedPositiveRate": 0.04862102152033682,
+      "threshold": 0.9499999999999998,
+      "cells": 17335,
+      "positives": 853
+    },
+    "logistic": {
+      "prAuc": 0.27381295125126925,
+      "brier": 0.02994464873955253,
+      "logLoss": 0.11737828307172889,
+      "precision": 0.30796574471192606,
+      "recall": 0.4968314142276748,
+      "positiveRate": 0.03596225313070168,
+      "predictedPositiveRate": 0.05801676773646899,
+      "threshold": 0.15,
+      "cells": 17335,
+      "positives": 853
+    }
+  },
+  "testLabelsOpened": false,
+  "frozenAt": "2026-10-25T05:10:33.731548+00:00",
+  "developmentSkips": [
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21458801",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21458806",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21458836",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21459234",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21459239",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21459242",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21538827",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21615465",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21690064",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21748766",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21748783",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21748798",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21748801",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21751305",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21804572",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21804877",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21804899",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21804942",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21804961",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21889779",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21889808",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21889953",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21889990",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21889992",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21889995",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21890058",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21890072",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21890100",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21890208",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21890515",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21998023",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21998081",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21998119",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21998152",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21998255",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_21999381",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_22141461",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_22141465",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_22141528",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_22141577",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_22141683",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2018/fire_22343666",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_22863125",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_22863172",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_22938746",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23036542",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23036565",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23036871",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23037424",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23159836",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23159838",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23159841",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23159860",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23160475",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23300665",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23301106",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2019/fire_23301386",
+      "split": "train"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24027566",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24103561",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24104640",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24191389",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24191760",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24332728",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24332784",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24332793",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24332872",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24332991",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24332995",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24333259",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24461899",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24462033",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24462127",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24463187",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24695557",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24695566",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24695584",
+      "split": "selection"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24103560",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24103584",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24104631",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24104644",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24104654",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24104857",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24191364",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24191680",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24332785",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24332894",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24332954",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24332956",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24332969",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24461320",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24462088",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24462263",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24462306",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24462753",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24463211",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24604676",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24604731",
+      "split": "calibration"
+    },
+    {
+      "skipped": "No recent detections; outside model domain",
+      "event": "2020/fire_24695532",
+      "split": "calibration"
+    }
+  ]
+}

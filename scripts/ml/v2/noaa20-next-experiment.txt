@@ -1,0 +1,68 @@
+NOAA-20 transition: verified sources and a separate future experiment
+Verified 2026-10-25 UTC. This note does not change the frozen v2 experiment.
+
+Source access
+NASA's official archive page lists VIIRS NOAA-20 375 m coverage beginning
+2018-04-01: https://firms.modaps.eosdis.nasa.gov/download/
+The yearly-country interface labels viirs-jpss1 as VIIRS NOAA-20:
+https://firms.modaps.eosdis.nasa.gov/country/
+Its public file index is:
+https://firms.modaps.eosdis.nasa.gov/data/country/yearly_summary_files.txt
+
+Index-listed United States science archive sizes:
+2018: viirs-jpss1_2018_United_States.csv, 37,835,646 bytes
+2019: viirs-jpss1_2019_United_States.csv, 36,948,805 bytes
+2020: viirs-jpss1_2020_United_States.csv, 54,537,603 bytes
+2021: viirs-jpss1_2021_United_States.csv, 54,976,027 bytes
+Total: 184,298,081 bytes (184.3 decimal MB).
+The index reports these files updated on 2025-06-20. These are index-listed
+sizes, not a claim that every annual file was downloaded or validated here.
+
+Verified a credential-free HTTP 206 response for bytes 0-700 of:
+https://firms.modaps.eosdis.nasa.gov/data/country/viirs-jpss1/2018/viirs-jpss1_2018_United_States.csv
+Content-Range was bytes 0-700/37835646. Only 701 CSV bytes were read.
+The sample begins 2018-04-01 and identifies satellite N20, instrument VIIRS,
+version 2. Its exact header is:
+latitude,longitude,bright_ti4,scan,track,acq_date,acq_time,satellite,instrument,confidence,version,bright_ti5,frp,daynight,type
+The same public path pattern uses the index's year and filename. Verify each
+response, coverage, row schema, byte size and checksum before using it.
+
+Required new experiment
+Neither the released v1 nor the frozen v2 S-NPP model is validated for NOAA-20.
+Do not replace a live sensor URL and reuse S-NPP probabilities or calibration.
+NOAA-20 has different sampling times and detection outcomes. It needs a distinct
+model identity, matching training labels, independent evaluation and provenance.
+
+A tractable first experiment can reuse the WSTS weather/terrain TIFFs while
+rebuilding the prior, recent and target fire masks from NOAA-20 points for every
+fixed event window. Preserve UTC acquisition dates, confidence filtering and a
+documented point-to-grid footprint; verify alignment and rasterization against
+the intended live NOAA-20 feed. Include all outcomes, including target-zero
+events. Never choose or replace events after seeing their target labels.
+Dates before NOAA-20 coverage starts are unavailable, not empty fire masks.
+
+Reusing WSTS also reuses its S-NPP-based event selection. This limits the claim
+to those sampled event contexts and does not establish performance for all
+NOAA-20 fires or nationwide ignition prediction. An expanded study should sample
+events from the continuing sensor itself. Check historical outage/observation
+availability where possible; a missing hotspot still does not prove clear-sky
+coverage or an unburned cell. Country archives may omit cross-border inputs;
+either retrieve matching neighboring coverage or declare/handle that edge.
+
+Freeze a new metadata-only allocation before inspecting new NOAA-20 outcomes:
+separate fitting, calibration and model/threshold selection from an untouched
+test, retaining geographic/incident separation. If using fresh 2021 events,
+exclude every already inspected v1/v2 test set and nearby incident complexes;
+choose no replacement IDs in this note. A later held-out year is another option
+if matching historical covariates can be obtained without future leakage.
+Report same-cell, same-weight comparisons with persistence and the prior model
+where their targets are meaningfully comparable, plus uncertainty and source
+availability subgroups. An S-NPP model evaluated against NOAA-20 outcomes is a
+cross-sensor baseline, not a previously validated comparator.
+
+Validate the actual live NOAA-20 source and transformations separately. Reusing
+WSTS weather leaves the existing live weather/terrain transfer differences in
+place; historical test skill alone does not validate current probabilities.
+Keep S-NPP cessation safeguards until a continuing-sensor model and its live
+pipeline pass this separate protocol. No bulk download, new target masks,
+additional training or test selection was performed for this note.

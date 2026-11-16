@@ -1,0 +1,3682 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-25T05:02:18.288Z",
+  "sourceUrl": "https://modaps.modaps.eosdis.nasa.gov/services/production/outages_suomi_npp.html",
+  "fetchedAt": "2026-10-25T05:02:17.791Z",
+  "sourceHtmlSha256": "779a0a18ee542f61fbb42b56994f58c22b443910eb923e6aa2d889c9d80f13a8",
+  "sourceUpdatedDate": "2026-10-24",
+  "planSha256": "5e2367ffdbd80228c007fff2db50da925295d9dfb1e13e33afc4645e2c96b40b",
+  "protocolId": "ember-day-ahead-v2-frozen-20261024",
+  "primaryEligibilityUnchanged": true,
+  "testOutcomeDataRead": false,
+  "method": "Compare frozen source-file dates with NASA structured UTC outage intervals. A gap overlaps a UTC day when its start precedes next midnight and its end follows that day’s midnight; intervals are half-open. Required masks are the first two of each four-day window; target is the fourth day.",
+  "scope": "All 250 metadata-selected events before input eligibility filtering; counts are not counts of model-eligible events.",
+  "limitations": [
+    "Metadata-only diagnostic; no TIFF pixel values or target labels were read.",
+    "The frozen primary sample, model selection, release gate and eligibility are unchanged. No outcome-dependent removal is performed.",
+    "NASA lists major known outages. Geographic impact and complete local overpass/cloud coverage are unknown; absence of a listed gap does not establish a fully observed day.",
+    "The current catalogue is retrospective. This audit does not establish that an outage was published or known at historical issue time.",
+    "Input-gap flags describe where the current conservative live abstention rule would apply given this catalogue. Target gaps may affect the recorded detection label and are not future inputs."
+  ],
+  "bySplit": {
+    "train": {
+      "plannedEvents": 100,
+      "inputGapEvents": 5,
+      "targetGapEvents": 4,
+      "anyGapEvents": 8
+    },
+    "selection": {
+      "plannedEvents": 50,
+      "inputGapEvents": 1,
+      "targetGapEvents": 1,
+      "anyGapEvents": 2
+    },
+    "calibration": {
+      "plannedEvents": 50,
+      "inputGapEvents": 2,
+      "targetGapEvents": 0,
+      "anyGapEvents": 2
+    },
+    "test": {
+      "plannedEvents": 50,
+      "inputGapEvents": 2,
+      "targetGapEvents": 3,
+      "anyGapEvents": 5
+    }
+  },
+  "events": [
+    {
+      "event": "2018/fire_21458801",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-01-26",
+        "2018-01-27"
+      ],
+      "issueDate": "2018-01-28",
+      "targetDate": "2018-01-29",
+      "inputGap": true,
+      "targetGap": true,
+      "inputOutages": [
+        {
+          "start": "2018-01-27T20:12:00.000Z",
+          "end": "2018-01-27T20:18:00.000Z",
+          "description": "maneuver"
+        }
+      ],
+      "targetOutages": [
+        {
+          "start": "2018-01-29T20:06:00.000Z",
+          "end": "2018-01-29T20:12:00.000Z",
+          "description": "s/c anomaly, LDOPE confirmed"
+        },
+        {
+          "start": "2018-01-29T18:24:00.000Z",
+          "end": "2018-01-29T19:12:00.000Z",
+          "description": "s/c anomaly, LDOPE confirmed"
+        },
+        {
+          "start": "2018-01-29T16:24:00.000Z",
+          "end": "2018-01-29T18:24:00.000Z",
+          "description": "s/c anomaly, confirmed"
+        }
+      ]
+    },
+    {
+      "event": "2018/fire_21458806",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-01-12",
+        "2018-01-13"
+      ],
+      "issueDate": "2018-01-14",
+      "targetDate": "2018-01-15",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21458836",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-01-18",
+        "2018-01-19"
+      ],
+      "issueDate": "2018-01-20",
+      "targetDate": "2018-01-21",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21459234",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-01-28",
+        "2018-01-29"
+      ],
+      "issueDate": "2018-01-30",
+      "targetDate": "2018-01-31",
+      "inputGap": true,
+      "targetGap": false,
+      "inputOutages": [
+        {
+          "start": "2018-01-29T20:06:00.000Z",
+          "end": "2018-01-29T20:12:00.000Z",
+          "description": "s/c anomaly, LDOPE confirmed"
+        },
+        {
+          "start": "2018-01-29T18:24:00.000Z",
+          "end": "2018-01-29T19:12:00.000Z",
+          "description": "s/c anomaly, LDOPE confirmed"
+        },
+        {
+          "start": "2018-01-29T16:24:00.000Z",
+          "end": "2018-01-29T18:24:00.000Z",
+          "description": "s/c anomaly, confirmed"
+        }
+      ],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21459239",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-01-24",
+        "2018-01-25"
+      ],
+      "issueDate": "2018-01-26",
+      "targetDate": "2018-01-27",
+      "inputGap": false,
+      "targetGap": true,
+      "inputOutages": [],
+      "targetOutages": [
+        {
+          "start": "2018-01-27T20:12:00.000Z",
+          "end": "2018-01-27T20:18:00.000Z",
+          "description": "maneuver"
+        }
+      ]
+    },
+    {
+      "event": "2018/fire_21459242",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-01-23",
+        "2018-01-24"
+      ],
+      "issueDate": "2018-01-25",
+      "targetDate": "2018-01-26",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21459249",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-01-30",
+        "2018-01-31"
+      ],
+      "issueDate": "2018-02-01",
+      "targetDate": "2018-02-02",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21538827",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-02-20",
+        "2018-02-21"
+      ],
+      "issueDate": "2018-02-22",
+      "targetDate": "2018-02-23",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21615465",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-03-07",
+        "2018-03-08"
+      ],
+      "issueDate": "2018-03-09",
+      "targetDate": "2018-03-10",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21615469",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-03-10",
+        "2018-03-11"
+      ],
+      "issueDate": "2018-03-12",
+      "targetDate": "2018-03-13",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21617464",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-02-28",
+        "2018-03-01"
+      ],
+      "issueDate": "2018-03-02",
+      "targetDate": "2018-03-03",
+      "inputGap": true,
+      "targetGap": false,
+      "inputOutages": [
+        {
+          "start": "2018-02-28T17:48:00.000Z",
+          "end": "2018-02-28T18:06:00.000Z",
+          "description": "DMU"
+        }
+      ],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21688916",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-04-21",
+        "2018-04-22"
+      ],
+      "issueDate": "2018-04-23",
+      "targetDate": "2018-04-24",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21690064",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-05-11",
+        "2018-05-12"
+      ],
+      "issueDate": "2018-05-13",
+      "targetDate": "2018-05-14",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21690102",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-04-12",
+        "2018-04-13"
+      ],
+      "issueDate": "2018-04-14",
+      "targetDate": "2018-04-15",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21748766",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-05-20",
+        "2018-05-21"
+      ],
+      "issueDate": "2018-05-22",
+      "targetDate": "2018-05-23",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21748783",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-05-23",
+        "2018-05-24"
+      ],
+      "issueDate": "2018-05-25",
+      "targetDate": "2018-05-26",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21748798",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-05-06",
+        "2018-05-07"
+      ],
+      "issueDate": "2018-05-08",
+      "targetDate": "2018-05-09",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21748801",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-05-17",
+        "2018-05-18"
+      ],
+      "issueDate": "2018-05-19",
+      "targetDate": "2018-05-20",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21751305",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-05-26",
+        "2018-05-27"
+      ],
+      "issueDate": "2018-05-28",
+      "targetDate": "2018-05-29",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21804572",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-06-25",
+        "2018-06-26"
+      ],
+      "issueDate": "2018-06-27",
+      "targetDate": "2018-06-28",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21804877",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-06-18",
+        "2018-06-19"
+      ],
+      "issueDate": "2018-06-20",
+      "targetDate": "2018-06-21",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21804899",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-07-02",
+        "2018-07-03"
+      ],
+      "issueDate": "2018-07-04",
+      "targetDate": "2018-07-05",
+      "inputGap": false,
+      "targetGap": true,
+      "inputOutages": [],
+      "targetOutages": [
+        {
+          "start": "2018-07-05T22:48:00.000Z",
+          "end": "2018-07-05T22:54:00.000Z",
+          "description": "Maneuver"
+        },
+        {
+          "start": "2018-07-05T15:30:00.000Z",
+          "end": "2018-07-05T15:36:00.000Z",
+          "description": "Maneuver, LDOPE confirmed"
+        }
+      ]
+    },
+    {
+      "event": "2018/fire_21804942",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-06-25",
+        "2018-06-26"
+      ],
+      "issueDate": "2018-06-27",
+      "targetDate": "2018-06-28",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21804961",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-06-26",
+        "2018-06-27"
+      ],
+      "issueDate": "2018-06-28",
+      "targetDate": "2018-06-29",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21804980",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-06-28",
+        "2018-06-29"
+      ],
+      "issueDate": "2018-06-30",
+      "targetDate": "2018-07-01",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21804985",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-06-29",
+        "2018-06-30"
+      ],
+      "issueDate": "2018-07-01",
+      "targetDate": "2018-07-02",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21889682",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-07-25",
+        "2018-07-26"
+      ],
+      "issueDate": "2018-07-27",
+      "targetDate": "2018-07-28",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21889763",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-07-29",
+        "2018-07-30"
+      ],
+      "issueDate": "2018-07-31",
+      "targetDate": "2018-08-01",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21889779",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-07-08",
+        "2018-07-09"
+      ],
+      "issueDate": "2018-07-10",
+      "targetDate": "2018-07-11",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21889808",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-07-26",
+        "2018-07-27"
+      ],
+      "issueDate": "2018-07-28",
+      "targetDate": "2018-07-29",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21889953",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-07-27",
+        "2018-07-28"
+      ],
+      "issueDate": "2018-07-29",
+      "targetDate": "2018-07-30",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21889990",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-08-03",
+        "2018-08-04"
+      ],
+      "issueDate": "2018-08-05",
+      "targetDate": "2018-08-06",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21889992",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-07-13",
+        "2018-07-14"
+      ],
+      "issueDate": "2018-07-15",
+      "targetDate": "2018-07-16",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21889995",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-07-19",
+        "2018-07-20"
+      ],
+      "issueDate": "2018-07-21",
+      "targetDate": "2018-07-22",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21890033",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-07-16",
+        "2018-07-17"
+      ],
+      "issueDate": "2018-07-18",
+      "targetDate": "2018-07-19",
+      "inputGap": true,
+      "targetGap": false,
+      "inputOutages": [
+        {
+          "start": "2018-07-17T16:06:00.000Z",
+          "end": "2018-07-17T16:24:00.000Z",
+          "description": "DMU"
+        }
+      ],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21890058",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-07-19",
+        "2018-07-20"
+      ],
+      "issueDate": "2018-07-21",
+      "targetDate": "2018-07-22",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21890072",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-06-30",
+        "2018-07-01"
+      ],
+      "issueDate": "2018-07-02",
+      "targetDate": "2018-07-03",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21890098",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-07-14",
+        "2018-07-15"
+      ],
+      "issueDate": "2018-07-16",
+      "targetDate": "2018-07-17",
+      "inputGap": false,
+      "targetGap": true,
+      "inputOutages": [],
+      "targetOutages": [
+        {
+          "start": "2018-07-17T16:06:00.000Z",
+          "end": "2018-07-17T16:24:00.000Z",
+          "description": "DMU"
+        }
+      ]
+    },
+    {
+      "event": "2018/fire_21890100",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-07-29",
+        "2018-07-30"
+      ],
+      "issueDate": "2018-07-31",
+      "targetDate": "2018-08-01",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21890103",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-07-01",
+        "2018-07-02"
+      ],
+      "issueDate": "2018-07-03",
+      "targetDate": "2018-07-04",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21890143",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-08-07",
+        "2018-08-08"
+      ],
+      "issueDate": "2018-08-09",
+      "targetDate": "2018-08-10",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21890170",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-07-25",
+        "2018-07-26"
+      ],
+      "issueDate": "2018-07-27",
+      "targetDate": "2018-07-28",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21890208",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-07-19",
+        "2018-07-20"
+      ],
+      "issueDate": "2018-07-21",
+      "targetDate": "2018-07-22",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21890515",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-07-26",
+        "2018-07-27"
+      ],
+      "issueDate": "2018-07-28",
+      "targetDate": "2018-07-29",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21997770",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-08-28",
+        "2018-08-29"
+      ],
+      "issueDate": "2018-08-30",
+      "targetDate": "2018-08-31",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21997828",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-08-05",
+        "2018-08-06"
+      ],
+      "issueDate": "2018-08-07",
+      "targetDate": "2018-08-08",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21997864",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-08-10",
+        "2018-08-11"
+      ],
+      "issueDate": "2018-08-12",
+      "targetDate": "2018-08-13",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21998023",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-08-16",
+        "2018-08-17"
+      ],
+      "issueDate": "2018-08-18",
+      "targetDate": "2018-08-19",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21998081",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-08-13",
+        "2018-08-14"
+      ],
+      "issueDate": "2018-08-15",
+      "targetDate": "2018-08-16",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21998100",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-08-21",
+        "2018-08-22"
+      ],
+      "issueDate": "2018-08-23",
+      "targetDate": "2018-08-24",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21998103",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-08-18",
+        "2018-08-19"
+      ],
+      "issueDate": "2018-08-20",
+      "targetDate": "2018-08-21",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21998119",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-08-27",
+        "2018-08-28"
+      ],
+      "issueDate": "2018-08-29",
+      "targetDate": "2018-08-30",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21998152",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-08-30",
+        "2018-08-31"
+      ],
+      "issueDate": "2018-09-01",
+      "targetDate": "2018-09-02",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21998255",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-08-26",
+        "2018-08-27"
+      ],
+      "issueDate": "2018-08-28",
+      "targetDate": "2018-08-29",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21998264",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-09-01",
+        "2018-09-02"
+      ],
+      "issueDate": "2018-09-03",
+      "targetDate": "2018-09-04",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21998299",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-08-30",
+        "2018-08-31"
+      ],
+      "issueDate": "2018-09-01",
+      "targetDate": "2018-09-02",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21999270",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-08-13",
+        "2018-08-14"
+      ],
+      "issueDate": "2018-08-15",
+      "targetDate": "2018-08-16",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21999321",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-08-03",
+        "2018-08-04"
+      ],
+      "issueDate": "2018-08-05",
+      "targetDate": "2018-08-06",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21999351",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-08-13",
+        "2018-08-14"
+      ],
+      "issueDate": "2018-08-15",
+      "targetDate": "2018-08-16",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21999354",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-08-12",
+        "2018-08-13"
+      ],
+      "issueDate": "2018-08-14",
+      "targetDate": "2018-08-15",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_21999381",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-09-11",
+        "2018-09-12"
+      ],
+      "issueDate": "2018-09-13",
+      "targetDate": "2018-09-14",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_22141243",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-09-01",
+        "2018-09-02"
+      ],
+      "issueDate": "2018-09-03",
+      "targetDate": "2018-09-04",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_22141461",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-10-05",
+        "2018-10-06"
+      ],
+      "issueDate": "2018-10-07",
+      "targetDate": "2018-10-08",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_22141465",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-09-14",
+        "2018-09-15"
+      ],
+      "issueDate": "2018-09-16",
+      "targetDate": "2018-09-17",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_22141528",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-09-10",
+        "2018-09-11"
+      ],
+      "issueDate": "2018-09-12",
+      "targetDate": "2018-09-13",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_22141566",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-08-30",
+        "2018-08-31"
+      ],
+      "issueDate": "2018-09-01",
+      "targetDate": "2018-09-02",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_22141577",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-10-10",
+        "2018-10-11"
+      ],
+      "issueDate": "2018-10-12",
+      "targetDate": "2018-10-13",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_22141596",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-09-21",
+        "2018-09-22"
+      ],
+      "issueDate": "2018-09-23",
+      "targetDate": "2018-09-24",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_22141683",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-09-15",
+        "2018-09-16"
+      ],
+      "issueDate": "2018-09-17",
+      "targetDate": "2018-09-18",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_22343661",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-11-19",
+        "2018-11-20"
+      ],
+      "issueDate": "2018-11-21",
+      "targetDate": "2018-11-22",
+      "inputGap": true,
+      "targetGap": false,
+      "inputOutages": [
+        {
+          "start": "2018-11-19T01:00:00.000Z",
+          "end": "2018-11-19T01:12:00.000Z",
+          "description": "Maneuver"
+        }
+      ],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_22343666",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-11-27",
+        "2018-11-28"
+      ],
+      "issueDate": "2018-11-29",
+      "targetDate": "2018-11-30",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2018/fire_22343689",
+      "split": "train",
+      "requiredMaskDates": [
+        "2018-11-03",
+        "2018-11-04"
+      ],
+      "issueDate": "2018-11-05",
+      "targetDate": "2018-11-06",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2019/fire_22863125",
+      "split": "train",
+      "requiredMaskDates": [
+        "2019-05-18",
+        "2019-05-19"
+      ],
+      "issueDate": "2019-05-20",
+      "targetDate": "2019-05-21",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2019/fire_22863172",
+      "split": "train",
+      "requiredMaskDates": [
+        "2019-05-24",
+        "2019-05-25"
+      ],
+      "issueDate": "2019-05-26",
+      "targetDate": "2019-05-27",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2019/fire_22938746",
+      "split": "train",
+      "requiredMaskDates": [
+        "2019-06-08",
+        "2019-06-09"
+      ],
+      "issueDate": "2019-06-10",
+      "targetDate": "2019-06-11",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2019/fire_23036542",
+      "split": "train",
+      "requiredMaskDates": [
+        "2019-07-21",
+        "2019-07-22"
+      ],
+      "issueDate": "2019-07-23",
+      "targetDate": "2019-07-24",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2019/fire_23036565",
+      "split": "train",
+      "requiredMaskDates": [
+        "2019-07-11",
+        "2019-07-12"
+      ],
+      "issueDate": "2019-07-13",
+      "targetDate": "2019-07-14",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2019/fire_23036860",
+      "split": "train",
+      "requiredMaskDates": [
+        "2019-07-10",
+        "2019-07-11"
+      ],
+      "issueDate": "2019-07-12",
+      "targetDate": "2019-07-13",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2019/fire_23036871",
+      "split": "train",
+      "requiredMaskDates": [
+        "2019-07-27",
+        "2019-07-28"
+      ],
+      "issueDate": "2019-07-29",
+      "targetDate": "2019-07-30",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2019/fire_23036877",
+      "split": "train",
+      "requiredMaskDates": [
+        "2019-07-20",
+        "2019-07-21"
+      ],
+      "issueDate": "2019-07-22",
+      "targetDate": "2019-07-23",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2019/fire_23037424",
+      "split": "train",
+      "requiredMaskDates": [
+        "2019-07-21",
+        "2019-07-22"
+      ],
+      "issueDate": "2019-07-23",
+      "targetDate": "2019-07-24",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2019/fire_23159642",
+      "split": "train",
+      "requiredMaskDates": [
+        "2019-08-14",
+        "2019-08-15"
+      ],
+      "issueDate": "2019-08-16",
+      "targetDate": "2019-08-17",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2019/fire_23159787",
+      "split": "train",
+      "requiredMaskDates": [
+        "2019-08-04",
+        "2019-08-05"
+      ],
+      "issueDate": "2019-08-06",
+      "targetDate": "2019-08-07",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2019/fire_23159792",
+      "split": "train",
+      "requiredMaskDates": [
+        "2019-08-04",
+        "2019-08-05"
+      ],
+      "issueDate": "2019-08-06",
+      "targetDate": "2019-08-07",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2019/fire_23159836",
+      "split": "train",
+      "requiredMaskDates": [
+        "2019-08-07",
+        "2019-08-08"
+      ],
+      "issueDate": "2019-08-09",
+      "targetDate": "2019-08-10",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2019/fire_23159838",
+      "split": "train",
+      "requiredMaskDates": [
+        "2019-08-11",
+        "2019-08-12"
+      ],
+      "issueDate": "2019-08-13",
+      "targetDate": "2019-08-14",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2019/fire_23159841",
+      "split": "train",
+      "requiredMaskDates": [
+        "2019-08-07",
+        "2019-08-08"
+      ],
+      "issueDate": "2019-08-09",
+      "targetDate": "2019-08-10",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2019/fire_23159860",
+      "split": "train",
+      "requiredMaskDates": [
+        "2019-07-31",
+        "2019-08-01"
+      ],
+      "issueDate": "2019-08-02",
+      "targetDate": "2019-08-03",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2019/fire_23160475",
+      "split": "train",
+      "requiredMaskDates": [
+        "2019-08-10",
+        "2019-08-11"
+      ],
+      "issueDate": "2019-08-12",
+      "targetDate": "2019-08-13",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2019/fire_23160488",
+      "split": "train",
+      "requiredMaskDates": [
+        "2019-08-09",
+        "2019-08-10"
+      ],
+      "issueDate": "2019-08-11",
+      "targetDate": "2019-08-12",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2019/fire_23160511",
+      "split": "train",
+      "requiredMaskDates": [
+        "2019-08-23",
+        "2019-08-24"
+      ],
+      "issueDate": "2019-08-25",
+      "targetDate": "2019-08-26",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2019/fire_23300665",
+      "split": "train",
+      "requiredMaskDates": [
+        "2019-09-09",
+        "2019-09-10"
+      ],
+      "issueDate": "2019-09-11",
+      "targetDate": "2019-09-12",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2019/fire_23300669",
+      "split": "train",
+      "requiredMaskDates": [
+        "2019-09-12",
+        "2019-09-13"
+      ],
+      "issueDate": "2019-09-14",
+      "targetDate": "2019-09-15",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2019/fire_23300741",
+      "split": "train",
+      "requiredMaskDates": [
+        "2019-09-06",
+        "2019-09-07"
+      ],
+      "issueDate": "2019-09-08",
+      "targetDate": "2019-09-09",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2019/fire_23301106",
+      "split": "train",
+      "requiredMaskDates": [
+        "2019-09-04",
+        "2019-09-05"
+      ],
+      "issueDate": "2019-09-06",
+      "targetDate": "2019-09-07",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2019/fire_23301386",
+      "split": "train",
+      "requiredMaskDates": [
+        "2019-08-30",
+        "2019-08-31"
+      ],
+      "issueDate": "2019-09-01",
+      "targetDate": "2019-09-02",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2019/fire_23410607",
+      "split": "train",
+      "requiredMaskDates": [
+        "2019-10-17",
+        "2019-10-18"
+      ],
+      "issueDate": "2019-10-19",
+      "targetDate": "2019-10-20",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2019/fire_23410720",
+      "split": "train",
+      "requiredMaskDates": [
+        "2019-10-02",
+        "2019-10-03"
+      ],
+      "issueDate": "2019-10-04",
+      "targetDate": "2019-10-05",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2019/fire_23493973",
+      "split": "train",
+      "requiredMaskDates": [
+        "2019-11-28",
+        "2019-11-29"
+      ],
+      "issueDate": "2019-11-30",
+      "targetDate": "2019-12-01",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2019/fire_23493983",
+      "split": "train",
+      "requiredMaskDates": [
+        "2019-11-12",
+        "2019-11-13"
+      ],
+      "issueDate": "2019-11-14",
+      "targetDate": "2019-11-15",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24025605",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-05-30",
+        "2020-05-31"
+      ],
+      "issueDate": "2020-06-01",
+      "targetDate": "2020-06-02",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24025610",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-05-25",
+        "2020-05-26"
+      ],
+      "issueDate": "2020-05-27",
+      "targetDate": "2020-05-28",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24027566",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-05-30",
+        "2020-05-31"
+      ],
+      "issueDate": "2020-06-01",
+      "targetDate": "2020-06-02",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24103561",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-06-07",
+        "2020-06-08"
+      ],
+      "issueDate": "2020-06-09",
+      "targetDate": "2020-06-10",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24103571",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-06-16",
+        "2020-06-17"
+      ],
+      "issueDate": "2020-06-18",
+      "targetDate": "2020-06-19",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24104639",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-06-27",
+        "2020-06-28"
+      ],
+      "issueDate": "2020-06-29",
+      "targetDate": "2020-06-30",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24104640",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-06-21",
+        "2020-06-22"
+      ],
+      "issueDate": "2020-06-23",
+      "targetDate": "2020-06-24",
+      "inputGap": false,
+      "targetGap": true,
+      "inputOutages": [],
+      "targetOutages": [
+        {
+          "start": "2020-06-24T16:36:00.000Z",
+          "end": "2020-06-24T16:54:00.000Z",
+          "description": "DMU"
+        }
+      ]
+    },
+    {
+      "event": "2020/fire_24191384",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-07-03",
+        "2020-07-04"
+      ],
+      "issueDate": "2020-07-05",
+      "targetDate": "2020-07-06",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24191389",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-07-15",
+        "2020-07-16"
+      ],
+      "issueDate": "2020-07-17",
+      "targetDate": "2020-07-18",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24191418",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-07-30",
+        "2020-07-31"
+      ],
+      "issueDate": "2020-08-01",
+      "targetDate": "2020-08-02",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24191741",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-07-15",
+        "2020-07-16"
+      ],
+      "issueDate": "2020-07-17",
+      "targetDate": "2020-07-18",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24191760",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-07-28",
+        "2020-07-29"
+      ],
+      "issueDate": "2020-07-30",
+      "targetDate": "2020-07-31",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24332592",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-08-26",
+        "2020-08-27"
+      ],
+      "issueDate": "2020-08-28",
+      "targetDate": "2020-08-29",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24332647",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-10-06",
+        "2020-10-07"
+      ],
+      "issueDate": "2020-10-08",
+      "targetDate": "2020-10-09",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24332700",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-08-30",
+        "2020-08-31"
+      ],
+      "issueDate": "2020-09-01",
+      "targetDate": "2020-09-02",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24332728",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-08-25",
+        "2020-08-26"
+      ],
+      "issueDate": "2020-08-27",
+      "targetDate": "2020-08-28",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24332731",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-08-19",
+        "2020-08-20"
+      ],
+      "issueDate": "2020-08-21",
+      "targetDate": "2020-08-22",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24332746",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-08-31",
+        "2020-09-01"
+      ],
+      "issueDate": "2020-09-02",
+      "targetDate": "2020-09-03",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24332760",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-08-13",
+        "2020-08-14"
+      ],
+      "issueDate": "2020-08-15",
+      "targetDate": "2020-08-16",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24332761",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-08-17",
+        "2020-08-18"
+      ],
+      "issueDate": "2020-08-19",
+      "targetDate": "2020-08-20",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24332764",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-09-16",
+        "2020-09-17"
+      ],
+      "issueDate": "2020-09-18",
+      "targetDate": "2020-09-19",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24332784",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-08-25",
+        "2020-08-26"
+      ],
+      "issueDate": "2020-08-27",
+      "targetDate": "2020-08-28",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24332793",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-08-15",
+        "2020-08-16"
+      ],
+      "issueDate": "2020-08-17",
+      "targetDate": "2020-08-18",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24332808",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-08-22",
+        "2020-08-23"
+      ],
+      "issueDate": "2020-08-24",
+      "targetDate": "2020-08-25",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24332872",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-09-01",
+        "2020-09-02"
+      ],
+      "issueDate": "2020-09-03",
+      "targetDate": "2020-09-04",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24332939",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-09-02",
+        "2020-09-03"
+      ],
+      "issueDate": "2020-09-04",
+      "targetDate": "2020-09-05",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24332949",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-08-23",
+        "2020-08-24"
+      ],
+      "issueDate": "2020-08-25",
+      "targetDate": "2020-08-26",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24332991",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-08-25",
+        "2020-08-26"
+      ],
+      "issueDate": "2020-08-27",
+      "targetDate": "2020-08-28",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24332995",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-08-02",
+        "2020-08-03"
+      ],
+      "issueDate": "2020-08-04",
+      "targetDate": "2020-08-05",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24333039",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-08-18",
+        "2020-08-19"
+      ],
+      "issueDate": "2020-08-20",
+      "targetDate": "2020-08-21",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24333259",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-09-08",
+        "2020-09-09"
+      ],
+      "issueDate": "2020-09-10",
+      "targetDate": "2020-09-11",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24333270",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-09-02",
+        "2020-09-03"
+      ],
+      "issueDate": "2020-09-04",
+      "targetDate": "2020-09-05",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24333277",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-08-28",
+        "2020-08-29"
+      ],
+      "issueDate": "2020-08-30",
+      "targetDate": "2020-08-31",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24333285",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-09-05",
+        "2020-09-06"
+      ],
+      "issueDate": "2020-09-07",
+      "targetDate": "2020-09-08",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24461607",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-10-01",
+        "2020-10-02"
+      ],
+      "issueDate": "2020-10-03",
+      "targetDate": "2020-10-04",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24461618",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-09-10",
+        "2020-09-11"
+      ],
+      "issueDate": "2020-09-12",
+      "targetDate": "2020-09-13",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24461623",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-09-20",
+        "2020-09-21"
+      ],
+      "issueDate": "2020-09-22",
+      "targetDate": "2020-09-23",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24461780",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-09-08",
+        "2020-09-09"
+      ],
+      "issueDate": "2020-09-10",
+      "targetDate": "2020-09-11",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24461899",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-09-05",
+        "2020-09-06"
+      ],
+      "issueDate": "2020-09-07",
+      "targetDate": "2020-09-08",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24461996",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-09-07",
+        "2020-09-08"
+      ],
+      "issueDate": "2020-09-09",
+      "targetDate": "2020-09-10",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24462033",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-09-02",
+        "2020-09-03"
+      ],
+      "issueDate": "2020-09-04",
+      "targetDate": "2020-09-05",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24462127",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-09-24",
+        "2020-09-25"
+      ],
+      "issueDate": "2020-09-26",
+      "targetDate": "2020-09-27",
+      "inputGap": true,
+      "targetGap": false,
+      "inputOutages": [
+        {
+          "start": "2020-09-24T17:30:00.000Z",
+          "end": "2020-09-24T19:00:00.000Z",
+          "description": "IAM"
+        }
+      ],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24462212",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-09-07",
+        "2020-09-08"
+      ],
+      "issueDate": "2020-09-09",
+      "targetDate": "2020-09-10",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24462691",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-09-10",
+        "2020-09-11"
+      ],
+      "issueDate": "2020-09-12",
+      "targetDate": "2020-09-13",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24462819",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-10-10",
+        "2020-10-11"
+      ],
+      "issueDate": "2020-10-12",
+      "targetDate": "2020-10-13",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24463187",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-09-03",
+        "2020-09-04"
+      ],
+      "issueDate": "2020-09-05",
+      "targetDate": "2020-09-06",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24604435",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-10-12",
+        "2020-10-13"
+      ],
+      "issueDate": "2020-10-14",
+      "targetDate": "2020-10-15",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24695557",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-11-16",
+        "2020-11-17"
+      ],
+      "issueDate": "2020-11-18",
+      "targetDate": "2020-11-19",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24695566",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-11-16",
+        "2020-11-17"
+      ],
+      "issueDate": "2020-11-18",
+      "targetDate": "2020-11-19",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24695584",
+      "split": "selection",
+      "requiredMaskDates": [
+        "2020-11-16",
+        "2020-11-17"
+      ],
+      "issueDate": "2020-11-18",
+      "targetDate": "2020-11-19",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_23757522",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-03-05",
+        "2020-03-06"
+      ],
+      "issueDate": "2020-03-07",
+      "targetDate": "2020-03-08",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24027563",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-05-26",
+        "2020-05-27"
+      ],
+      "issueDate": "2020-05-28",
+      "targetDate": "2020-05-29",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24027570",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-06-02",
+        "2020-06-03"
+      ],
+      "issueDate": "2020-06-04",
+      "targetDate": "2020-06-05",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24103560",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-07-06",
+        "2020-07-07"
+      ],
+      "issueDate": "2020-07-08",
+      "targetDate": "2020-07-09",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24103582",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-06-14",
+        "2020-06-15"
+      ],
+      "issueDate": "2020-06-16",
+      "targetDate": "2020-06-17",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24103584",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-06-02",
+        "2020-06-03"
+      ],
+      "issueDate": "2020-06-04",
+      "targetDate": "2020-06-05",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24103590",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-05-31",
+        "2020-06-01"
+      ],
+      "issueDate": "2020-06-02",
+      "targetDate": "2020-06-03",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24104628",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-06-28",
+        "2020-06-29"
+      ],
+      "issueDate": "2020-06-30",
+      "targetDate": "2020-07-01",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24104631",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-07-05",
+        "2020-07-06"
+      ],
+      "issueDate": "2020-07-07",
+      "targetDate": "2020-07-08",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24104644",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-06-05",
+        "2020-06-06"
+      ],
+      "issueDate": "2020-06-07",
+      "targetDate": "2020-06-08",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24104654",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-06-25",
+        "2020-06-26"
+      ],
+      "issueDate": "2020-06-27",
+      "targetDate": "2020-06-28",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24104674",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-06-18",
+        "2020-06-19"
+      ],
+      "issueDate": "2020-06-20",
+      "targetDate": "2020-06-21",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24104857",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-06-11",
+        "2020-06-12"
+      ],
+      "issueDate": "2020-06-13",
+      "targetDate": "2020-06-14",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24191357",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-07-23",
+        "2020-07-24"
+      ],
+      "issueDate": "2020-07-25",
+      "targetDate": "2020-07-26",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24191364",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-07-04",
+        "2020-07-05"
+      ],
+      "issueDate": "2020-07-06",
+      "targetDate": "2020-07-07",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24191393",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-07-19",
+        "2020-07-20"
+      ],
+      "issueDate": "2020-07-21",
+      "targetDate": "2020-07-22",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24191395",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-07-29",
+        "2020-07-30"
+      ],
+      "issueDate": "2020-07-31",
+      "targetDate": "2020-08-01",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24191411",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-07-20",
+        "2020-07-21"
+      ],
+      "issueDate": "2020-07-22",
+      "targetDate": "2020-07-23",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24191680",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-07-02",
+        "2020-07-03"
+      ],
+      "issueDate": "2020-07-04",
+      "targetDate": "2020-07-05",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24191756",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-07-14",
+        "2020-07-15"
+      ],
+      "issueDate": "2020-07-16",
+      "targetDate": "2020-07-17",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24332768",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-08-20",
+        "2020-08-21"
+      ],
+      "issueDate": "2020-08-22",
+      "targetDate": "2020-08-23",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24332785",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-08-30",
+        "2020-08-31"
+      ],
+      "issueDate": "2020-09-01",
+      "targetDate": "2020-09-02",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24332791",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-08-09",
+        "2020-08-10"
+      ],
+      "issueDate": "2020-08-11",
+      "targetDate": "2020-08-12",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24332815",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-08-30",
+        "2020-08-31"
+      ],
+      "issueDate": "2020-09-01",
+      "targetDate": "2020-09-02",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24332894",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-08-14",
+        "2020-08-15"
+      ],
+      "issueDate": "2020-08-16",
+      "targetDate": "2020-08-17",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24332934",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-09-07",
+        "2020-09-08"
+      ],
+      "issueDate": "2020-09-09",
+      "targetDate": "2020-09-10",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24332954",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-08-13",
+        "2020-08-14"
+      ],
+      "issueDate": "2020-08-15",
+      "targetDate": "2020-08-16",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24332956",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-08-26",
+        "2020-08-27"
+      ],
+      "issueDate": "2020-08-28",
+      "targetDate": "2020-08-29",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24332969",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-08-09",
+        "2020-08-10"
+      ],
+      "issueDate": "2020-08-11",
+      "targetDate": "2020-08-12",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24333000",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-09-27",
+        "2020-09-28"
+      ],
+      "issueDate": "2020-09-29",
+      "targetDate": "2020-09-30",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24333006",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-08-27",
+        "2020-08-28"
+      ],
+      "issueDate": "2020-08-29",
+      "targetDate": "2020-08-30",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24333012",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-09-13",
+        "2020-09-14"
+      ],
+      "issueDate": "2020-09-15",
+      "targetDate": "2020-09-16",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24461320",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-09-02",
+        "2020-09-03"
+      ],
+      "issueDate": "2020-09-04",
+      "targetDate": "2020-09-05",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24461771",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-09-09",
+        "2020-09-10"
+      ],
+      "issueDate": "2020-09-11",
+      "targetDate": "2020-09-12",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24461789",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-10-07",
+        "2020-10-08"
+      ],
+      "issueDate": "2020-10-09",
+      "targetDate": "2020-10-10",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24462088",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-09-02",
+        "2020-09-03"
+      ],
+      "issueDate": "2020-09-04",
+      "targetDate": "2020-09-05",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24462263",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-09-24",
+        "2020-09-25"
+      ],
+      "issueDate": "2020-09-26",
+      "targetDate": "2020-09-27",
+      "inputGap": true,
+      "targetGap": false,
+      "inputOutages": [
+        {
+          "start": "2020-09-24T17:30:00.000Z",
+          "end": "2020-09-24T19:00:00.000Z",
+          "description": "IAM"
+        }
+      ],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24462306",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-09-17",
+        "2020-09-18"
+      ],
+      "issueDate": "2020-09-19",
+      "targetDate": "2020-09-20",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24462753",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-09-03",
+        "2020-09-04"
+      ],
+      "issueDate": "2020-09-05",
+      "targetDate": "2020-09-06",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24462847",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-10-01",
+        "2020-10-02"
+      ],
+      "issueDate": "2020-10-03",
+      "targetDate": "2020-10-04",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24462867",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-09-25",
+        "2020-09-26"
+      ],
+      "issueDate": "2020-09-27",
+      "targetDate": "2020-09-28",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24462882",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-09-13",
+        "2020-09-14"
+      ],
+      "issueDate": "2020-09-15",
+      "targetDate": "2020-09-16",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24463211",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-09-08",
+        "2020-09-09"
+      ],
+      "issueDate": "2020-09-10",
+      "targetDate": "2020-09-11",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24463227",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-09-06",
+        "2020-09-07"
+      ],
+      "issueDate": "2020-09-08",
+      "targetDate": "2020-09-09",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24604456",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-10-19",
+        "2020-10-20"
+      ],
+      "issueDate": "2020-10-21",
+      "targetDate": "2020-10-22",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24604676",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-10-20",
+        "2020-10-21"
+      ],
+      "issueDate": "2020-10-22",
+      "targetDate": "2020-10-23",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24604731",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-10-30",
+        "2020-10-31"
+      ],
+      "issueDate": "2020-11-01",
+      "targetDate": "2020-11-02",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24604754",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-10-12",
+        "2020-10-13"
+      ],
+      "issueDate": "2020-10-14",
+      "targetDate": "2020-10-15",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24604832",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-10-28",
+        "2020-10-29"
+      ],
+      "issueDate": "2020-10-30",
+      "targetDate": "2020-10-31",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2020/fire_24695532",
+      "split": "calibration",
+      "requiredMaskDates": [
+        "2020-11-25",
+        "2020-11-26"
+      ],
+      "issueDate": "2020-11-27",
+      "targetDate": "2020-11-28",
+      "inputGap": true,
+      "targetGap": false,
+      "inputOutages": [
+        {
+          "start": "2020-11-25T15:54:00.000Z",
+          "end": "2020-11-25T16:00:00.000Z",
+          "description": "Outage"
+        }
+      ],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_24935885",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-02-06",
+        "2021-02-07"
+      ],
+      "issueDate": "2021-02-08",
+      "targetDate": "2021-02-09",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_24936357",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-02-02",
+        "2021-02-03"
+      ],
+      "issueDate": "2021-02-04",
+      "targetDate": "2021-02-05",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25084892",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-05-03",
+        "2021-05-04"
+      ],
+      "issueDate": "2021-05-05",
+      "targetDate": "2021-05-06",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25088019",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-05-01",
+        "2021-05-02"
+      ],
+      "issueDate": "2021-05-03",
+      "targetDate": "2021-05-04",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25138926",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-05-12",
+        "2021-05-13"
+      ],
+      "issueDate": "2021-05-14",
+      "targetDate": "2021-05-15",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25205247",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-06-11",
+        "2021-06-12"
+      ],
+      "issueDate": "2021-06-13",
+      "targetDate": "2021-06-14",
+      "inputGap": true,
+      "targetGap": false,
+      "inputOutages": [
+        {
+          "start": "2021-06-12T01:00:00.000Z",
+          "end": "2021-06-12T01:18:00.000Z",
+          "description": "RMM Outage for 01:00 through 01:12 granules"
+        }
+      ],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25205259",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-06-22",
+        "2021-06-23"
+      ],
+      "issueDate": "2021-06-24",
+      "targetDate": "2021-06-25",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25205260",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-06-26",
+        "2021-06-27"
+      ],
+      "issueDate": "2021-06-28",
+      "targetDate": "2021-06-29",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25205295",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-06-15",
+        "2021-06-16"
+      ],
+      "issueDate": "2021-06-17",
+      "targetDate": "2021-06-18",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25205827",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-06-09",
+        "2021-06-10"
+      ],
+      "issueDate": "2021-06-11",
+      "targetDate": "2021-06-12",
+      "inputGap": false,
+      "targetGap": true,
+      "inputOutages": [],
+      "targetOutages": [
+        {
+          "start": "2021-06-12T01:00:00.000Z",
+          "end": "2021-06-12T01:18:00.000Z",
+          "description": "RMM Outage for 01:00 through 01:12 granules"
+        }
+      ]
+    },
+    {
+      "event": "2021/fire_25205954",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-06-07",
+        "2021-06-08"
+      ],
+      "issueDate": "2021-06-09",
+      "targetDate": "2021-06-10",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25294692",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-08-12",
+        "2021-08-13"
+      ],
+      "issueDate": "2021-08-14",
+      "targetDate": "2021-08-15",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25294714",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-07-18",
+        "2021-07-19"
+      ],
+      "issueDate": "2021-07-20",
+      "targetDate": "2021-07-21",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25294976",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-07-11",
+        "2021-07-12"
+      ],
+      "issueDate": "2021-07-13",
+      "targetDate": "2021-07-14",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25294983",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-07-07",
+        "2021-07-08"
+      ],
+      "issueDate": "2021-07-09",
+      "targetDate": "2021-07-10",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25294998",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-07-15",
+        "2021-07-16"
+      ],
+      "issueDate": "2021-07-17",
+      "targetDate": "2021-07-18",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25295023",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-07-25",
+        "2021-07-26"
+      ],
+      "issueDate": "2021-07-27",
+      "targetDate": "2021-07-28",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25295026",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-07-24",
+        "2021-07-25"
+      ],
+      "issueDate": "2021-07-26",
+      "targetDate": "2021-07-27",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25295081",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-07-25",
+        "2021-07-26"
+      ],
+      "issueDate": "2021-07-27",
+      "targetDate": "2021-07-28",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25295808",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-07-24",
+        "2021-07-25"
+      ],
+      "issueDate": "2021-07-26",
+      "targetDate": "2021-07-27",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25295837",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-08-09",
+        "2021-08-10"
+      ],
+      "issueDate": "2021-08-11",
+      "targetDate": "2021-08-12",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25295843",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-07-16",
+        "2021-07-17"
+      ],
+      "issueDate": "2021-07-18",
+      "targetDate": "2021-07-19",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25295855",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-08-06",
+        "2021-08-07"
+      ],
+      "issueDate": "2021-08-08",
+      "targetDate": "2021-08-09",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25295862",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-08-01",
+        "2021-08-02"
+      ],
+      "issueDate": "2021-08-03",
+      "targetDate": "2021-08-04",
+      "inputGap": false,
+      "targetGap": true,
+      "inputOutages": [],
+      "targetOutages": [
+        {
+          "start": "2021-08-03T12:48:00.000Z",
+          "end": "2021-08-04T15:48:00.000Z",
+          "description": "Safe-Mode outage"
+        }
+      ]
+    },
+    {
+      "event": "2021/fire_25295869",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-07-31",
+        "2021-08-01"
+      ],
+      "issueDate": "2021-08-02",
+      "targetDate": "2021-08-03",
+      "inputGap": false,
+      "targetGap": true,
+      "inputOutages": [],
+      "targetOutages": [
+        {
+          "start": "2021-08-03T12:48:00.000Z",
+          "end": "2021-08-04T15:48:00.000Z",
+          "description": "Safe-Mode outage"
+        }
+      ]
+    },
+    {
+      "event": "2021/fire_25295877",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-07-27",
+        "2021-07-28"
+      ],
+      "issueDate": "2021-07-29",
+      "targetDate": "2021-07-30",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25295927",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-08-09",
+        "2021-08-10"
+      ],
+      "issueDate": "2021-08-11",
+      "targetDate": "2021-08-12",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25295931",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-07-30",
+        "2021-07-31"
+      ],
+      "issueDate": "2021-08-01",
+      "targetDate": "2021-08-02",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25295934",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-07-08",
+        "2021-07-09"
+      ],
+      "issueDate": "2021-07-10",
+      "targetDate": "2021-07-11",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25295941",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-08-08",
+        "2021-08-09"
+      ],
+      "issueDate": "2021-08-10",
+      "targetDate": "2021-08-11",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25295966",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-08-02",
+        "2021-08-03"
+      ],
+      "issueDate": "2021-08-04",
+      "targetDate": "2021-08-05",
+      "inputGap": true,
+      "targetGap": false,
+      "inputOutages": [
+        {
+          "start": "2021-08-03T12:48:00.000Z",
+          "end": "2021-08-04T15:48:00.000Z",
+          "description": "Safe-Mode outage"
+        }
+      ],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25410444",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-08-21",
+        "2021-08-22"
+      ],
+      "issueDate": "2021-08-23",
+      "targetDate": "2021-08-24",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25410735",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-08-20",
+        "2021-08-21"
+      ],
+      "issueDate": "2021-08-22",
+      "targetDate": "2021-08-23",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25410746",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-09-05",
+        "2021-09-06"
+      ],
+      "issueDate": "2021-09-07",
+      "targetDate": "2021-09-08",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25410845",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-09-02",
+        "2021-09-03"
+      ],
+      "issueDate": "2021-09-04",
+      "targetDate": "2021-09-05",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25410883",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-08-21",
+        "2021-08-22"
+      ],
+      "issueDate": "2021-08-23",
+      "targetDate": "2021-08-24",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25410960",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-08-20",
+        "2021-08-21"
+      ],
+      "issueDate": "2021-08-22",
+      "targetDate": "2021-08-23",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25410985",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-08-30",
+        "2021-08-31"
+      ],
+      "issueDate": "2021-09-01",
+      "targetDate": "2021-09-02",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25411057",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-08-16",
+        "2021-08-17"
+      ],
+      "issueDate": "2021-08-18",
+      "targetDate": "2021-08-19",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25411093",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-08-11",
+        "2021-08-12"
+      ],
+      "issueDate": "2021-08-13",
+      "targetDate": "2021-08-14",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25411102",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-08-08",
+        "2021-08-09"
+      ],
+      "issueDate": "2021-08-10",
+      "targetDate": "2021-08-11",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25411748",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-08-15",
+        "2021-08-16"
+      ],
+      "issueDate": "2021-08-17",
+      "targetDate": "2021-08-18",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25411795",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-08-17",
+        "2021-08-18"
+      ],
+      "issueDate": "2021-08-19",
+      "targetDate": "2021-08-20",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25411897",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-08-06",
+        "2021-08-07"
+      ],
+      "issueDate": "2021-08-08",
+      "targetDate": "2021-08-09",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25411915",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-08-19",
+        "2021-08-20"
+      ],
+      "issueDate": "2021-08-21",
+      "targetDate": "2021-08-22",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25548047",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-10-08",
+        "2021-10-09"
+      ],
+      "issueDate": "2021-10-10",
+      "targetDate": "2021-10-11",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25548063",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-10-10",
+        "2021-10-11"
+      ],
+      "issueDate": "2021-10-12",
+      "targetDate": "2021-10-13",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25548658",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-09-24",
+        "2021-09-25"
+      ],
+      "issueDate": "2021-09-26",
+      "targetDate": "2021-09-27",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25548678",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-09-05",
+        "2021-09-06"
+      ],
+      "issueDate": "2021-09-07",
+      "targetDate": "2021-09-08",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    },
+    {
+      "event": "2021/fire_25639187",
+      "split": "test",
+      "requiredMaskDates": [
+        "2021-10-16",
+        "2021-10-17"
+      ],
+      "issueDate": "2021-10-18",
+      "targetDate": "2021-10-19",
+      "inputGap": false,
+      "targetGap": false,
+      "inputOutages": [],
+      "targetOutages": []
+    }
+  ]
+}
